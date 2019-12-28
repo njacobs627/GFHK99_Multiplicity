@@ -1,0 +1,1790 @@
+﻿Expt,Species,Long.ID,Short.ID,Virus,Day,Organ,Dose,PB2,PB1,PA,HA,NP,NA,M,NS
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,0,1
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,1,1,1,1,0,1,1,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,1,1,1,0,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,1,1,1,0,1,1,1,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,1,1,1,0,1,1,1,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,1,1,1,0,0,1,1,1
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,1,1,0,0,1,1,1,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,1,0,1,0,0,1,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,0,0,0,0,0,1,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,1,0,0,0,0,0,1,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,0,1,1,0,0,1,1,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,0,1,1,0,0,1,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,0,0,1,0,0,1,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,0,0,1,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,0,0,0,0,0,1,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,0,0,0,0,0,1,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,1,0,1,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,1,0,0,0,0,0,1,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,1,1,1,0,0,1,1,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,1,,1,0,0,0,1,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,0,1,0,1,0,0,1,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,1,1,1,1,1,1,1,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,1,1,1,0,0,1,1,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,1,1,1,0,0,1,1,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,1,1,1,0,0,1,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,1,1,1,0,0,1,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,1,1,1,0,0,0,1,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,1,0,0,0,0,0,1,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,1,1,1,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,1,1,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,1,0,0,0,1,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,1,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,1,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,1,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,1,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,1,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,1,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,1,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,1,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,1,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,0,0,0,1,1,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,1,1,1,1,1,1,0,1
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,1,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,0,1,1,1,1,0,1,1
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,0,1,1,0,0,0,1,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,0,1,0,0,1,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,0,1,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,0,0,1,0,0,0,1,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,1,1
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,1
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,1,1,1,1,1,0,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,1,1,1,0,1,1,1,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,1,1,0,0,1,1,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,1,0,1,0,0,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,1,0,0,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,0,1,0,0,0,1,0,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,0,0,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,0,0,1,0,0,1,0,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,0,0,1,0,0,0,0,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,0,0,0,1,0,1,0,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,0,0,0,0,1,1,1,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,0,0,0,0,1,0,,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,0,0,0,0,1,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,0,0,0,0,0,1,0,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,1,1,1,0,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,1,1,1,0,1,0,1,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,0,0,1,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,1,1,1,0,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,1,1,0,0,1,0,0,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,1,1,0,0,0,1,1,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,1,0,0,0,1,1,1,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,1,0,0,0,1,0,1,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,1,0,0,0,1,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,1,0,0,0,0,0,1,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,1,0,0,0,0,0,1,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,1,0,0,0,0,0,1,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,0,1,1,0,0,1,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,0,1,0,0,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,0,1,0,0,1,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,0,0,1,0,0,0,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,0,0,0,0,1,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,0,0,0,0,0,1,1,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,1,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,1,1,1,1,1,1,1,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,1,0,1,0,0,0,1,1
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,1,0,0,1,1,0,1,1
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,1,0,0,0,0,0,1,1
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,0,0,0,1,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,1,1
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,1,1
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,1,0,1,1,1,0,1,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,1,0,0,0,1,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,1,0,0,0,0,0,0,1
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,0,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,0,1,1,0,1,1,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,0,1,1,0,1,1,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,1,1
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 1,GP1,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,3,Nasal Wash,100,1,1,0,1,1,0,0,1
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,3,Nasal Wash,100,1,1,0,1,0,0,0,1
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,3,Nasal Wash,100,1,0,1,0,0,1,1,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,3,Nasal Wash,100,1,0,1,0,0,1,1,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,3,Nasal Wash,100,1,0,1,0,0,1,1,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,3,Nasal Wash,100,1,0,1,0,0,1,1,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,3,Nasal Wash,100,1,0,0,0,1,0,0,1
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,3,Nasal Wash,100,1,0,0,0,1,0,0,1
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 2,GP2,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,3,Nasal Wash,100,1,1,1,1,0,0,0,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,3,Nasal Wash,100,1,0,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,3,Nasal Wash,100,,0,1,1,1,0,0,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,3,Nasal Wash,100,0,1,1,1,1,1,1,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,3,Nasal Wash,100,0,1,1,1,1,0,0,0
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,3,Nasal Wash,100,0,1,1,0,0,0,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,3,Nasal Wash,100,0,1,0,1,0,1,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,3,Nasal Wash,100,0,1,0,1,0,0,1,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,3,Nasal Wash,100,0,0,0,1,0,0,0,1
+KG5,Guinea Pig,Guinea Pig 3,GP3,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,1,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,0,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,1,0,1,1,1,1,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,1,0,1,1,0,1,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,1,0,1,0,0,1,1,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,0,0,0,1,1,0,1,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,0,0,0,1,1,0,0,1
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,0,0,0,1,1,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 4,GP4,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,1,1,1,1,1,0,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,1,1,0,1,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,0,1,0,0,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,0,0,0,1,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,0,0,0,0,1,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 5,GP5,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,1,1,0,1,1,0,0,1
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,1,1,0,0,1,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,0,1,1,1,1,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,0,1,0,1,1,0,1,1
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,0,0,1,1,1,0,0,1
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,0,0,1,0,1,0,1,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,0,0,0,1,1,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,0,0,0,0,1,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG5,Guinea Pig,Guinea Pig 6,GP6,MaMN99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,1,1,0,0,0,1,0,0
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,0,1,1,1,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,1,Nasal Wash,100,0,1,0,0,0,1,0,0
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,1,Nasal Wash,100,1,1,1,1,0,1,0,0
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,1,Nasal Wash,100,1,1,1,0,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,1,Nasal Wash,100,1,1,0,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,1,Nasal Wash,100,1,1,0,0,0,0,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,1,Nasal Wash,100,1,0,1,1,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,1,Nasal Wash,100,1,0,0,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,1,Nasal Wash,100,1,0,0,1,1,0,1,0
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,1,Nasal Wash,100,1,0,0,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,1,Nasal Wash,100,1,0,0,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,1,Nasal Wash,100,1,0,0,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,1,Nasal Wash,100,1,0,0,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,1,Nasal Wash,100,1,0,0,0,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,1,Nasal Wash,100,1,0,0,0,0,1,0,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,1,Nasal Wash,100,0,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,1,Nasal Wash,100,0,1,1,1,0,1,0,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,1,Nasal Wash,100,0,1,1,1,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,1,Nasal Wash,100,0,1,1,1,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,1,Nasal Wash,100,0,1,1,1,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,1,Nasal Wash,100,0,1,1,1,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,1,Nasal Wash,100,0,0,1,1,1,0,0,0
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,1,1,1,0,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,1,1,0,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,1,1,0,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,1,0,0,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,1,0,0,0,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,0,1,0,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,0,1,0,0,1,1,0,0
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,0,0,0,0,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,1,Nasal Wash,100,0,0,0,0,1,0,1,0
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,1,Nasal Wash,100,1,1,1,1,1,1,,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,1,Nasal Wash,100,1,1,1,1,1,1,,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,1,Nasal Wash,100,0,1,1,1,0,1,0,0
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,1,Nasal Wash,100,0,0,0,0,0,1,0,0
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,1,1,1,0,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,1,0,0,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,1,0,0,0,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,0,1,0,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,1,Nasal Wash,100,0,0,0,0,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,0,1,1,1,0,1,0,0
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,0,0,0,0,0,0,0,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,2,Nasal Wash,100,1,1,1,1,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,2,Nasal Wash,100,1,1,0,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,2,Nasal Wash,100,1,1,0,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,2,Nasal Wash,100,1,1,0,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,2,Nasal Wash,100,1,1,0,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,2,Nasal Wash,100,1,1,0,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,2,Nasal Wash,100,1,1,0,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,2,Nasal Wash,100,1,1,0,1,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,2,Nasal Wash,100,1,1,0,1,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,2,Nasal Wash,100,1,1,0,1,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,2,Nasal Wash,100,1,1,0,1,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,2,Nasal Wash,100,1,1,0,1,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,2,Nasal Wash,100,0,0,,0,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,2,Nasal Wash,100,1,1,1,1,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,2,Nasal Wash,100,1,1,1,1,0,0,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,2,Nasal Wash,100,1,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,2,Nasal Wash,100,1,1,1,0,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,2,Nasal Wash,100,1,1,1,0,0,0,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,2,Nasal Wash,100,1,1,0,1,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,2,Nasal Wash,100,1,1,0,1,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,2,Nasal Wash,100,1,1,0,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,2,Nasal Wash,100,1,1,0,0,1,0,0,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,2,Nasal Wash,100,1,1,0,0,0,1,,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,2,Nasal Wash,100,1,1,0,0,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,2,Nasal Wash,100,1,0,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,2,Nasal Wash,100,1,0,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,2,Nasal Wash,100,1,0,1,0,0,0,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,2,Nasal Wash,100,0,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,2,Nasal Wash,100,0,1,1,0,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,2,Nasal Wash,100,0,1,0,1,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,2,Nasal Wash,100,0,0,0,0,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,0,0,0,0,0,1,0,0
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,1,1,1,1,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,1,1,1,1,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,1,1,1,1,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,1,1,1,1,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,1,1,0,0,1,1,,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,1,1,0,0,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,1,0,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,1,0,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,0,1,1,1,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,0,1,1,1,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,2,Nasal Wash,100,0,1,0,0,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,1,1,0,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,1,0,1,1,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,0,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,0,0,0,0,0,1,0,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,0,0,0,0,0,0,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,0,0,0,0,0,0,,0
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,2,Nasal Wash,100,1,1,0,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,2,Nasal Wash,100,1,0,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,2,Nasal Wash,100,0,1,0,0,1,0,1,0
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,2,Nasal Wash,100,0,0,0,0,1,1,0,0
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,2,Nasal Wash,100,1,1,1,1,0,0,0,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,2,Nasal Wash,100,1,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,2,Nasal Wash,100,1,0,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,2,Nasal Wash,100,1,0,1,0,0,1,0,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,2,Nasal Wash,100,1,0,0,1,0,0,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,2,Nasal Wash,100,1,0,0,0,0,0,1,0
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,2,Nasal Wash,100,0,0,1,0,0,1,0,0
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,1,1,1,1,,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,1,0,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,0,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,0,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,0,1,1,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_1,GP1,NL09,4,Nasal Wash,100,1,0,1,1,0,0,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,1,1,1,1,1,,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,1,1,1,1,1,,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,1,1,1,1,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,1,1,1,1,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,1,1,1,0,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,1,1,0,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,1,1,0,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,1,1,0,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,1,1,0,0,0,0,1,0
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,1,1,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,1,0,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,1,0,1,1,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,1,0,1,1,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,1,0,1,0,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,0,0,1,0,1,0,1,0
+KG2,Guinea Pig,Guinea_Pig_2,GP2,NL09,4,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,1,1,1,1,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,1,0,1,1,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,1,0,1,1,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,1,0,1,0,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,1,0,0,1,0,1,0,0
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,1,0,0,1,0,0,1,0
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,1,0,0,0,1,0,0,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,1,0,0,0,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,1,0,0,0,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,0,1,0,1,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,0,1,0,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,0,1,0,0,1,0,0,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,0,1,0,0,0,0,1,0
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,0,0,1,1,0,0,1,0
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,0,0,1,0,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,0,0,1,0,0,0,1,0
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,0,0,1,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,0,0,0,1,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,0,0,0,1,0,0,1,0
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,0,0,0,0,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_3,GP3,NL09,4,Nasal Wash,100,0,0,0,0,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,4,Nasal Wash,100,1,1,1,1,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,4,Nasal Wash,100,1,1,1,,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,4,Nasal Wash,100,1,1,1,1,0,0,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,4,Nasal Wash,100,1,1,1,1,0,0,1,0
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,4,Nasal Wash,100,1,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,4,Nasal Wash,100,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,4,Nasal Wash,100,,1,0,0,0,0,1,0
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,4,Nasal Wash,100,1,0,0,1,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,4,Nasal Wash,100,1,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,4,Nasal Wash,100,0,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,4,Nasal Wash,100,0,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_4,GP4,NL09,4,Nasal Wash,100,0,0,1,0,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,4,Nasal Wash,100,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,4,Nasal Wash,100,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,4,Nasal Wash,100,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,4,Nasal Wash,100,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,4,Nasal Wash,100,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,4,Nasal Wash,100,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,4,Nasal Wash,100,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,4,Nasal Wash,100,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,4,Nasal Wash,100,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,4,Nasal Wash,100,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,4,Nasal Wash,100,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,4,Nasal Wash,100,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,4,Nasal Wash,100,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,4,Nasal Wash,100,1,1,1,0,1,0,0,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,4,Nasal Wash,100,1,1,1,0,0,0,0,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,4,Nasal Wash,100,1,0,0,0,0,1,0,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,4,Nasal Wash,100,0,1,0,1,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,4,Nasal Wash,100,0,1,0,1,0,0,0,1
+KG2,Guinea Pig,Guinea_Pig_5,GP5,NL09,4,Nasal Wash,100,0,0,0,1,0,0,0,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,1,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,1,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,1,1,0,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,0,0,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_6,GP6,NL09,4,Nasal Wash,100,0,0,1,0,0,1,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,1,Nasal Wash,100000,0,1,1,0,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,1,Nasal Wash,100000,1,,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,1,Nasal Wash,100000,1,0,0,1,0,0,1,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,1,Nasal Wash,100000,0,1,,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,1,Nasal Wash,100000,0,1,0,0,0,1,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,1,Nasal Wash,100000,0,1,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,1,Nasal Wash,100000,0,0,0,0,0,0,0,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,1,Nasal Wash,100000,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,1,Nasal Wash,100000,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,1,Nasal Wash,100000,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,1,Nasal Wash,100000,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,1,Nasal Wash,100000,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,1,Nasal Wash,100000,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,1,Nasal Wash,100000,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,1,1,1,1,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,1,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,1,1,1,0,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,1,1,0,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,1,1,0,0,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,1,0,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,1,0,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,1,0,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,1,0,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,1,0,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,1,0,0,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,0,1,0,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,0,1,0,0,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,0,1,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,0,1,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,0,0,0,1,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,0,0,0,0,0,0,0,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,1,Nasal Wash,100000,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,1,Nasal Wash,100000,1,1,1,1,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,1,Nasal Wash,100000,1,1,1,0,0,1,0,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,1,Nasal Wash,100000,1,1,0,0,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,1,Nasal Wash,100000,1,0,1,1,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,1,Nasal Wash,100000,1,0,0,0,0,1,0,0
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,1,Nasal Wash,100000,1,0,0,0,0,0,1,0
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,1,Nasal Wash,100000,0,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,1,Nasal Wash,100000,0,1,1,1,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,1,Nasal Wash,100000,0,0,1,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,1,Nasal Wash,100000,0,0,0,0,,0,0,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,1,Nasal Wash,100000,1,1,1,1,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,1,Nasal Wash,100000,1,1,0,1,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,1,Nasal Wash,100000,1,0,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,1,Nasal Wash,100000,0,1,1,1,1,0,0,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,1,Nasal Wash,100000,0,0,1,1,0,1,0,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,1,Nasal Wash,100000,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,2,Nasal Wash,100000,1,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,2,Nasal Wash,100000,1,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,2,Nasal Wash,100000,1,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,2,Nasal Wash,100000,1,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,2,Nasal Wash,100000,1,1,1,0,1,1,,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,2,Nasal Wash,100000,1,1,,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,2,Nasal Wash,100000,1,0,1,1,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,2,Nasal Wash,100000,1,0,1,0,,0,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,2,Nasal Wash,100000,1,0,1,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,2,Nasal Wash,100000,1,0,1,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,1,1,1,1,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,1,1,1,0,0,0,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,1,0,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,1,0,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,1,0,0,0,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,0,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,0,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,0,0,1,0,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,0,0,0,1,1,0,0,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,0,0,0,0,1,1,0,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,0,0,0,0,1,0,0,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,0,0,0,0,1,0,0,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,2,Nasal Wash,100000,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,,1,1,1,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,1,1,,1,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,1,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,1,0,1,0,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,1,0,0,0,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,1,0,0,0,1,0,1,0
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,0,1,1,1,1,1,1,
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,0,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,0,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,0,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,0,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,0,1,1,0,1,0,1,0
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,0,0,0,0,1,0,1,0
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,2,Nasal Wash,100000,0,0,0,0,1,0,1,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,2,Nasal Wash,100000,1,1,1,0,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,2,Nasal Wash,100000,1,1,1,0,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,2,Nasal Wash,100000,1,1,1,0,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,2,Nasal Wash,100000,1,1,1,0,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,2,Nasal Wash,100000,1,1,1,0,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,2,Nasal Wash,100000,1,1,1,0,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,2,Nasal Wash,100000,1,1,1,0,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,2,Nasal Wash,100000,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,2,Nasal Wash,100000,1,1,1,0,1,1,0,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,2,Nasal Wash,100000,1,1,1,0,1,0,1,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,2,Nasal Wash,100000,1,1,1,0,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,2,Nasal Wash,100000,1,1,1,0,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,2,Nasal Wash,100000,1,,0,0,0,1,0,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,2,Nasal Wash,100000,1,0,1,0,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,2,Nasal Wash,100000,1,0,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,2,Nasal Wash,100000,1,0,1,0,0,,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,2,Nasal Wash,100000,0,1,1,0,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,2,Nasal Wash,100000,0,0,0,0,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,3,Nasal Wash,100000,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,3,Nasal Wash,100000,1,1,1,0,0,1,0,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,3,Nasal Wash,100000,1,1,0,0,1,0,,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,3,Nasal Wash,100000,1,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,3,Nasal Wash,100000,1,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,3,Nasal Wash,100000,1,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,3,Nasal Wash,100000,1,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,3,Nasal Wash,100000,1,0,0,0,0,,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,3,Nasal Wash,100000,1,0,0,0,0,0,0,
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,3,Nasal Wash,100000,1,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,3,Nasal Wash,100000,0,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,3,Nasal Wash,100000,0,1,1,1,0,1,0,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,3,Nasal Wash,100000,0,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,3,Nasal Wash,100000,0,1,1,0,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,3,Nasal Wash,100000,0,1,1,0,,1,1,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,3,Nasal Wash,100000,0,1,0,0,0,1,0,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,3,Nasal Wash,100000,0,0,1,0,0,0,0,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,3,Nasal Wash,100000,0,0,0,0,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,3,Nasal Wash,100000,0,0,0,0,1,0,1,0
+KG2,Guinea Pig,Guinea_Pig_7,GP7,NL09,3,Nasal Wash,100000,0,0,0,0,0,0,1,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,1,1,1,1,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,1,1,1,1,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,1,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,1,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,1,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,1,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,1,1,1,0,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,1,1,0,1,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,1,0,1,1,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,1,0,1,1,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,1,0,0,1,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,1,0,0,1,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,0,1,1,1,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,0,1,1,1,1,0,1,
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,0,1,0,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,0,1,0,1,0,1,0,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,0,0,0,,0,0,0,1
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,0,0,0,1,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_8,GP8,NL09,3,Nasal Wash,100000,0,0,0,1,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,1,,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,1,1,1,1,1,1,0,0
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,1,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,1,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,1,1,1,0,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,1,1,1,0,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,1,1,0,0,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,1,1,0,0,0,1,1,0
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,1,1,0,0,0,1,0,0
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,1,0,1,1,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,1,0,0,0,1,0,0,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,0,1,1,0,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,0,1,1,0,0,0,0,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,0,0,1,0,0,0,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,0,0,0,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,0,0,0,0,0,1,0,0
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_9,GP9,NL09,3,Nasal Wash,100000,0,0,0,0,0,0,0,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,1,1,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,1,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,1,1,1,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,1,1,1,0,1,1,0,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,1,1,1,0,0,1,0,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,1,1,0,1,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,1,1,0,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,1,1,0,0,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,1,1,0,0,1,0,1,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,1,0,1,1,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,1,0,0,1,1,0,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,1,0,0,0,0,0,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,0,1,1,1,1,0,0,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,0,1,0,0,1,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,0,0,1,1,1,0,1,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,0,0,1,0,1,1,1,0
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,0,0,1,0,0,1,1,1
+KG2,Guinea Pig,Guinea_Pig_10,GP10,NL09,3,Nasal Wash,100000,0,0,0,0,0,1,1,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,1,1,1,0,1,1,0,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,1,1,0,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,1,1,0,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,1,1,0,0,0,1,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,1,0,1,0,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,1,0,0,0,0,1,1,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,1,0,0,0,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,0,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,0,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,0,1,1,0,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,0,1,0,1,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,0,1,0,0,0,0,0,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,0,0,0,1,1,0,1,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,1,1,1,1,1,0,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,1,1,1,0,1,1,0,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,1,1,0,1,1,1,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,1,1,0,0,1,1,0,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,1,0,1,0,1,1,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,1,0,0,0,0,0,0,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,0,1,1,1,0,1,1,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,0,1,1,0,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,0,1,0,1,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,0,1,0,0,0,1,1,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,0,1,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,0,0,1,0,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,1,Nasal Wash,100,1,1,1,0,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,1,Nasal Wash,100,1,0,1,1,1,1,0,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,1,Nasal Wash,100,1,0,1,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,1,Nasal Wash,100,0,1,0,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,1,Nasal Wash,100,0,0,1,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,1,Nasal Wash,100,0,0,0,1,0,0,1,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,1,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,1,Nasal Wash,100,1,1,0,0,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,1,Nasal Wash,100,1,1,0,0,0,0,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,1,Nasal Wash,100,1,0,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,1,Nasal Wash,100,1,0,1,1,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,1,Nasal Wash,100,0,1,1,1,0,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,1,Nasal Wash,100,0,1,0,1,0,0,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,1,Nasal Wash,100,0,1,0,0,1,0,0,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,1,1,1,1,,1,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,1,1,1,1,0,0,0,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,1,1,1,0,1,0,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,1,1,1,0,0,1,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,1,1,0,1,1,0,0,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,1,1,0,1,0,0,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,1,1,0,0,1,0,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,1,0,1,0,1,0,1,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,1,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,0,1,1,0,1,0,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,0,1,1,0,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,0,1,1,0,0,0,1,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,0,0,1,1,0,1,1,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,0,0,1,1,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,0,0,1,1,0,0,1,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,0,0,0,1,1,0,0,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,1,1,1,1,0,0,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,1,1,0,1,1,1,0,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,1,0,0,1,0,1,1,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,0,1,1,1,1,0,1,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,0,1,1,0,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,0,1,0,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,0,1,0,1,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,0,1,0,0,1,1,1,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,0,0,0,1,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,0,0,0,0,1,0,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,0,0,0,0,0,1,1,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,1,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,1,1,1,0,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,1,1,1,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,1,1,0,1,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,1,1,0,0,1,1,1,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,1,1,0,0,1,0,0,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,1,1,0,0,1,0,0,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,1,0,1,1,0,1,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,1,0,0,1,0,1,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,1,0,0,0,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,0,1,0,0,1,0,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,0,0,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,0,0,1,0,0,1,1,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,0,0,0,1,1,0,0,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,0,0,0,0,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,0,0,0,0,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,1,1,1,1,1,1,1,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,1,1,1,1,0,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,1,1,0,1,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,1,0,0,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,1,0,0,1,1,1,1,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,1,0,0,0,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,0,1,1,1,0,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,0,1,1,0,1,1,1,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,0,0,0,1,1,0,0,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,0,0,0,0,1,0,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,0,0,0,0,1,0,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,0,0,0,0,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,2,Nasal Wash,100,1,1,1,1,1,0,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,2,Nasal Wash,100,1,1,1,0,1,1,1,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,2,Nasal Wash,100,1,1,0,0,1,1,0,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,2,Nasal Wash,100,1,0,1,0,0,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,2,Nasal Wash,100,1,0,0,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,2,Nasal Wash,100,0,1,0,0,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,2,Nasal Wash,100,0,0,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,2,Nasal Wash,100,0,0,1,0,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,2,Nasal Wash,100,0,0,1,0,0,0,0,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,2,Nasal Wash,100,0,0,0,1,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,2,Nasal Wash,100,0,0,0,0,1,1,1,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,2,Nasal Wash,100,0,0,0,0,1,0,0,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,2,Nasal Wash,100,0,0,0,0,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,2,Nasal Wash,100,0,0,0,0,0,0,0,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,2,Nasal Wash,100,1,1,1,0,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,2,Nasal Wash,100,1,1,1,0,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,2,Nasal Wash,100,1,1,1,0,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,2,Nasal Wash,100,1,1,1,0,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,2,Nasal Wash,100,1,1,1,0,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,2,Nasal Wash,100,1,1,1,0,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,2,Nasal Wash,100,1,1,1,0,1,0,1,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,2,Nasal Wash,100,1,1,1,0,1,0,1,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,2,Nasal Wash,100,1,1,1,0,0,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,2,Nasal Wash,100,1,1,0,1,0,0,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,2,Nasal Wash,100,1,1,0,0,0,1,1,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,2,Nasal Wash,100,1,1,0,0,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,2,Nasal Wash,100,1,0,0,,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,2,Nasal Wash,100,1,0,0,0,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,2,Nasal Wash,100,0,1,1,1,1,1,1,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,2,Nasal Wash,100,0,1,1,,0,0,0,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,2,Nasal Wash,100,0,1,1,0,0,0,0,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,2,Nasal Wash,100,0,0,1,0,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,2,Nasal Wash,100,0,0,0,1,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,2,Nasal Wash,100,0,0,0,0,0,0,1,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,1,1,1,1,1,1,0,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,1,1,1,1,1,0,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,1,1,1,1,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,1,1,1,0,1,0,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,1,0,0,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,0,1,0,1,1,0,0,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,0,1,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,0,0,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,0,0,1,1,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,0,0,0,0,0,0,0,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,2,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,1,1,1,0,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,1,1,1,0,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,1,1,1,0,0,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,1,1,0,1,0,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,1,1,0,1,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,1,1,0,1,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,1,1,0,0,0,0,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,1,0,1,0,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,1,0,0,1,0,1,1,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,1,0,0,0,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,0,1,1,1,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,0,1,1,1,0,0,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,0,1,1,0,0,0,0,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,0,1,0,1,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,0,0,1,1,1,0,0,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,0,0,1,0,1,0,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,0,0,0,1,1,0,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,0,0,0,1,0,0,1,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,0,0,0,1,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,0,0,0,1,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,2,Nasal Wash,100,0,0,0,0,0,1,1,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,1,1,1,1,1,1,0,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,1,1,1,1,1,0,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,1,1,1,1,1,0,0,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,1,1,1,1,0,0,0,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,1,1,1,0,1,1,1,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,1,1,0,1,1,1,1,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,1,0,1,1,1,1,0,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,1,0,1,0,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,1,0,0,1,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,1,0,0,0,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,0,1,1,1,1,0,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,0,1,1,1,1,0,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,0,1,1,1,1,0,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,0,1,1,0,1,1,1,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,0,1,1,0,1,1,0,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,0,1,1,0,0,0,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,0,1,0,1,0,0,1,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,0,1,0,0,0,0,1,0
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,0,0,1,1,1,0,1,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,0,0,1,1,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 1,GP1,GFHK99,3,Nasal Wash,100,0,0,1,0,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,1,1,1,1,0,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,1,1,1,1,0,0,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,1,1,1,1,0,0,1,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,1,1,1,0,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,1,1,0,1,1,0,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,1,1,0,0,0,0,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,1,0,1,1,0,1,1,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,1,0,1,1,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,1,0,0,0,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,0,1,1,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,0,0,1,1,1,0,1,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,0,0,1,1,1,0,0,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,0,0,1,1,0,0,0,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,0,0,1,0,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,0,0,0,1,1,0,0,1
+KG3,Guinea Pig,Guinea Pig 2,GP2,GFHK99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,1,1,0,0,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,1,0,0,1,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,1,0,0,1,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,1,0,0,1,0,0,0,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,1,0,0,0,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,1,0,0,0,1,1,0,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,1,0,0,0,1,0,1,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,1,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,0,1,1,0,0,1,1,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,0,1,0,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,0,1,0,1,0,1,1,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,0,1,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,0,1,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,0,0,1,1,0,1,1,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,0,0,1,0,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,0,0,0,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,0,0,0,1,0,1,1,1
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,0,0,0,1,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,0,0,0,1,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 3,GP3,GFHK99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,3,Nasal Wash,100,1,1,1,1,1,0,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,3,Nasal Wash,100,1,1,1,1,0,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,3,Nasal Wash,100,1,1,1,1,0,0,0,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,3,Nasal Wash,100,1,1,1,0,1,1,0,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,3,Nasal Wash,100,1,1,1,0,0,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,3,Nasal Wash,100,1,1,1,0,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,3,Nasal Wash,100,1,1,0,0,1,0,0,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,3,Nasal Wash,100,1,0,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,3,Nasal Wash,100,1,0,1,1,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,3,Nasal Wash,100,1,0,1,1,0,0,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,3,Nasal Wash,100,1,0,1,1,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,3,Nasal Wash,100,1,0,1,0,1,0,1,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,3,Nasal Wash,100,1,0,0,0,0,1,1,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,3,Nasal Wash,100,0,1,1,1,0,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,3,Nasal Wash,100,0,1,1,0,0,1,1,1
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,3,Nasal Wash,100,0,0,0,0,1,1,1,0
+KG3,Guinea Pig,Guinea Pig 4,GP4,GFHK99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,1,1,1,1,1,0,0,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,1,1,1,1,1,0,0,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,1,1,1,1,1,0,0,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,1,1,1,0,1,0,0,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,1,1,0,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,1,1,0,1,1,0,1,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,1,1,0,1,0,0,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,1,0,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,1,0,1,1,0,0,0,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,1,0,1,0,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,1,0,0,1,0,1,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,0,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,0,1,1,1,0,0,1,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,0,1,0,1,1,1,0,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,0,0,1,0,1,1,0,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,0,0,0,1,1,0,1,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,0,0,0,1,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,0,0,0,0,1,0,0,0
+KG3,Guinea Pig,Guinea Pig 5,GP5,GFHK99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,1,1,1,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,1,1,1,1,1,1,1,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,1,1,1,0,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,1,0,0,1,0,0,1,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,1,0,0,0,1,0,0,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,1,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,0,1,1,0,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,0,1,0,0,1,1,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,0,1,0,0,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,0,1,0,0,0,1,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,0,1,0,0,0,0,1,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,0,0,1,1,0,1,0,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,0,0,1,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,0,0,0,1,1,1,1,1
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG3,Guinea Pig,Guinea Pig 6,GP6,GFHK99,3,Nasal Wash,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,1,1,1,1,1,0,1,1
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,0,0,1,0,0,1,1,0
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,0,0,0,0,1,0,1,0
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,1,1,0,1,0,1,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 20,Q20,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,
+KG1,Quail,Quail 20,Q20,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,0
+KG1,Quail,Quail 20,Q20,GFHK99,1,Trachea,100,1,1,1,1,,1,1,0
+KG1,Quail,Quail 20,Q20,GFHK99,1,Trachea,100,1,,1,1,1,0,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,1,Trachea,100,1,1,1,0,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,1,Trachea,100,1,1,0,1,1,0,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,1,Trachea,100,1,0,0,1,0,1,0,1
+KG1,Quail,Quail 20,Q20,GFHK99,1,Trachea,100,,1,1,1,1,0,1,1
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,1,0,1,0,0,1,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,1,0,0,1,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,1,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,1,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,0,1,1,1,0,0,1,0
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,0,1,0,1,1,1,1,1
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,0,1,0,1,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,0,0,0,1,0,0,1,0
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,0,0,0,0,1,1,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,0,0,0,0,,0,,0
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,0,0,0,0,0,1,0,1
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,1,Trachea,100,0,0,,0,0,0,0,0
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,1,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,1,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,1,1,1,1,0,0,1,0
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,1,1,0,1,0,1,1,0
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,1,1,0,1,0,0,1,1
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,1,1,0,0,0,0,0,0
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,1,0,0,0,0,0,0,0
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,0,1,0,1,0,0,0,1
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,0,,0,0,0,0,1,0
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,0,1,0,0,0,0,0,0
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,1
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 41,Q41,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,1,1,1,1,1,0,0,1
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,1,0,0,1,0,0,0,0
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,1,0,0,0,0,0,0,1
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,1,0,0,0,0,0,0,0
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,0,1,0,1,1,0,1,0
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,0,1,0,1,1,0,0,1
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,0,1,0,0,1,1,0,1
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,0,1,0,0,0,0,0,0
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,0,0,1,1,0,1,0,1
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,0,0,1,0,0,0,0,1
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,0,0,1,0,0,0,0,0
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,0,0,0,1,0,0,0,0
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,0,0,0,1,0,0,0,0
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,0,0,0,0,1,0,0,0
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 42,Q42,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 44,Q44,GFHK99,1,Trachea,100000,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 44,Q44,GFHK99,1,Trachea,100000,1,1,1,1,0,1,1,1
+KG1,Quail,Quail 44,Q44,GFHK99,1,Trachea,100000,1,1,0,1,1,1,1,1
+KG1,Quail,Quail 44,Q44,GFHK99,1,Trachea,100000,1,0,0,1,1,1,1,1
+KG1,Quail,Quail 44,Q44,GFHK99,1,Trachea,100000,1,0,0,1,1,1,1,1
+KG1,Quail,Quail 44,Q44,GFHK99,1,Trachea,100000,1,0,0,,0,0,0,0
+KG1,Quail,Quail 44,Q44,GFHK99,1,Trachea,100000,0,1,1,0,1,1,1,1
+KG1,Quail,Quail 44,Q44,GFHK99,1,Trachea,100000,0,1,1,0,0,1,0,
+KG1,Quail,Quail 44,Q44,GFHK99,1,Trachea,100000,0,1,0,0,0,0,1,0
+KG1,Quail,Quail 44,Q44,GFHK99,1,Trachea,100000,0,0,1,1,,1,0,1
+KG1,Quail,Quail 44,Q44,GFHK99,1,Trachea,100000,0,0,1,0,0,1,0,1
+KG1,Quail,Quail 44,Q44,GFHK99,1,Trachea,100000,0,0,0,1,1,0,0,1
+KG1,Quail,Quail 44,Q44,GFHK99,1,Trachea,100000,0,0,0,1,0,1,0,1
+KG1,Quail,Quail 44,Q44,GFHK99,1,Trachea,100000,0,0,0,0,1,0,0,1
+KG1,Quail,Quail 44,Q44,GFHK99,1,Trachea,100000,0,0,0,0,1,0,0,1
+KG1,Quail,Quail 44,Q44,GFHK99,1,Trachea,100000,0,0,0,0,0,1,1,1
+KG1,Quail,Quail 44,Q44,GFHK99,1,Trachea,100000,0,0,0,0,0,0,1,0
+KG1,Quail,Quail 44,Q44,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 44,Q44,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,1,1,1,1,1,0,1,1
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,1,1,1,1,0,1,0,1
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,1,1,0,1,1,1,1,1
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,1,0,1,1,1,1,0,1
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,1,0,1,1,1,0,1,0
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,1,0,0,1,0,1,1,0
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,1,0,0,0,0,0,0,0
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,0,1,0,1,1,1,0,1
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,0,1,0,0,0,0,1,0
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,0,0,0,1,1,1,1,1
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,0,0,0,1,0,0,0,0
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 45,Q45,GFHK99,1,Trachea,100000,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 19,Q19,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 19,Q19,GFHK99,3,Trachea,100,1,0,1,1,0,1,1,1
+KG1,Quail,Quail 19,Q19,GFHK99,3,Trachea,100,1,1,1,0,1,0,0,1
+KG1,Quail,Quail 19,Q19,GFHK99,3,Trachea,100,0,1,1,0,0,0,0,1
+KG1,Quail,Quail 19,Q19,GFHK99,3,Trachea,100,1,0,1,0,1,0,1,0
+KG1,Quail,Quail 19,Q19,GFHK99,3,Trachea,100,0,0,0,0,0,0,1,0
+KG1,Quail,Quail 19,Q19,GFHK99,3,Trachea,100,0,1,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 20,Q20,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,
+KG1,Quail,Quail 20,Q20,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,0
+KG1,Quail,Quail 20,Q20,GFHK99,3,Trachea,100,1,1,1,1,,1,1,0
+KG1,Quail,Quail 20,Q20,GFHK99,3,Trachea,100,1,1,1,1,1,0,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,3,Trachea,100,1,1,1,0,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,3,Trachea,100,1,1,0,1,1,0,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,3,Trachea,100,1,0,0,1,0,1,0,1
+KG1,Quail,Quail 20,Q20,GFHK99,3,Trachea,100,,1,1,1,1,0,1,0
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,1,0,1,1,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,1,0,1,0,0,0,0,1
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,1,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,0,1,1,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,0,1,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,0,0,0,1,0,0,1,0
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,0,0,0,1,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,0,0,0,1,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,0,0,0,1,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,0,0,0,0,1,0,1,1
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,0,0,0,0,0,0,,0
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,1,1,1,,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 22,Q22,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,3,Trachea,100,1,,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,3,Trachea,100,1,1,0,0,0,1,0,0
+KG1,Quail,Quail 23,Q23,GFHK99,3,Trachea,100,0,1,0,0,0,1,1,0
+KG1,Quail,Quail 23,Q23,GFHK99,3,Trachea,100,0,1,0,0,0,1,0,0
+KG1,Quail,Quail 23,Q23,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 23,Q23,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 23,Q23,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 23,Q23,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 23,Q23,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 23,Q23,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 23,Q23,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 23,Q23,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,1,1,1,1,1,1,1,0
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,0,0,0,0,0,1,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,0,0,0,0,0,0,1,0
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,1
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,3,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,1,0,1
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,0,1,0
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 19,Q19,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,1,1,1,1,0,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,1,1,1,0,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,1,1,0,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,1,1,0,0,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,1,1,0,0,0,0,0,0
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,1,0,0,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,0,1,1,1,1,1,1,1
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,0,1,0,0,1,1,1,0
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,0,0,0,1,0,0,0,1
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,0,0,0,1,0,0,0,0
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 20,Q20,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,5,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 21,Q21,GFHK99,5,Trachea,100,1,1,1,1,1,1,1,1
+KG1,Quail,Quail 21,Q21,GFHK99,5,Trachea,100,1,1,0,1,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,5,Trachea,100,1,0,1,1,0,1,1,1
+KG1,Quail,Quail 21,Q21,GFHK99,5,Trachea,100,0,1,1,1,1,1,1,1
+KG1,Quail,Quail 21,Q21,GFHK99,5,Trachea,100,0,1,1,1,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,5,Trachea,100,0,1,0,1,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,5,Trachea,100,0,1,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,5,Trachea,100,0,,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,5,Trachea,100,0,0,1,1,0,0,1,1
+KG1,Quail,Quail 21,Q21,GFHK99,5,Trachea,100,0,0,0,1,1,0,1,0
+KG1,Quail,Quail 21,Q21,GFHK99,5,Trachea,100,0,0,0,1,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,5,Trachea,100,0,0,0,1,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 21,Q21,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 23,Q23,GFHK99,5,Trachea,100,1,1,1,1,1,0,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,5,Trachea,100,1,1,1,1,1,0,0,
+KG1,Quail,Quail 23,Q23,GFHK99,5,Trachea,100,1,1,1,1,0,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,5,Trachea,100,1,1,1,1,0,1,1,0
+KG1,Quail,Quail 23,Q23,GFHK99,5,Trachea,100,1,1,0,0,1,1,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,5,Trachea,100,1,0,1,1,0,0,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,5,Trachea,100,1,0,0,1,1,1,1,
+KG1,Quail,Quail 23,Q23,GFHK99,5,Trachea,100,1,0,0,1,0,0,0,0
+KG1,Quail,Quail 23,Q23,GFHK99,5,Trachea,100,1,0,0,0,1,0,0,0
+KG1,Quail,Quail 23,Q23,GFHK99,5,Trachea,100,0,1,0,,0,0,0,0
+KG1,Quail,Quail 23,Q23,GFHK99,5,Trachea,100,0,1,0,0,0,0,1,0
+KG1,Quail,Quail 23,Q23,GFHK99,5,Trachea,100,0,0,1,1,1,1,0,1
+KG1,Quail,Quail 23,Q23,GFHK99,5,Trachea,100,0,0,1,1,1,1,0,1
+KG1,Quail,Quail 23,Q23,GFHK99,5,Trachea,100,0,0,1,1,1,1,0,0
+KG1,Quail,Quail 23,Q23,GFHK99,5,Trachea,100,0,0,1,1,0,1,0,0
+KG1,Quail,Quail 23,Q23,GFHK99,5,Trachea,100,0,0,1,0,1,0,1,0
+KG1,Quail,Quail 23,Q23,GFHK99,5,Trachea,100,0,0,1,0,0,0,0,0
+KG1,Quail,Quail 23,Q23,GFHK99,5,Trachea,100,0,0,0,1,1,0,0,0
+KG1,Quail,Quail 23,Q23,GFHK99,5,Trachea,100,0,0,0,0,1,0,1,1
+KG1,Quail,Quail 23,Q23,GFHK99,5,Trachea,100,0,0,0,0,1,0,1,1
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,1,1,1,0,1,1,1
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,1,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,0,0,,1,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,0,0,,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,0,0,0,1,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,0,0,0,0,0,1,0
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,1
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0
+KG1,Quail,Quail 24,Q24,GFHK99,5,Trachea,100,0,0,0,0,0,0,0,0

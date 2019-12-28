@@ -1,0 +1,2797 @@
+---
+title: "Phipps et al. GFHK99 Multiplicity Dependence Notebook"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r Housekeeping}
+require(reshape2)
+require(ggplot2)
+require(scales)
+require(ggthemes)
+require(ggridges)
+require(latex2exp)
+require(lme4)
+require(lmerTest)
+require(relaimpo)
+require(tidyverse)
+require(pvclust)
+require(dendextend)
+
+
+#If the package "cellrangerRkit" has not been installed, use the following lines to install it from GitHub
+
+# install.packages("devtools")
+# install.packages("roxygen2")
+# library(devtools)
+# library(roxygen2)
+# devtools::install_github("hb-gitified/cellrangerRkit", build_vignettes = FALSE)
+
+require(cellrangerRkit)
+
+# Before running, change the Proj.Home variable below to the file path of the parent folder containing Notebook.Rmd.
+Proj.Home = "/Users/jacobn07/Documents/GFHK99_Multiplicity"
+
+setwd(Proj.Home)
+
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE, fig.margin = TRUE)
+theme_set(theme_grey())
+
+g_legend<-function(a.gplot){
+  tmp <- ggplot_gtable(ggplot_build(a.gplot))
+  leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
+  legend <- tmp$grobs[[leg]]
+  legend
+}
+
+```
+
+
+```{r Figure 1}
+
+Genotype_Convert = function(Virions) {
+  
+  PB2.Index = which(colnames(Virions) == "PB2")
+  NS.Index = which(colnames(Virions) == "NS")
+  Virion.Table = Virions[,PB2.Index:NS.Index]
+  
+  Genotype = rep(x = 0, times = nrow(Virion.Table))
+  
+  for (i in 0:7) {
+    Genotype = Genotype + (2^i) * Virion.Table[,i+1]
+  }
+  Genotype
+}
+
+Simpson_Diversity = function(Genotypes) {
+  P = as.numeric(table(Genotypes))
+  N = sum(P)
+  P = P / sum(P)
+  
+  1 / sum(P * P) #2nd Order Hill Number (N2)
+  
+}
+
+Pois_Exp = function(HA) {
+  
+  lam = -log(1 - HA)
+  
+  Dual = rep(0,length(HA))
+  
+  for (i in 1:length(HA)) {
+    Dual[i] = sum(dpois(x = 1:20, lambda = lam[i]) * (1 - 2 ^ (1 - 1:20)))
+  }
+  
+  Dual
+}
+
+
+
+set.seed(666)
+
+Flu.Segments = c("PB2","PB1","PA","HA","NP","NA","M","NS")
+PP1_Reassortment = read.csv(file = file.path(Proj.Home,"Data","PP1_Reassortment.csv"), header = TRUE)
+Exp_Dual_HA = read.csv(file = file.path(Proj.Home,"Data","Poisson_DualHA_Exp.csv"), header = TRUE)
+
+# 1A: dual-HA+ vs. HA+ ----
+
+KP9 = read.csv(file = file.path(Proj.Home,"Data","1A_Data.csv"), header = TRUE) %>%
+ dplyr::mutate(Expressing_HA = Expressing_HA / 100,
+         Strain = Strain %>% factor(levels = c("GFHK99 in MDCK",
+                                               "GFHK99 in DF-1",
+                                               "NL09 in MDCK",
+                                               "MaMN99 in MDCK")),
+         Dual_HA = Dual_HA / 100)
+ggplot() +
+  geom_abline(slope = 1,
+              color = "dimgray",
+              lty = 3,
+              lwd = 1) +
+  geom_line(data = Exp_Dual_HA, 
+            aes(x = pHA * 100, 
+                y = pDual * 100), 
+            color = "dimgray",
+            lty = 2, 
+            lwd = 1) +
+  annotate("text",x = 80, y = 95,size = 6,label = TeX("\\textbf{x = y}"), color = "dimgray") +
+  annotate("text",x = 80, y = 5,size = 6,label = TeX("\\textbf{Prediction}"), color = "dimgray") +
+  geom_point(data = KP9,
+             aes(x = Expressing_HA * 100,
+                 y = Dual_HA * 100,
+                 color = Strain)) +
+  geom_smooth(data = KP9,
+              aes(x = Expressing_HA * 100,
+                  y = Dual_HA * 100,
+                  color = Strain,
+                  fill = Strain),
+              method = "rlm",
+              se = FALSE,
+              formula = y ~ 0 + I(Pois_Exp(x / 100)) + x) +
+  labs(x =  expression(bold("% cells HA"^"+")),
+       y =  expression(bold("% cells dual-HA"^"+")),
+       color = "Virus:cell",
+       fill = "Virus:cell") +
+  scale_color_manual(values = c("GFHK99 in MDCK" = "skyblue",
+                                "MaMN99 in MDCK" = "green3",
+                                "NL09 in MDCK" = "goldenrod",
+                                "GFHK99 in DF-1" = "deeppink3")) +
+  scale_x_continuous(breaks = c(0,25,50,75,100)) +
+  scale_y_continuous(breaks = c(0,25,50,75,100)) +
+  coord_cartesian(xlim = c(0,100), ylim = c(0,100)) +
+  theme(text=element_text(size=14,face="bold"),
+        strip.text.x=element_text(size=rel(1.5),margin=margin(0,0,3,0)),
+        strip.text.y=element_text(size=rel(1.5),margin=margin(0,0,0,0),angle=0),
+        strip.background = element_blank(),
+        plot.title = element_text(size=rel(1.5)),
+        axis.text.x=element_text(angle=0,vjust=0,size=rel(1.5),color = "black"),
+        axis.text.y=element_text(size=rel(1.5),color = "black"),
+        axis.line.x = element_line(size=0.5),
+        axis.line.y = element_line(size=0.5),
+        axis.ticks.x = element_line(size=0.5, color = "black"),
+        axis.ticks.y = element_line(size = 0.5, color = "black"),
+        axis.title.y = element_text(size=rel(1.2),color = "black"),
+        axis.title.x = element_text(size=rel(1.2)),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        legend.position = "NA")
+
+ggsave('Plots/1A_HA_Co_Expression.pdf',
+       width = 4,
+       height = 4,
+       unit = "in")
+
+Legend.1A = ggplot() +
+  geom_abline(slope = 1,
+              color = "dimgray",
+              lty = 3,
+              lwd = 1) +
+  geom_line(data = Exp_Dual_HA, 
+            aes(x = pHA * 100, 
+                y = pDual * 100), 
+            color = "dimgray",
+            lty = 2, 
+            lwd = 1) +
+  annotate("text",x = 80, y = 95,size = 6,label = TeX("\\textbf{x = y}"), color = "dimgray") +
+  annotate("text",x = 80, y = 5,size = 6,label = TeX("\\textbf{Prediction}"), color = "dimgray") +
+  geom_point(data = KP9,
+             aes(x = Expressing_HA * 100,
+                 y = Dual_HA * 100,
+                 color = Strain)) +
+  geom_smooth(data = KP9,
+              aes(x = Expressing_HA * 100,
+                  y = Dual_HA * 100,
+                  color = Strain,
+                  fill = Strain),
+              method = "rlm",
+              se = FALSE,
+              formula = y ~ 0 + I(Pois_Exp(x / 100)) + x) +
+  labs(x =  expression(bold("% cells HA"^"+")),
+       y =  expression(bold("% cells dual-HA"^"+")),
+       color = "Virus:cell",
+       fill = "Virus:cell") +
+  scale_color_manual(values = c("GFHK99 in MDCK" = "skyblue",
+                                "MaMN99 in MDCK" = "green3",
+                                "NL09 in MDCK" = "goldenrod",
+                                "GFHK99 in DF-1" = "deeppink3")) +
+  scale_x_continuous(breaks = c(0,25,50,75,100)) +
+  scale_y_continuous(breaks = c(0,25,50,75,100)) +
+  coord_cartesian(xlim = c(0,100), ylim = c(0,100)) +
+  theme(text=element_text(size=14,face="bold"),
+        strip.text.x=element_text(size=rel(1.5),margin=margin(0,0,3,0)),
+        strip.text.y=element_text(size=rel(1.5),margin=margin(0,0,0,0),angle=0),
+        strip.background = element_blank(),
+        plot.title = element_text(size=rel(1.5)),
+        axis.text.x=element_text(angle=0,vjust=0,size=rel(1.5),color = "black"),
+        axis.text.y=element_text(size=rel(1.5),color = "black"),
+        axis.line.x = element_line(size=0.5),
+        axis.line.y = element_line(size=0.5),
+        axis.ticks.x = element_line(size=0.5, color = "black"),
+        axis.ticks.y = element_line(size = 0.5, color = "black"),
+        axis.title.y = element_text(size=rel(1.2),color = "black"),
+        axis.title.x = element_text(size=rel(1.2)),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank())
+
+ggsave(g_legend(Legend.1A),
+       file = "Plots/Legend_1A.pdf",
+       height = 5,
+       width = 5,
+       units = "in")
+
+# 1B: Linearity of % dual-HA+ vs. % HA+ ----
+
+m1 = lm(formula = Dual_HA ~ 0 + Strain:HA_2 + Strain:HA,
+        data = KP9 %>%dplyr::mutate(HA = Expressing_HA, HA_2 = Pois_Exp(HA))) %>% summary
+s1 = coefficients(m1)
+
+df1 = matrix(nrow = KP9$Strain %>% unique %>% length,
+             ncol = 3,
+             data = 0)
+
+df1[,1] = (names(s1[,1]) %>% str_replace("Strain","") %>% str_replace(":HA","") %>% str_replace("_2",""))[1:nrow(df1)]
+df1[,2] = as.numeric(s1[1:(nrow(df1)),1])
+df1[,3] = as.numeric(s1[(nrow(df1) + 1):(nrow(s1)),1])
+df1 = df1 %>% data.frame
+
+colnames(df1) = c("Strain","Pois","Linear")
+
+df2 = df1 %>%
+ dplyr::mutate(Pois = Pois %>% as.character %>% as.numeric,
+         Linear = Linear %>% as.character %>% as.numeric,
+         Pois_Rel = abs(Pois) / (abs(Pois) + abs(Linear)),
+         Lin_Rel = abs(Linear) / (abs(Pois) + abs(Linear)),
+         Perc_WF10_Lin = (Linear - min(Linear)) / max(Linear - min(Linear)),
+         Perc_MN99_Quad = (Pois - min(Pois)) / max(Pois - min(Pois)),
+         Strain = factor(Strain, levels = c("GFHK99 in MDCK",
+                                            "GFHK99 in DF-1",
+                                            "NL09 in MDCK",
+                                            "MaMN99 in MDCK") %>% rev))
+
+ggplot() +
+  geom_bar(data = df2,
+           aes(x = Strain,
+               y = Lin_Rel * 100,
+               fill = Strain),
+           color = "black",
+           stat = "identity") +
+  scale_fill_manual(values = c("GFHK99 in MDCK" = "skyblue",
+                               "MaMN99 in MDCK" = "green3",
+                               "GFHK99 in DF-1" = "deeppink3",
+                               "NL09 in MDCK" = "goldenrod"),
+                    guide = FALSE) +
+  labs(y = "% linearity",
+       x = NULL) +
+  coord_flip() +
+  scale_y_continuous(limits = c(0,100)) +
+  theme(text=element_text(size=14,face="bold"),
+        strip.text.x=element_text(size=rel(1.5),margin=margin(0,0,3,0)),
+        strip.text.y=element_text(size=rel(1.5),margin=margin(0,0,0,0),angle=0),
+        strip.background = element_blank(),
+        plot.title = element_text(size=rel(1.5)),
+        axis.text.x=element_text(angle = 0 ,vjust=0.5,size=rel(1.5),color = "black"),
+        axis.text.y=element_text(size=rel(1.5),color = "black"),
+        axis.line.x = element_line(size=0.5),
+        axis.line.y = element_line(size=0.5),
+        axis.ticks.x = element_line(size=0.5, color = "black"),
+        axis.ticks.y = element_line(size = 0.5, color = "black"),
+        axis.title.y = element_text(size=rel(1.2),color = "black"),
+        axis.title.x = element_text(size=rel(1.2)),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        legend.position = "NA")
+
+ggsave('Plots/1B_Percent_Linear.pdf',
+       width = 5,
+       height = 4,
+       unit = "in")
+
+# 1C: reassortment vs. HA+, by Virus ----
+
+KP4 = read.csv(file = file.path(Proj.Home,"Data","1C_Data.csv"), header = TRUE) %>%
+  dplyr::mutate(Cell = Cell %>% str_replace("DF1","DF-1"),
+         Virus_Cell = str_c(Virus," in ", Cell),
+         Virus_Cell = Virus_Cell %>% factor(levels = c("GFHK99 in MDCK",
+                                                       "GFHK99 in DF-1",
+                                                       "NL09 in MDCK",
+                                                       "MaMN99 in MDCK"))) %>%
+  na.omit
+
+m2 = lm(formula = Reassortment ~ 0 + Virus_Cell:log(Expressing_HA) + Virus_Cell,
+        data = KP4)
+
+s2 = coefficients(m2)
+
+Base.Plot = 
+  ggplot() +
+  theme(text=element_text(size=14,face="bold"),
+        strip.text.x=element_text(size=rel(1.5),margin=margin(0,0,3,0)),
+        strip.text.y=element_text(size=rel(1.5),margin=margin(0,0,0,0),angle=0),
+        strip.background = element_blank(),
+        plot.title = element_text(size=rel(1.5)),
+        axis.text.x=element_text(angle=0,vjust=0,size=rel(1.5),color = "black"),
+        axis.text.y=element_text(size=rel(1.5),color = "black"),
+        axis.line.x = element_line(size=0.5),
+        axis.line.y = element_line(size=0.5),
+        axis.ticks.x = element_line(size=0.5, color = "black"),
+        axis.ticks.y = element_line(size = 0.5, color = "black"),
+        axis.title.y = element_text(size=rel(1.2),color = "black"),
+        axis.title.x = element_text(size=rel(1.2)),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        legend.position = "NA")
+
+Base.Plot +
+  geom_point(data = KP4,
+             aes(x = Expressing_HA,
+                 y = Reassortment,
+                 color = Virus_Cell),
+             size = 2) +
+  geom_smooth(data = KP4,
+              aes(x = Expressing_HA,
+                  y = Reassortment,
+                  color = Virus_Cell),
+              method = "lm",
+              se = FALSE,
+              formula = y ~ log(x)) +
+  geom_line(data = PP1_Reassortment, 
+            aes(x = Expressing.HA, 
+                y = Reassortant.Percent), 
+            color = "dimgray",
+            lty = 2, 
+            lwd = 1) +
+  scale_y_continuous(limits = c(0,100)) +
+  scale_color_manual(values = c("GFHK99 in MDCK" = "skyblue",
+                                "GFHK99 in DF-1" = "deeppink3",
+                                "MaMN99 in MDCK" = "green3",
+                                "NL09 in MDCK" = "goldenrod")) +
+  annotate("text",x = 75, y = 5,size = 6,label = TeX("\\textbf{Prediction}"), color = "dimgray") +
+  labs(x=expression(bold("% cells HA"^"+")),
+       y="% reassortment",
+       color = "Virus:cell",
+       fill = "Virus:cell")
+
+ggsave('Plots/1C_Reassortment_v_HA.pdf',
+       width = 4,
+       height = 4,
+       unit = "in")
+
+# 1D: Clustering ----
+
+m2 = lm(formula = Reassortment ~ 0 + Virus_Cell + Virus_Cell:log(Expressing_HA),
+        data = KP4)
+s2 = coefficients(m2)
+
+df1$Reassort_b0 = s2[1:(length(s2) / 2)]
+df1$Reassort_b1 = s2[(length(s2) / 2 + 1):length(s2)]
+virus_cell = df1$Strain
+df1 = df1[,2:ncol(df1)]
+
+rownames(df1) = virus_cell
+df2 = df1
+
+rownames(df2) = virus_cell
+
+d = dist(df2, method = "euclidean", diag = TRUE) %>% as.matrix
+result = pvclust(d, method.hclust = "ward",
+                 method.dist = "correlation")
+
+result %>% as.dendrogram
+
+ggd1 = result %>% as.dendrogram %>%
+  rotate(virus_cell %>% rev) %>% 
+  set("labels_colors",c("skyblue","deeppink3","goldenrod","green3") %>% rev) %>%
+  set("leaves_col",c("skyblue","deeppink3","goldenrod","green3") %>% rev) %>%
+  set("labels_cex",1) %>%
+  set("leaves_pch",16) %>%
+  as.ggdend
+
+Clusters = cutree(result %>% as.dendrogram %>%
+                    rotate(virus_cell),
+                  k = 2) %>% rev
+
+Node.BP = cbind(result$hclust$height,result$edges$au, result$edges$bp) %>% data.frame
+colnames(Node.BP) = c("y","au","bp")
+
+Node.Support = full_join(ggd1$nodes %>% filter(y > 0),Node.BP) %>%
+  dplyr::mutate(AU = (au * 100) %>% round(0) %>% as.character)
+
+ggd1$labels$cluster = Clusters
+
+ggd1$labels$y = ggd1$labels$y - 0.25
+xmin = min(c(ggd1$segments$x,ggd1$segments$xend))
+xmax = max(c(ggd1$segments$x,ggd1$segments$xend))
+ymin = min(c(ggd1$segments$y,ggd1$segments$yend))
+ymax = max(c(ggd1$segments$y,ggd1$segments$yend))
+
+Rect_xmin = ggd1$labels %>% 
+  group_by(cluster) %>% dplyr::summarise(xmin = min(x),
+                                         xmax = max(x))
+
+Rect_ymax = rev(sort(ggd1$nodes$y))[2]
+Rect_ymin = ymin
+ggd1$nodes
+ggplot(ggd1, horiz = TRUE) + 
+  theme_dendro() + 
+  geom_point(data = ggd1$nodes %>% filter(leaf == TRUE), aes(x = x,
+                                                             y = y),
+             size = 3,
+             stroke = 1,
+             pch = 21) +
+  theme(text = element_text(size = 16, face = "bold")) +
+  geom_point(data = Node.Support %>% filter(au >= 0.95),
+             aes(x = x,
+                 y = y),
+             pch = 21,
+             stroke = 1,
+             fill = "yellow",
+             color = "black",
+             size = 2) +
+  coord_flip(xlim = c(xmin - .1,xmax + .1),
+             ylim = c(ymin - 2.5,ymax)) +
+  geom_rect(data = Rect_xmin,
+            aes(xmin = xmin - .2,
+                xmax = xmax + .2),
+            ymin = Rect_ymin - 1,
+            ymax = Rect_ymax + 2.5,
+            fill = NA,
+            color = "dimgray",
+            lwd = 1.2,
+            lty = 8)
+
+ggsave(file = "Plots/1D_Cluster.pdf",
+       height = 4,
+       width = 4,
+       units = "in")
+
+# 1E: Reassortment/Diversity in Guinea Pigs ---- 
+
+KG = read.csv(file = file.path(Proj.Home,"Data","1F_1G_Data.csv"), header = TRUE) %>%
+  na.omit %>% #Remove rows where some wells' genes were uncoded
+ dplyr::mutate(Day = as.numeric(Day),
+         Dose = factor(Dose),
+         Short.ID = interaction(Short.ID,Expt),
+         Species = factor(Species, levels = c("Guinea Pig","Quail")),
+         RT = recode(Organ,"Nasal Swab" = "URT",
+                     "Nasal Wash" = "URT",
+                     "Trachea" = "URT","Lung" = "LRT") %>% 
+           factor(levels = c("URT","LRT"))) ; KG = KG %>% 
+ dplyr::mutate(Genotype = Genotype_Convert(Virions = KG))
+
+KG.Summary = KG %>%
+  group_by(Short.ID,Day,Organ,Dose,Species,Virus,RT,Expt) %>% 
+  dplyr::summarise(Simpson = Simpson_Diversity(Genotype))
+
+KG.Plot = ggplot() +
+  theme(text=element_text(size=14,face="bold"),
+        strip.text.x=element_text(size=rel(1.5),margin=margin(0,0,3,0)),
+        strip.text.y=element_text(size=rel(1.5),margin=margin(0,0,0,0),angle=0),
+        strip.background = element_blank(),
+        plot.title = element_text(size=rel(1.5)),
+        axis.text.x=element_text(angle=0,vjust=0,size=rel(1.5),color = "black"),
+        axis.text.y=element_text(size=rel(1.5),color = "black"),
+        axis.line.x = element_line(size=0.5),
+        axis.line.y = element_line(size=0.5),
+        axis.ticks.x = element_line(size=0.5, color = "black"),
+        axis.ticks.y = element_line(size = 0.5, color = "black"),
+        axis.title.y = element_text(size=rel(1.2),color = "black"),
+        axis.title.x = element_text(size=rel(1.2)),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank())
+
+KG.Plot +
+  geom_jitter(data = KG.Summary %>% 
+                filter(Virus %in% c("GFHK99","MaMN99","NL09"), Species == "Guinea Pig", Dose == 100) %>% ungroup %>%
+               dplyr::mutate(Virus = Virus %>% str_replace("WF10","GFHK99")),
+              aes(x = Day,
+                  y = Simpson,
+                  color = Virus)) +
+  geom_smooth(data = KG.Summary %>% filter(Virus %in% c("GFHK99","MaMN99","NL09"), Species == "Guinea Pig", Dose == 100) %>% ungroup %>%
+               dplyr::mutate(Virus = Virus %>% str_replace("WF10","GFHK99")),
+              aes(x = Day,
+                  y = Simpson,
+                  color = Virus,
+                  fill = Virus,
+                  group = Virus),
+              method = "rlm") +
+  labs(x = "Time post-inoculation (days)",
+       y = TeX("\\textbf{Effective diversity (Hill's $\\N_2$)}")) +
+  labs(color = "Virus",
+       fill = "Virus") +
+  scale_y_continuous(limits = c(0,20), breaks = c(0,5,10,15,20)) +
+  scale_x_continuous(breaks = 0:4) +
+  scale_color_manual(values = c("GFHK99" = "skyblue",
+                                "MaMN99" = "green3",
+                                "NL09" = "goldenrod")) +
+  scale_fill_manual(values = c("GFHK99" = "skyblue",
+                               "MaMN99" = "green3",
+                               "NL09" = "goldenrod")) +
+  theme(legend.position = "NA")
+
+ggsave('Plots/1E_Diversity.pdf',
+       width = 4,
+       height = 4,
+       unit = "in")
+
+Legend.1E = KG.Plot +
+  geom_jitter(data = KG.Summary %>% 
+                filter(Virus %in% c("GFHK99","MaMN99","NL09"), Species == "Guinea Pig", Dose == 100) %>% ungroup %>%
+                dplyr::mutate(Virus = Virus %>% str_replace("WF10","GFHK99")),
+              aes(x = Day,
+                  y = Simpson,
+                  color = Virus)) +
+  geom_smooth(data = KG.Summary %>% 
+                filter(Virus %in% c("GFHK99","MaMN99","NL09"), Species == "Guinea Pig", Dose == 100) %>% ungroup %>%
+                dplyr::mutate(Virus = Virus %>% str_replace("WF10","GFHK99")),
+              aes(x = Day,
+                  y = Simpson,
+                  color = Virus,
+                  fill = Virus,
+                  group = Virus),
+              method = "rlm") +
+  labs(x = "Time post-inoculation (days)",
+       y = TeX("\\textbf{Effective diversity (Hill's $\\N_2$)}")) +
+  labs(color = "Virus",
+       fill = "Virus") +
+  scale_y_continuous(limits = c(0,20), breaks = c(0,5,10,15,20)) +
+  scale_x_continuous(breaks = 0:4) +
+  scale_color_manual(values = c("GFHK99" = "skyblue",
+                                "MaMN99" = "green3",
+                                "NL09" = "goldenrod")) +
+  scale_fill_manual(values = c("GFHK99" = "skyblue",
+                               "MaMN99" = "green3",
+                               "NL09" = "goldenrod"))
+
+ggsave(g_legend(Legend.1E),
+       file = "Plots/Legend_1E.pdf",
+       height = 3,
+       width = 2,
+       units = "in")
+
+# 1F: GFHK99 reassortment/diversity in diverse hosts ---- 
+
+KG.Plot +
+  geom_jitter(data = KG.Summary %>% filter(Virus == "GFHK99", Species %in% c("Quail","Guinea Pig"), Dose == 100),
+              aes(x = Day,
+                  y = Simpson,
+                  color = Species)) +
+  geom_smooth(data = KG.Summary %>% filter(Virus == "GFHK99", Species %in% c("Quail","Guinea Pig"), Dose == 100),
+              aes(x = Day,
+                  y = Simpson,
+                  color = Species,
+                  fill = Species,
+                  group = Species),
+              method = "rlm") +
+  labs(x = "Time post-inoculation (days)",
+       y = TeX("\\textbf{Effective diversity (Hill's $\\N_2$)}")) +
+  labs(color = "Host",
+       fill = "Host") +
+  scale_y_continuous(limits = c(0,20), breaks = c(0,5,10,15,20)) +
+  scale_color_manual(values = c("Guinea Pig" = "skyblue",
+                                "Quail" = "deeppink3")) +
+  scale_fill_manual(values = c("Guinea Pig" = "skyblue",
+                               "Quail" = "deeppink3")) +
+  theme(legend.position = c(2,2))
+
+ggsave('Plots/1F_Diversity_GFHK99_by_Host.pdf',
+       width = 4,
+       height = 4,
+       unit = "in")
+
+Legend.1F = KG.Plot +
+  geom_jitter(data = KG.Summary %>% filter(Virus == "GFHK99", Species %in% c("Quail","Guinea Pig"), Dose == 100),
+              aes(x = Day,
+                  y = Simpson,
+                  color = Species)) +
+  geom_smooth(data = KG.Summary %>% filter(Virus == "GFHK99", Species %in% c("Quail","Guinea Pig"), Dose == 100),
+              aes(x = Day,
+                  y = Simpson,
+                  color = Species,
+                  fill = Species,
+                  group = Species),
+              method = "rlm") +
+  labs(x = "Time post-inoculation (days)",
+       y = TeX("\\textbf{Effective diversity (Hill's $\\N_2$)}")) +
+  labs(color = "Host",
+       fill = "Host") +
+  scale_y_continuous(limits = c(0,20), breaks = c(0,5,10,15,20)) +
+  scale_color_manual(values = c("Guinea Pig" = "skyblue",
+                                "Quail" = "deeppink3")) +
+  scale_fill_manual(values = c("Guinea Pig" = "skyblue",
+                               "Quail" = "deeppink3"))
+
+
+ggsave(g_legend(Legend.1F),
+       file = "Plots/Legend_1F.pdf",
+       height = 3,
+       width = 2,
+       units = "in")
+
+
+KG.Summary %>% filter(Dose == 100) %>%
+  write.csv(file = file.path(Proj.Home,"Data/Diversity_Summary.csv"),
+                         row.names = FALSE)
+
+
+```
+
+```{r Figure 2}
+
+Base.Plot = ggplot() +
+  theme(text=element_text(size=14,face="bold"),
+        strip.text.x=element_text(size=rel(1.5),margin=margin(0,0,3,0)),
+        strip.text.y=element_text(size=rel(1.5),margin=margin(0,0,0,0),angle=0),
+        strip.background = element_blank(),
+        plot.title = element_text(size=rel(1.5)),
+        axis.text.x=element_text(angle=0,vjust=0,size=rel(1.5),color = "black"),
+        axis.text.y=element_text(size=rel(1.5),color = "black"),
+        axis.line.x = element_line(size=0.5),
+        axis.line.y = element_line(size=0.5),
+        axis.ticks.x = element_line(size=0.5),
+        axis.ticks.y = element_line(size = 0.5),
+        axis.title.y = element_text(size=rel(1.2),color = "black"),
+        axis.title.x = element_text(size=rel(1.2)),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        legend.position = "NA")
+
+# 2G: Fold change amplification vs. MOI ----
+
+KP7.Titer = read.csv(file = file.path(Proj.Home,"Data","2_Titer_Data.csv"), header = TRUE) %>%
+  na.omit %>% 
+  filter(Time >= 4) %>%
+  mutate(Expt = 1 + (Rep > 3),
+         Cell = Cell %>% str_replace_all("DF1","DF-1"))
+KP7.FACS = read.csv(file = file.path(Proj.Home,"Data","2_Flow_Data.csv"), header = TRUE) %>%
+  na.omit %>%
+  mutate(Expt = 1 + (Rep > 3),
+         Cell = Cell %>% str_replace_all("DF1","DF-1"))
+
+KP7.FACS.Sum = KP7.FACS %>% dplyr::group_by(Strain, Cell, Expt, MOI) %>%
+  dplyr::summarise(Frac_HA = mean(HA) / 100,
+                   Frac_HA.se = sd(HA) / sqrt(length(HA)) / 100) %>%
+  mutate(Virus_Cell = str_c(Strain," in ",Cell))
+
+KP7.Titer.Sum = KP7.Titer %>% dplyr::group_by(Strain, Cell, Expt, MOI, Rep) %>%
+  dplyr::summarise(Produced = max(PFU) * 2) # Titers reported are in PFU/mL, but each dish contains 2 mL.
+
+KP7.Burst.Sum = right_join(KP7.FACS.Sum, KP7.Titer.Sum) %>%
+  ungroup() %>%
+  mutate(HA_Cells = Frac_HA * 1e6,
+         Burst = Produced / HA_Cells,
+         Amplification = Produced / (MOI * 1e6),
+         MOI = log10(MOI),
+         Virus_Cell = str_c(Strain," in ",Cell))
+
+Base.df = KP7.Burst.Sum %>% 
+  filter(MOI == -2) %>%
+  group_by(Virus_Cell) %>%
+  dplyr::summarise(Amp_Base = mean(Amplification),
+            Burst_Base = mean(Burst))
+
+Norm.df = right_join(KP7.Burst.Sum,Base.df) %>%
+  filter(Expt == 2) %>%
+  dplyr::select(Virus_Cell, Amplification, Burst, Amp_Base, Burst_Base, MOI, Frac_HA) %>%
+  mutate(Amp_Norm = Amplification / Amp_Base,
+         Burst_Norm = Burst / Burst_Base)
+
+
+
+KP7.Growth = KP7.Titer %>%
+  mutate(PFU = log10(PFU),
+         MOI = log10(MOI)) %>%
+  group_by(MOI,Expt,Time,Strain,Cell) %>%
+  dplyr::summarise(PFU.se = sd(PFU)/sqrt(length(PFU)),
+            PFU.Mean = mean(PFU))
+Norm.Sum.df = Norm.df %>% mutate(MOI = (10^MOI) %>% round(2) %>% factor,
+                                 Virus_Cell = Virus_Cell %>% factor(levels = c("WF10 in DF-1","WF10 in MDCK","MN99 in MDCK","NL09 in MDCK"))) %>%
+  group_by(MOI,Virus_Cell) %>%
+  dplyr::summarise(Amp_Norm_Mean = mean(Amp_Norm),
+                   Amp_Norm_se = sd(Amp_Norm) / sqrt(length(Amp_Norm)))
+Base.Plot + 
+  geom_bar(data = Norm.Sum.df,
+           aes(x = MOI,
+               y = Amp_Norm_Mean,
+               fill = Virus_Cell),
+           lwd = 1,
+           color = "black",
+           position = "dodge",
+           stat = "identity") +
+  geom_errorbar(data = Norm.Sum.df,
+           aes(x = MOI,
+               ymin = Amp_Norm_Mean - Amp_Norm_se,
+               ymax = Amp_Norm_Mean + Amp_Norm_se),
+           position = position_dodge2(width = 0.9,padding = 0.4),
+           lwd = 0.8,
+           color = "black") +
+  geom_jitter(data = Norm.df %>% mutate(MOI = (10^MOI) %>% round(2) %>% factor,
+                                        Virus_Cell = Virus_Cell %>% factor(levels = c("WF10 in DF-1","WF10 in MDCK","MN99 in MDCK","NL09 in MDCK"))),
+              aes(x = MOI,
+                  y = Amp_Norm,
+                  fill = Virus_Cell),
+              shape = 21,
+              stroke = 1,
+              position = position_dodge2(width = 0.9, padding = 0.2),
+              
+              color = "black") +
+  labs(x = TeX("\\textbf{MOI ($\\log_1_0$ PFU/cell)}"),
+       y = "Fold change in amplification") +
+  scale_color_manual(values = c("WF10 in MDCK" = "skyblue",
+                                "MN99 in MDCK" = "green3",
+                                "WF10 in DF-1" = "deeppink3",
+                                "NL09 in MDCK" = "goldenrod"),
+                     guide = FALSE) +
+  scale_fill_manual(values = c("WF10 in MDCK" = "skyblue",
+                               "MN99 in MDCK" = "green3",
+                               "WF10 in DF-1" = "deeppink3",
+                               "NL09 in MDCK" = "goldenrod"),
+                    guide = FALSE)
+
+ggsave('Plots/2G_Amplification_by_MOI_Bar.pdf',
+       width = 4,
+       height = 4,
+       unit = "in")
+
+Legend.2D = Base.Plot + geom_bar(data = Norm.df %>% mutate(MOI = (10^MOI) %>% round(2) %>% factor,
+                                               Virus_Cell = Virus_Cell %>% factor(levels = c("WF10 in DF-1","WF10 in MDCK","MN99 in MDCK","NL09 in MDCK"))) %>%
+                       group_by(MOI,Virus_Cell) %>%
+                       dplyr::summarise(Amp_Norm_Mean = mean(Amp_Norm)),
+                     aes(x = MOI,
+                         y = Amp_Norm_Mean,
+                         fill = Virus_Cell),
+                     lwd = 1,
+                     color = "black",
+                     position = "dodge",
+                     stat = "identity") +
+  labs(x = TeX("\\textbf{MOI ($\\log_1_0$ PFU/cell)}"),
+       y = "Fold change in amplification",
+       fill = "Virus:cell") +
+  scale_color_manual(values = c("WF10 in MDCK" = "skyblue",
+                                "MN99 in MDCK" = "green3",
+                                "WF10 in DF-1" = "deeppink3",
+                                "NL09 in MDCK" = "goldenrod")) +
+  scale_fill_manual(values = c("WF10 in MDCK" = "skyblue",
+                               "MN99 in MDCK" = "green3",
+                               "WF10 in DF-1" = "deeppink3",
+                               "NL09 in MDCK" = "goldenrod")) +
+  theme(legend.position = "right")
+
+ggsave(g_legend(Legend.2D),
+       file = "Plots/Legend_2G.pdf",
+       height = 3,
+       width = 2,
+       units = "in")
+
+# 2H: Burst vs. MOI ----
+
+DF1.Max = KP7.Burst.Sum %>%
+  filter(Expt == 1,
+         Cell == "DF-1")
+DF1.Max = max(DF1.Max$Burst)[1]
+
+MDCK.Max = KP7.Burst.Sum %>%
+  filter(Expt == 1,
+         Cell == "MDCK")
+MDCK.Max = max(MDCK.Max$Burst)[1]
+
+DF1.Offset = MDCK.Max / DF1.Max - 1
+
+KP7.Burst.Sum %>%
+  filter(Expt == 1) %>%
+  mutate(Burst = Burst + Burst * (DF1.Offset * (Cell == "DF-1")),
+         MOI = 10^(MOI) %>% factor) %>%
+  group_by(Cell, MOI) %>%
+  summarise(Burst_Mean = mean(Burst))
+
+
+KP7.Burst.Sum %>%
+    mutate(Burst = Burst + Burst * (DF1.Offset * (Cell == "DF-1")),
+           MOI = 10^(MOI) %>% factor)
+  
+KP7.Burst.Sum.2 = KP7.Burst.Sum %>%
+  filter(Expt == 1) %>% 
+  mutate(Burst = Burst + Burst * (DF1.Offset * (Cell == "DF-1")),
+         MOI = 10^(MOI) %>% factor) %>%
+  group_by(Cell, MOI) %>%
+  dplyr::summarise(Burst_Mean = mean(Burst),
+                   Burst_se = sd(Burst) / sqrt(length(Burst)))
+  
+Base.Plot +
+  geom_bar(data = KP7.Burst.Sum.2,
+           aes(x = MOI %>% factor,
+               y = Burst_Mean,
+               fill = Cell),
+           stat = "identity",
+           color = "black",
+           lwd = 1,
+           position = position_dodge(0.9)) +
+  geom_errorbar(data = KP7.Burst.Sum.2,
+                aes(x = MOI %>% factor,
+                    ymax = Burst_Mean + Burst_se,
+                    ymin = Burst_Mean - Burst_se),
+                position = position_dodge2(width = 0.9,padding = 0.2),
+                lwd = 0.8) +
+  geom_jitter(data = KP7.Burst.Sum %>% 
+               filter(Expt == 1) %>% 
+               mutate(Burst = Burst + Burst * (DF1.Offset * (Cell == "DF-1")),
+                      MOI = 10^(MOI) %>% factor),
+             aes(x = MOI %>% factor,
+                 y = Burst,
+                 fill = Cell),
+             shape = 21,
+             color = "black",
+             stroke = 1,
+             position = position_dodge2(width = .9, padding = 0.2)) +
+  scale_y_continuous(sec.axis = sec_axis(~. / (DF1.Offset + 1), name = TeX("\\textbf{DF-1 burst size (PFU/HA^+ cell)}"))) +
+  
+  labs(y = TeX("\\textbf{MDCK burst size (PFU/HA^+ cell)}"),
+       x = TeX("\\textbf{MOI ($\\log_1_0$ PFU/cell)}")) +
+  scale_shape(guide = FALSE) +
+  scale_color_manual(values = c("DF-1" = "deeppink3", "MDCK" = "skyblue"), guide = FALSE) +
+  scale_fill_manual(values = c("DF-1" = "deeppink3", "MDCK" = "skyblue"), guide = FALSE)
+
+ggsave('Plots/2H_Burst_by_MOI_High_Bar.pdf',
+       width = 4,
+       height = 4,
+       unit = "in")
+
+```
+
+```{r Figure 3}
+
+Pois_Exp = function(HA) {
+  
+  lam = -log(1 - HA)
+  
+  Dual = rep(0,length(HA))
+  
+  for (i in 1:length(HA)) {
+    Dual[i] = sum(dpois(x = 1:20, lambda = lam[i]) * (1 - 2 ^ (1 - 1:20)))
+  }
+  
+  Dual
+}
+
+set.seed(666)
+
+WF10.Segments = c("All GFHK99", "PB2 + PB1 + PA + NP","PB2","PB1","PA","NP","HA + NA + M + NS", "HA", "None, all MaMN99")
+
+Base.Plot = ggplot() +
+  scale_color_manual(values = c("All GFHK99" = "firebrick3",
+                                "PB2 + PB1 + PA + NP" = "orange",
+                                "PB2" = "darkorchid1",
+                                "PB1" = "green3",
+                                "PA" = "goldenrod",
+                                "NP" = "navy",
+                                "HA" = "steelblue",
+                                "HA + NA + M + NS" = "deepskyblue",
+                                "None, all MaMN99" = "black")) +
+  scale_fill_manual(values = c("All GFHK99" = "firebrick3",
+                                "PB2 + PB1 + PA + NP" = "orange",
+                                "PB2" = "darkorchid1",
+                                "PB1" = "green3",
+                                "PA" = "goldenrod",
+                                "NP" = "navy",
+                                "HA" = "steelblue",
+                                "HA + NA + M + NS" = "deepskyblue",
+                                "None, all MaMN99" = "black")) +
+  theme(text=element_text(size=14,face="bold"),
+        strip.text.x=element_text(size=rel(1.5),margin=margin(0,0,3,0)),
+        strip.text.y=element_text(size=rel(1.5),margin=margin(0,0,0,0),angle=0),
+        strip.background = element_blank(),
+        plot.title = element_text(size=rel(1.5)),
+        axis.text.x=element_text(angle=0,vjust=0,size=rel(1.5),color = "black"),
+        axis.text.y=element_text(size=rel(1.5),color = "black"),
+        axis.line.x = element_line(size=0.5),
+        axis.line.y = element_line(size=0.5),
+        axis.ticks.x = element_line(size=0.5, color = "black"),
+        axis.ticks.y = element_line(size = 0.5, color = "black"),
+        axis.title.y = element_text(size=rel(1.2),color = "black"),
+        axis.title.x = element_text(size=rel(1.2)),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        legend.position = "NA")
+
+
+# 3A: % Dual-HA+ vs. % HA+ in 4:4 chimeras ----
+
+KP6 = read.csv(file = file.path(Proj.Home,"Data","3A_3B_Data.csv"), header = TRUE) %>%
+  na.omit %>% 
+  mutate(Strain = recode(Strain,
+                         "GFHK99" = "All GFHK99",
+                         "MaMN99" = "None, all MaMN99",
+                         "HA_NA_M_NS" = "HA + NA + M + NS",
+                         "3P_NP" = "PB2 + PB1 + PA + NP") %>%
+           factor(levels = c("All GFHK99",
+                             "PB2 + PB1 + PA + NP",
+                             "PB2",
+                             "PB1",
+                             "PA",
+                             "NP",
+                             "HA + NA + M + NS",
+                             "HA",
+                             "None, all MaMN99")))
+
+Exp_Dual_HA = read.csv(file = file.path(Proj.Home,"Data","Poisson_DualHA_Exp.csv"), header = TRUE)
+
+# 3B: HA co-expression by 4:4 chimeras
+
+Base.Plot +
+  geom_abline(slope = 1,
+              color = "dimgray",
+              lty = 3,
+              lwd = 1) +
+  geom_line(data = Exp_Dual_HA , 
+            aes(x = pHA * 100, 
+                y = pDual * 100), 
+            color = "dimgray",
+            lty = 2, 
+            lwd = 1) +
+  annotate("text",x = 80, y = 95,size = 6,label = TeX("\\textbf{x = y}"), color = "dimgray") +
+  annotate("text",x = 80, y = 5,size = 6,label = TeX("\\textbf{Prediction}"), color = "dimgray") +
+  geom_smooth(data = KP6 %>% filter(Strain %in% c("All GFHK99",
+                                                  "PB2 + PB1 + PA + NP",
+                                                  "HA + NA + M + NS",
+                                                  "None, all MaMN99")),
+              aes(x = Expressing_HA,
+                  y = Dual_HA,
+                  color = Strain,
+                  fill = Strain),
+              method = "rlm",
+              se = FALSE,
+              formula = y ~ 0 + I(Pois_Exp(x / 100)) + x) +
+  geom_point(data = KP6 %>% filter(Strain %in% c("All GFHK99",
+                                                 "PB2 + PB1 + PA + NP",
+                                                 "HA + NA + M + NS",
+                                                 "None, all MaMN99")),
+             aes(x = Expressing_HA,
+                 y = Dual_HA,
+                 color = Strain)) +
+  labs(x =  expression(bold("% cells HA"^"+")),
+       y =  expression(bold("% cells dual-HA"^"+")),
+       color = "WF10 segments",
+       fill = "WF10 segments") +
+  scale_x_continuous(breaks = c(0,25,50,75,100)) +
+  scale_y_continuous(breaks = c(0,25,50,75,100)) +
+  coord_cartesian(xlim = c(0,100), ylim = c(0,100))
+
+ggsave('Plots/3A_4_4_HA_Co_Expression.pdf',
+       width = 4,
+       height = 4,
+       unit = "in")
+
+# 3B: HA co-expression by 1:7 chimeras ----
+
+Base.Plot +
+  geom_abline(slope = 1,
+              color = "dimgray",
+              lty = 3,
+              lwd = 1) +
+  geom_line(data = Exp_Dual_HA , 
+            aes(x = pHA * 100, 
+                y = pDual * 100), 
+            color = "dimgray",
+            lty = 2, 
+            lwd = 1) +
+  annotate("text",x = 80, y = 95,size = 6,label = TeX("\\textbf{x = y}"), color = "dimgray") +
+  annotate("text",x = 80, y = 5,size = 6,label = TeX("\\textbf{Prediction}"), color = "dimgray") +
+  geom_smooth(data = KP6 %>% filter(Strain %in% c("All GFHK99",
+                                                  "PB2", "PB1", "PA", "NP","HA",
+                                                  "None, all MaMN99")),
+              aes(x = Expressing_HA,
+                  y = Dual_HA,
+                  color = Strain,
+                  fill = Strain),
+              method = "rlm",
+              se = FALSE,
+              formula = y ~ 0 + I(Pois_Exp(x / 100)) + x) +
+  geom_point(data = KP6 %>% filter(Strain %in% c("All GFHK99",
+                                                 "PB2", "PB1", "PA", "NP","HA",
+                                                 "None, all MaMN99")),
+             aes(x = Expressing_HA,
+                 y = Dual_HA,
+                 color = Strain)) +
+  labs(x =  expression(bold("% cells HA"^"+")),
+       y =  expression(bold("% cells dual-HA"^"+")),
+       color = "WF10 segments",
+       fill = "WF10 segments") +
+  scale_x_continuous(breaks = c(0,25,50,75,100)) +
+  scale_y_continuous(breaks = c(0,25,50,75,100)) +
+  coord_cartesian(xlim = c(0,100), ylim = c(0,100))
+
+ggsave('Plots/3B_1_7_HA_Co_Expression.pdf',
+       width = 4,
+       height = 4,
+       unit = "in")
+
+Legend.3A = ggplot() +
+  geom_smooth(data = KP6,
+              aes(x = Expressing_HA,
+                  y = Dual_HA,
+                  color = Strain,
+                  fill = Strain),
+              method = "rlm",
+              se = FALSE,
+              formula = y ~ 0 + I(Pois_Exp(x / 100)) + x) +
+  geom_point(data = KP6,
+             aes(x = Expressing_HA,
+                 y = Dual_HA,
+                 color = Strain)) +
+  labs(x =  expression(bold("% cells HA"^"+")),
+       y =  expression(bold("% cells dual-HA"^"+")),
+       color = "GFHK99 segments",
+       fill = "GFHK99 segments") +
+  scale_x_continuous(breaks = c(0,25,50,75,100)) +
+  scale_y_continuous(breaks = c(0,25,50,75,100)) +
+  scale_color_manual(values = c("All GFHK99" = "firebrick3",
+                                "PB2 + PB1 + PA + NP" = "orange",
+                                "PB2" = "darkorchid1",
+                                "PB1" = "green3",
+                                "PA" = "goldenrod",
+                                "NP" = "navy",
+                                "HA" = "steelblue",
+                                "HA + NA + M + NS" = "deepskyblue",
+                                "None, all MaMN99" = "black")) +
+  scale_fill_manual(values = c("All GFHK99" = "firebrick3",
+                                "PB2 + PB1 + PA + NP" = "orange",
+                                "PB2" = "darkorchid1",
+                                "PB1" = "green3",
+                                "PA" = "goldenrod",
+                                "NP" = "navy",
+                                "HA" = "steelblue",
+                                "HA + NA + M + NS" = "deepskyblue",
+                                "None, all MaMN99" = "black")) +
+  coord_cartesian(xlim = c(0,100), ylim = c(0,100)) +
+  theme(text=element_text(size=14,face="bold"),
+        strip.text.x=element_text(size=rel(1.5),margin=margin(0,0,3,0)),
+        strip.text.y=element_text(size=rel(1.5),margin=margin(0,0,0,0),angle=0),
+        strip.background = element_blank(),
+        plot.title = element_text(size=rel(1.5)),
+        axis.text.x=element_text(angle=0,vjust=0,size=rel(1.5),color = "black"),
+        axis.text.y=element_text(size=rel(1.5),color = "black"),
+        axis.line.x = element_line(size=0.5),
+        axis.line.y = element_line(size=0.5),
+        axis.ticks.x = element_line(size=0.5),
+        axis.ticks.y = element_line(size = 0.5),
+        axis.title.y = element_text(size=rel(1.2),color = "black"),
+        axis.title.x = element_text(size=rel(1.2)),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank())
+
+ggsave(g_legend(Legend.3A),
+       file = "Plots/Legend_3A.pdf",
+       height = 4,
+       width = 2,
+       units = "in")
+
+# HA co-expression linearity ----
+
+m2 = lm(formula = Dual_HA ~ 0 + Strain:HA_2 + Strain:HA,
+        data = KP6 %>% mutate(Dual_HA = Dual_HA / 100, HA = Expressing_HA / 100, HA_2 = Pois_Exp(HA))) %>% summary
+s2 = coefficients(m2)
+
+df2 = matrix(nrow = length(levels(KP6$Strain)),
+             ncol = 3,
+             data = 0)
+df2[,1] = (names(s2[,1]) %>% str_replace("Strain","") %>% str_replace(":HA","") %>% str_replace("_2",""))[1:length(levels(KP6$Strain))]
+df2[,2] = as.numeric(s2[1:length(levels(KP6$Strain)),1])
+df2[,3] = as.numeric(s2[(1 + length(levels(KP6$Strain))):(length(levels(KP6$Strain)) * 2),1])
+df2 = df2 %>% data.frame
+colnames(df2) = c("Strain","Pois","Linear")
+
+
+# Reassortment data ----
+
+PP1_Reassortment = read.csv(file = file.path(Proj.Home,"Data/PP1_Reassortment.csv"))
+KP3 = read.csv(file = file.path(Proj.Home,"Data","3C_3D_Data.csv"), header = TRUE) %>%
+  na.omit %>% 
+  mutate(Strain = recode(Strain,
+                         "GFHK99" = "All GFHK99",
+                         "MaMN99" = "None, all MaMN99",
+                         "HA_NA_M_NS" = "HA + NA + M + NS",
+                         "3P_NP" = "PB2 + PB1 + PA + NP") %>%
+           factor(levels = c("All GFHK99",
+                             "PB2 + PB1 + PA + NP",
+                             "PB2",
+                             "PB1",
+                             "PA",
+                             "NP",
+                             "HA + NA + M + NS",
+                             "HA",
+                             "None, all MaMN99")))
+
+# 3C: Reassortment of 4:4 chimeras ----
+Base.Plot + 
+  geom_point(data = KP3 %>% filter(Strain %in% c("All GFHK99",
+                                                 "PB2 + PB1 + PA + NP",
+                                                 "HA + NA + M + NS",
+                                                 "None, all MaMN99")),
+             aes(x = Expressing_HA,
+                 y = Reassortment,
+                 color = Strain)) +
+  geom_smooth(data = KP3%>% filter(Strain %in% c("All GFHK99",
+                                                 "PB2 + PB1 + PA + NP",
+                                                 "HA + NA + M + NS",
+                                                 "None, all MaMN99")),
+              aes(x = Expressing_HA,
+                  y = Reassortment,
+                  color = Strain),
+              method = "lm",
+              se = FALSE,
+              formula = y ~ log(x)) +
+  geom_line(data = PP1_Reassortment, 
+            aes(x = Expressing.HA, 
+                y = Reassortant.Percent), 
+            color = "dimgray",
+            lty = 2, 
+            lwd = 1) +
+  annotate("text",x = 75, y = 5,size = 6,label = TeX("\\textbf{Prediction}"), color = "dimgray") +
+  labs(x = expression(bold("% cells HA"^"+")),
+       y = "% reassortment",
+       color = "GFHK99 segments") +
+  scale_x_continuous(breaks = c(0,25,50,75,100)) +
+  scale_y_continuous(breaks = c(0,25,50,75,100)) +
+  coord_cartesian(xlim = c(0,100), ylim = c(0,100))
+
+ggsave('Plots/3C_4_4_Reassortment.pdf',
+       width = 4,
+       height = 4,
+       unit = "in")
+
+# 3D: Reassortment of 1:7 chimeras ----
+
+Base.Plot + 
+  geom_point(data = KP3 %>% filter(Strain %in% c("All GFHK99",
+                                                 "PB2", "PB1", "PA", "NP","HA",
+                                                 "None, all MaMN99")),
+             aes(x = Expressing_HA,
+                 y = Reassortment,
+                 color = Strain)) +
+  geom_smooth(data = KP3 %>% filter(Strain %in% c("All GFHK99",
+                                                  "PB2", "PB1", "PA", "NP","HA",
+                                                  "None, all MaMN99")),
+              aes(x = Expressing_HA,
+                  y = Reassortment,
+                  color = Strain),
+              method = "lm",
+              se = FALSE,
+              formula = y ~ log(x)) +
+  geom_line(data = PP1_Reassortment, 
+            aes(x = Expressing.HA, 
+                y = Reassortant.Percent), 
+            color = "dimgray",
+            lty = 2, 
+            lwd = 1) +
+  annotate("text",x = 75, y = 5,size = 6,label = TeX("\\textbf{Prediction}"), color = "dimgray") +
+  labs(x = expression(bold("% cells HA"^"+")),
+       y = "% reassortment",
+       color = "GFHK99 segments") +
+  scale_x_continuous(breaks = c(0,25,50,75,100)) +
+  scale_y_continuous(breaks = c(0,25,50,75,100)) +
+  coord_cartesian(xlim = c(0,100), ylim = c(0,100))
+
+ggsave('Plots/3D_1_7_Reassortment.pdf',
+       width = 4,
+       height = 4,
+       unit = "in")
+
+KP3 %>% group_by(Strain) %>%
+  dplyr::summarise(N = length(Expressing_HA))
+
+# Reassortment model ----
+
+m1 = lm(formula = Reassortment ~ 0 + Strain:log(Expressing_HA) + Strain,
+        data = KP3)
+
+s1 = coefficients(m1)
+
+df1 = matrix(nrow = length(levels(KP3$Strain)),
+             ncol = 3)
+colnames(df1) = c("Strain","Expressing_HA","Reassortment_10")
+
+df1 = data.frame(df1)
+
+df1$Strain = levels(KP3$Strain) %>% factor(levels = c("All GFHK99",
+                                                      "PB2 + PB1 + PA + NP",
+                                                      "PB2",
+                                                      "PB1","PA",
+                                                      "NP",
+                                                      "HA + NA + M + NS",
+                                                      "HA",
+                                                      "None, all MaMN99") %>% rev)
+
+
+# 3E: Clustering ----
+
+WF10.Segments = df2$Strain
+df2$Reassortment_b0 = s1[1:9]
+df2$Reassortment_b1 = s1[10:18]
+
+df4 = df2[,2:5] %>% as.matrix %>% as.numeric %>% matrix(nrow = 9) %>% scale
+
+rownames(df4) = df2$Strain
+d = dist(df4, method = "euclidean", diag = TRUE) %>% as.matrix
+
+colnames(d) = WF10.Segments
+rownames(d) = WF10.Segments
+result = pvclust(d, method.hclust = "ward",
+        method.dist = "correlation")
+
+ggd1 = result %>% as.dendrogram %>%
+  sort(type = "labels", decreasing = TRUE) %>%
+  dendextend::set("labels_cex",.8) %>%
+  dendextend::set("leaves_pch",16) %>%
+  as.ggdend
+
+Node.BP = cbind(result$hclust$height,result$edges$au, result$edges$bp) %>% data.frame
+colnames(Node.BP) = c("y","au","bp")
+
+Node.Support = full_join(ggd1$nodes %>% filter(y > 0),Node.BP) %>%
+  dplyr::mutate(AU = (au * 100) %>% round(0) %>% as.character)
+ggd1$labels$y = ggd1$labels$y - 0.3
+
+Clusters = cutree(result %>% as.dendrogram %>%
+         sort(type = "labels", decreasing = TRUE),
+       k = 2) %>% rev
+
+Clusters = cbind(names(Clusters),Clusters) %>% data.frame
+colnames(Clusters) = c("label","cluster")
+ggd1$labels = right_join(ggd1$labels,Clusters)
+
+colors.df = cbind(WF10.Segments %>% as.character,
+                  c("firebrick3", "orange","darkorchid1","green3","goldenrod",
+                    "navy","deepskyblue","steelblue","black")) %>% data.frame
+colnames(colors.df) = c("label","col")
+
+ggd1$labels = right_join(ggd1$labels %>% dplyr::select(-col),colors.df)
+ggd1$nodes = right_join(ggd1$nodes %>% filter(y == 0) %>% dplyr::select(-col,-cex),ggd1$labels %>% dplyr::select(x,label,col))
+ggd1$nodes$cex = 3
+ggd1$nodes$col = ggd1$nodes$col %>% as.character
+Rect_xmin = ggd1$labels %>%
+  group_by(cluster) %>% dplyr::summarise(xmin = min(x),
+                                  xmax = max(x))
+xmin = min(c(ggd1$segments$x,ggd1$segments$xend))
+xmax = max(c(ggd1$segments$x,ggd1$segments$xend))
+ymin = min(c(ggd1$segments$y,ggd1$segments$yend))
+ymax = max(c(ggd1$segments$y,ggd1$segments$yend))
+Rect_ymax = rev(sort(ggd1$nodes$y))[2]
+Rect_ymin = ymin
+
+ggd1$nodes$pch = NA
+ggd1$nodes$fill = ggd1$nodes$col
+
+ggplot(ggd1, horiz = TRUE) + theme_dendro() +
+  theme(text = element_text(size = 16, face = "bold")) +
+    coord_flip(xlim = c(xmin,xmax),
+               ylim = c(ymin - 5,ymax)) +
+  geom_point(data = Node.Support %>% filter(au >= 0.95),
+             aes(x = x,
+                 y = y),
+             pch = 21,
+             stroke = 1,
+             fill = "yellow",
+             color = "black",
+             size = 2) +
+  geom_point(data = ggd1$nodes, aes(x = x,
+                                    y = y,
+                                    fill = label),
+             size = 3,
+             stroke = 1,
+             pch = 21) +
+  scale_fill_manual(values = c("All GFHK99" = "firebrick3",
+                               "PB2 + PB1 + PA + NP" = "orange",
+                               "PB2" = "darkorchid1",
+                               "PB1" = "green3",
+                               "PA" = "goldenrod",
+                               "NP" = "navy",
+                               "HA" = "steelblue",
+                               "HA + NA + M + NS" = "deepskyblue",
+                               "None, all MaMN99" = "black"),
+                    guide = FALSE) +
+
+  geom_rect(data = Rect_xmin,
+            aes(xmin = xmin - 0.3,
+            xmax = xmax + 0.3),
+            ymin = Rect_ymin - 2,
+            ymax = Rect_ymax + 6.5,
+            fill = NA,
+            color = "dimgray",
+            lwd = 1.2,
+            lty = 8)
+
+ggsave(file = "Plots/3E_Cluster.pdf",
+       height = 4,
+       width = 4,
+       units = "in")
+
+
+```
+
+```{r Figure 4}
+
+df1 = read.csv(file = file.path(Proj.Home,"Data","4_Data.csv"), header = TRUE) %>%
+  mutate(Virus_Cell = str_c(Virus," in ", Cell))
+
+Baseline.df = df1 %>% 
+  filter(MOI == 0) %>%
+  group_by(Virus_Cell) %>%
+  dplyr::summarise(Base = mean(Copy))
+
+df2 = right_join(df1,Baseline.df) %>%
+  mutate(Fold = Copy / Base)
+
+df3 = df2 %>% 
+  group_by(Virus_Cell,MOI) %>%
+  dplyr::summarise(Fold = mean(Fold)) %>%
+  filter(Fold == max(Fold))
+
+df4 = df2 %>%
+  mutate(MOI = factor(MOI)) %>%
+  group_by(Virus, Cell, Virus_Cell, MOI) %>%
+  dplyr::summarise(Fold.Avg = mean(Fold),
+                   Fold.se = sd(Fold) / sqrt(length(Fold)))
+
+Base.Plot = 
+  ggplot() +
+  scale_color_manual(values = c("GFHK99 in MDCK" = "skyblue",
+                                "GFHK99 in DF-1" = "deeppink3",
+                                "GFHK99 in HTBE" = "steelblue",
+                                "NL09 in MDCK" = "goldenrod",
+                                "NL09 in HTBE" = "purple",
+                                "MaMN99 in MDCK" = "green3",
+                                "MaMN99 in DE" = "firebrick3")) +
+  scale_fill_manual(values = c("GFHK99 in MDCK" = "skyblue",
+                               "GFHK99 in DF-1" = "deeppink3",
+                               "GFHK99 in HTBE" = "steelblue",
+                               "NL09 in MDCK" = "goldenrod",
+                               "NL09 in HTBE" = "purple",
+                               "MaMN99 in MDCK" = "green3",
+                               "MaMN99 in DE" = "firebrick3")) +
+  theme(text=element_text(size=14,face="bold"),
+        strip.text.x=element_text(size=rel(1.5),margin=margin(0,0,3,0)),
+        strip.text.y=element_text(size=rel(1.5),margin=margin(0,0,0,0),angle=0),
+        strip.background = element_blank(),
+        plot.title = element_text(size=rel(1.5)),
+        axis.text.x=element_text(angle=0,vjust=0,size=rel(1.5),color = "black"),
+        axis.text.y=element_text(size=rel(1.5),color = "black"),
+        axis.line.x = element_line(size=0.5),
+        axis.line.y = element_line(size=0.5),
+        axis.ticks.x = element_line(size=0.5),
+        axis.ticks.y = element_line(size = 0.5),
+        axis.title.y = element_text(size=rel(1.2),color = "black"),
+        axis.title.x = element_text(size=rel(1.2)),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        legend.position = "NA")
+
+Base.Plot +
+  geom_hline(lty = 2, yintercept = 1) +
+  geom_col(data = df4 %>% filter(MOI != "0", Virus == "GFHK99", Cell != "HTBE"),
+           position = position_dodge(),
+           color = "black",
+           aes(x = MOI,
+               y = Fold.Avg,
+               fill = Virus_Cell)) +
+  geom_errorbar(data = df4 %>% filter(MOI != "0", Virus == "GFHK99", Cell != "HTBE"),
+                aes(x = MOI,
+                    ymin = Fold.Avg - Fold.se,
+                    ymax = Fold.Avg + Fold.se),
+                position = position_dodge2(padding = 0.5),
+                width = 0.9,
+                lwd = 0.8) +
+  geom_jitter(data = df2 %>% filter(MOI != "0", Virus == "GFHK99", Cell != "HTBE"),
+           aes(x = MOI %>% factor,
+               y = Fold,
+               fill = Virus_Cell),
+           color = "black",
+           position = position_dodge2(0.9),
+           stroke = 1,
+           pch = 21) +
+  scale_y_log10(breaks = c(.1, 1, 10, 100)) +
+  labs(x = "Helper virus MOI (PFU/cell)",
+       y = "Fold change relative to WT only") +
+  coord_cartesian(ylim = c(.1,100))
+
+ggsave(file = "Plots/4A_Help_GFHK99_Bar.pdf",
+       height = 5,
+       width = 5,
+       units = "in")
+
+options(scipen = 999)
+
+Base.Plot +
+  geom_hline(lty = 2, yintercept = 1) +
+  geom_col(data = df4 %>% filter(MOI != "0", Virus == "NL09", Cell != "HTBE"),
+           position = position_dodge(),
+           color = "black",
+           aes(x = MOI,
+               y = Fold.Avg,
+               fill = Virus_Cell)) +
+  geom_errorbar(data = df4 %>% filter(MOI != "0", Virus == "NL09", Cell != "HTBE"),
+                aes(x = MOI,
+                    ymin = Fold.Avg - Fold.se,
+                    ymax = Fold.Avg + Fold.se),
+                #position = position_dodge2(padding = 0.1),
+                width = 0.4,
+                lwd = 0.8) +
+  geom_jitter(data = df2 %>% filter(MOI != "0", Virus == "NL09", Cell != "HTBE"),
+              aes(x = MOI %>% factor,
+                  y = Fold,
+                  fill = Virus_Cell),
+              color = "black",
+              #position_dodge(width = 0.1),
+              position = position_dodge2(0.9),
+              stroke = 1,
+              pch = 21) +
+  scale_y_log10(breaks = c(.001, 0.01, .1, 1, 10, 100)) +
+  labs(x = "Helper virus MOI (PFU/cell)",
+       y = "Fold change relative to WT only") +
+  coord_cartesian(ylim = c(.001,1))
+
+ggsave(file = "Plots/4C_Help_NL09_Bar.pdf",
+       height = 5,
+       width = 5,
+       units = "in")
+
+options(scipen = 999)
+Base.Plot +
+  geom_hline(lty = 2, yintercept = 1) +
+  geom_jitter(data = df2 %>% filter(MOI > 0,
+                                    Fold > 0,
+                                    Virus == "MaMN99"),
+              aes(x = MOI,
+                  y = Fold,
+                  color = Virus_Cell),
+              width = 0.05) +
+  geom_smooth(data = df2 %>% filter(MOI > 0, 
+                                    Cell == "DE",
+                                    Virus == "MaMN99"),
+              aes(x = MOI,
+                  y = Fold,
+                  color = Virus_Cell,
+                  fill = Virus_Cell)) +
+  scale_x_log10() +
+  scale_y_log10(breaks = c(100,1,.01)) +
+  labs(x = "Helper virus MOI (PFU/cell)",
+       y = "Fold change relative to WT only") +
+  coord_cartesian(xlim = c(.01,5),
+                  ylim = c(1e-4,3))
+
+Base.Plot +
+  geom_hline(lty = 2, yintercept = 1) +
+  geom_col(data = df4 %>%
+             mutate(Fold.Avg = Fold.Avg %>% na_if(0)) %>%
+             #mutate(Fold.Avg = Fold.Avg + 1 * (Fold.Avg == 0)) %>%
+             filter(MOI != "0", Virus == "MaMN99", Cell != "HTBE"),
+           position = position_dodge(),
+           color = "black",
+           aes(x = MOI,
+               y = Fold.Avg,
+               fill = Virus_Cell)) +
+  geom_errorbar(data = df4 %>%
+                  #mutate(Fold.Avg = Fold.Avg + 1 * (Fold.Avg == 0)) %>%
+                  mutate(Fold.Avg = Fold.Avg %>% na_if(0)) %>%
+                  filter(MOI != "0", Virus == "MaMN99", Cell != "HTBE"),
+                aes(x = MOI,
+                    ymin = Fold.Avg - Fold.se,
+                    ymax = Fold.Avg + Fold.se),
+                position = position_dodge2(padding = 0.5),
+                width = 0.9,
+                lwd = 0.8) +
+  geom_jitter(data = df2 %>% 
+                #mutate(Fold = Fold %>% na_if(0)) %>%
+                filter(MOI != "0", Virus == "MaMN99", Cell != "HTBE"),
+              aes(x = MOI %>% factor,
+                  y = Fold,
+                  fill = Virus_Cell),
+              color = "black",
+              #position_dodge(width = 0.1),
+              position = position_dodge2(width = 0.9, padding = 0.2),
+              stroke = 1,
+              pch = 21) +
+  scale_y_log10(breaks = c(.0001, .001, 0.01, .1, 1, 10, 100)) +
+  labs(x = "Helper virus MOI (PFU/cell)",
+       y = "Fold change relative to WT only") +
+  coord_cartesian(ylim = c(5e-5,1))
+
+ggsave(file = "Plots/4B_Help_MaMN99_Bar.pdf",
+       height = 5,
+       width = 5,
+       units = "in")
+
+Base.Plot +
+  geom_hline(lty = 2, yintercept = 1) +
+  geom_col(data = df4 %>%
+             mutate(Fold.Avg = Fold.Avg %>% na_if(0)) %>%
+             #mutate(Fold.Avg = Fold.Avg + 1 * (Fold.Avg == 0)) %>%
+             filter(MOI != "0", Virus == "GFHK99", Cell == "HTBE"),
+           position = position_dodge(),
+           color = "black",
+           aes(x = MOI,
+               y = Fold.Avg,
+               fill = Virus_Cell)) +
+  geom_errorbar(data = df4 %>%
+                  #mutate(Fold.Avg = Fold.Avg + 1 * (Fold.Avg == 0)) %>%
+                  mutate(Fold.Avg = Fold.Avg %>% na_if(0)) %>%
+                  filter(MOI != "0", Virus == "GFHK99", Cell == "HTBE"),
+                aes(x = MOI,
+                    ymin = Fold.Avg - Fold.se,
+                    ymax = Fold.Avg + Fold.se),
+                position = position_dodge2(padding = 0.5),
+                width = 0.4,
+                lwd = 0.8) +
+  geom_jitter(data = df2 %>% 
+                #mutate(Fold = Fold %>% na_if(0)) %>%
+                filter(MOI != "0", Virus == "GFHK99", Cell == "HTBE"),
+              aes(x = MOI %>% factor,
+                  y = Fold,
+                  fill = Virus_Cell),
+              color = "black",
+              #position_dodge(width = 0.1),
+              position = position_dodge2(width = 0.9, padding = 0.2),
+              stroke = 1,
+              pch = 21) +
+  scale_y_log10(breaks = c(.0001, .001, 0.01, .1, 1, 10, 100)) +
+  labs(x = "Helper virus MOI (PFU/cell)",
+       y = "Fold change relative to WT only") +
+  coord_cartesian(ylim = c(1,100))
+
+ggsave(file = "Plots/4D_Help_GFHK99_HTBE_Bar.pdf",
+       height = 5,
+       width = 5,
+       units = "in")
+
+Base.Plot +
+  geom_hline(lty = 2, yintercept = 1) +
+  geom_col(data = df4 %>%
+             mutate(Fold.Avg = Fold.Avg %>% na_if(0)) %>%
+             #mutate(Fold.Avg = Fold.Avg + 1 * (Fold.Avg == 0)) %>%
+             filter(MOI != "0", Virus == "NL09", Cell == "HTBE"),
+           position = position_dodge(),
+           color = "black",
+           aes(x = MOI,
+               y = Fold.Avg,
+               fill = Virus_Cell)) +
+  geom_errorbar(data = df4 %>%
+                  #mutate(Fold.Avg = Fold.Avg + 1 * (Fold.Avg == 0)) %>%
+                  mutate(Fold.Avg = Fold.Avg %>% na_if(0)) %>%
+                  filter(MOI != "0", Virus == "NL09", Cell == "HTBE"),
+                aes(x = MOI,
+                    ymin = Fold.Avg - Fold.se,
+                    ymax = Fold.Avg + Fold.se),
+                position = position_dodge2(padding = 0.5),
+                width = 0.4,
+                lwd = 0.8) +
+  geom_jitter(data = df2 %>% 
+                #mutate(Fold = Fold %>% na_if(0)) %>%
+                filter(MOI != "0", Virus == "NL09", Cell == "HTBE"),
+              aes(x = MOI %>% factor,
+                  y = Fold,
+                  fill = Virus_Cell),
+              color = "black",
+              #position_dodge(width = 0.1),
+              position = position_dodge2(width = 0.9, padding = 0.2),
+              stroke = 1,
+              pch = 21) +
+  scale_y_log10(breaks = c(.0001, .001, 0.01, .1, 1, 10, 100)) +
+  labs(x = "Helper virus MOI (PFU/cell)",
+       y = "Fold change relative to WT only") +
+  coord_cartesian(ylim = c(.1,10))
+
+ggsave(file = "Plots/4E_Help_NL09_HTBE_Bar.pdf",
+       height = 5,
+       width = 5,
+       units = "in")
+
+# Legend ----
+Legend.Plot = Base.Plot +
+  geom_point(data = df2,
+             aes(x = MOI,
+                 y = Fold,
+                 color = Virus_Cell)) +
+  geom_smooth(data = df2,
+             aes(x = MOI,
+                 y = Fold,
+                 color = Virus_Cell,
+                 fill = Virus_Cell)) +
+  labs(color = NULL,
+       fill = NULL) +
+  theme(legend.position = "right")
+
+ggsave(g_legend(Legend.Plot),
+       file = "Plots/Legend_4A.pdf",
+       height = 4,
+       width = 2,
+       units = "in")
+
+```
+
+```{r Figure 6, eval = FALSE}
+
+Base.Plot = ggplot() +
+  theme(text=element_text(size=14,face="bold"),
+        strip.text.x=element_text(size=rel(1.5),margin=margin(0,0,3,0)),
+        strip.text.y=element_text(size=rel(1.5),margin=margin(0,0,0,0),angle=0),
+        strip.background = element_blank(),
+        plot.title = element_text(size=rel(1.5)),
+        axis.text.x=element_text(angle=0,vjust=0,size=rel(1.5),color = "black"),
+        axis.text.y=element_text(size=rel(1.5),color = "black"),
+        axis.line.x = element_line(size=0.5),
+        axis.line.y = element_line(size=0.5),
+        axis.ticks.x = element_line(size=0.5),
+        axis.ticks.y = element_line(size = 0.5),
+        axis.title.y = element_text(size=rel(1.2),color = "black"),
+        axis.title.x = element_text(size=rel(1.2)),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(),
+        legend.position = "NA")
+
+Legend.Plot = ggplot() +
+  theme(text=element_text(size=14,face="bold"),
+        strip.text.x=element_text(size=rel(1.5),margin=margin(0,0,3,0)),
+        strip.text.y=element_text(size=rel(1.5),margin=margin(0,0,0,0),angle=0),
+        strip.background = element_blank(),
+        plot.title = element_text(size=rel(1.5)),
+        axis.text.x=element_text(angle=0,vjust=0,size=rel(1.5),color = "black"),
+        axis.text.y=element_text(size=rel(1.5),color = "black"),
+        axis.line.x = element_line(size=0.5),
+        axis.line.y = element_line(size=0.5),
+        axis.ticks.x = element_line(size=0.5),
+        axis.ticks.y = element_line(size = 0.5),
+        axis.title.y = element_text(size=rel(1.2),color = "black"),
+        axis.title.x = element_text(size=rel(1.2)),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank())
+
+# Expt 1 Analysis ----
+cellranger_pipestance_path <- "/Users/jacobn07/Documents/GFHK99_Multiplicity/Data/CellRanger_Output"
+Genomes = c('WT_DF1_0.07','WT_DF1_0.2','WT_DF1_0.6','WT_DF1_1.8','WT_MDCK_0.07','WT_MDCK_0.2','WT_MDCK_0.6','WT_MDCK_1.8')
+Cells = c(rep("DF1",4),rep("MDCK",4))
+MOIs = rep(c(0.07,0.2,0.6,1.8),2)
+
+GBM = function(i) {
+  gbm = load_cellranger_matrix(cellranger_pipestance_path, genome = Genomes[i])
+  use_genes = get_nonzero_genes(gbm)
+  x = gbm[use_genes,] %>% exprs %>% as.matrix %>% t %>% data.frame
+  x$TotalRNA = rowSums(x)
+  
+  x = x %>% mutate(Flu_RNA = WF10PB2 + WF10PB1 + WF10PA + WF10HA + WF10NP + WF10NA + WF10M + WF10NS,
+                   Test_RNA = WF10PB2 + WF10PB1 + WF10PA + WF10HA + WF10NP + WF10NA + WF10M + WF10NS,
+                   Test_Prop = Test_RNA / TotalRNA,
+                   Flu_Prop = Flu_RNA / TotalRNA)
+  
+  x$Cell = Cells[i]
+  x$MOI = MOIs[i]
+  x %>% dplyr::select(Cell,MOI,
+                      WF10PB2, WF10PB1, WF10PA, WF10HA, WF10NP, WF10NA, WF10M, WF10NS, 
+                      Flu_RNA,TotalRNA,Flu_Prop,Test_Prop)
+}
+
+GBM_Aggr = do.call("rbind", lapply(1:length(Genomes),GBM))
+
+write.csv(GBM_Aggr,
+          file = file.path(Proj.Home,"Data","10X_Expt1_Raw.csv"),
+          row.names = FALSE)
+
+df1 = read.csv(file = file.path(Proj.Home,"Data","10X_Expt1_Raw.csv"),
+               header = TRUE) %>% 
+  mutate(WT = WF10PB2 + WF10PB1 + WF10PA + WF10HA + WF10NP + WF10NA + WF10M + WF10NS,
+         P3_NP = factor(sign(WF10PB2) * sign(WF10PB1) * sign(WF10PA) * sign(WF10NP)),
+         Test_Prop = WT / Flu_RNA,
+         Test_Prop_Flu = (WT) / Flu_RNA,
+         Test_Prop_Cell = (WT) / TotalRNA,
+         Test_Sum = WT,
+         Test_Log = Test_Sum %>% log10,
+         Mean_Log = 0,
+         Mean_Gain = 0,
+         Mean_Sum = 0) %>% 
+  filter(Test_Sum > 0) %>%
+  arrange(Cell,MOI,Test_Prop_Cell) %>%
+  mutate(Cell.ID = 1:length(Test_Prop_Cell),
+         Test_Gain = (Test_Prop_Cell - lag(Test_Prop_Cell)) / lag(Test_Prop_Cell))
+
+Threshold.df = df1 %>% 
+  dplyr::select(Cell,MOI) %>% 
+  unique
+
+df2 = df1 %>% arrange(Cell,MOI,Test_Prop_Cell) %>%
+  group_by(Cell,MOI) %>%
+  mutate(Marginal_Prop = (Test_Prop_Cell - lag(Test_Prop_Cell)) / lag(Test_Prop_Cell)) %>%
+  na.omit() %>%
+  filter(Marginal_Prop > 0)
+
+# Now, find point of maximum curvature (greatest second derivative)
+
+for(i in 1:(nrow(Threshold.df) / 1)) {
+  sub.df = df2 %>% filter(Cell == Threshold.df[i,"Cell"],
+                          MOI == Threshold.df[i,"MOI"]) %>%
+    mutate(Test_Prop_Cell_Log = log10(Test_Prop_Cell)) 
+  
+  model = loess(Marginal_Prop ~ Test_Prop_Cell_Log, 
+                data = sub.df,
+                span = 0.2)
+  
+  xrange = range(sub.df$Test_Prop_Cell_Log)
+  xseq = seq(from = xrange[1], to = xrange[2], by = (xrange[2] - xrange[1]) / 100)
+  pred = predict(model, newdata = data.frame(Test_Prop_Cell_Log = xseq), se = TRUE)
+  y = pred$fit
+  ymin = y - 1.96 * pred$se.fit
+  ymax = y + 1.96 * pred$se.fit
+  loess.df = data.frame(x = xseq, y, ymin, ymax, se = pred$se.fit) %>% na.omit
+  valley.df = loess.df %>%
+    mutate(x = 10^x,
+           Decreased = y < lag(y),
+           Increasing = y < lead(y),
+           Local.Minimum = Decreased * Increasing) %>%
+    filter(Local.Minimum == 1)
+  Threshold.df[i,"Threshold"] = valley.df[1,"x"]
+  
+}
+
+
+Base.Plot +
+  geom_point(data = df1 %>% filter(Test_Gain > 0) %>% mutate(Cell = Cell %>% recode("DF1" = "DF-1")),
+             aes(x = Test_Prop_Cell,
+                 y = Test_Gain)) +
+  geom_smooth(data = df1 %>% filter(Test_Gain > 0) %>% mutate(Cell = Cell %>% recode("DF1" = "DF-1")),
+              aes(x = Test_Prop_Cell,
+                  y = Test_Gain,
+                  group = interaction(MOI,Cell),
+                  color = Cell),
+              se = FALSE,
+              span = 0.2) +
+  geom_vline(data = Threshold.df %>% mutate(Cell = Cell %>% recode("DF1" = "DF-1")),
+             aes(xintercept = Threshold),
+             lty = 2) +
+  facet_wrap(Cell ~ MOI, scales = "free") +
+  scale_color_manual(values = c("MDCK" = "skyblue",
+                                "DF-1" = "deeppink3")) +
+  labs(x = "Proportion IAV mRNA in transcriptome",
+       y = "Marginal increase in % IAV mRNA in transcriptome") +
+  scale_x_log10(breaks = c(1e-4, 1e-3, 1e-2, 1e-1, 1)) +
+  theme(legend.position = "NA")
+
+ggsave(file = "Plots/Supp5A_Expt1_Threshold.pdf",
+       height = 9,
+       width = 9,
+       units = "in")
+
+df3 = right_join(df1,Threshold.df) %>%
+  filter((Test_Prop_Cell > Threshold))
+
+write.csv(df3,
+          file = file.path(Proj.Home,"Data","10X_Expt1_Trimmed.csv"),
+          row.names = FALSE)
+# Expt 2 Analysis ----
+
+Genomes = c('DF1_0.02','DF1_0.07','DF1_0.2','DF1_0.6','MDCK_0.02','MDCK_0.07','MDCK_0.2','MDCK_0.6')
+Cells = c(rep("DF1",4),rep("MDCK",4))
+MOIs = rep(c(0.02,0.07,0.2,0.6),2)
+
+GBM = function(i) {
+  gbm = load_cellranger_matrix(cellranger_pipestance_path, genome = Genomes[i])
+  use_genes = c(1:24,get_nonzero_genes(gbm)) %>% unique
+  x = gbm[use_genes,] %>% exprs %>% as.matrix %>% t %>% data.frame
+  x$TotalRNA = rowSums(x)
+  
+  x = x %>% mutate(Flu_RNA = WF10PB2 + WF10PB1 + WF10PA + WF10HA + WF10NP + WF10NA + WF10M + WF10NS + 
+                     mVarPB2 + mVarPB1 + mVarPA + mVarHA + mVarNP + mVarNA + mVarM + mVarNS + 
+                     mHelperPB2 + mHelperPB1 + mHelperPA + mHelperHA + mHelperNP + mHelperNA + mHelperM + mHelperNS,
+                   Test_RNA = WF10PB2 + WF10PB1 + WF10PA + WF10HA + WF10NP + WF10NA + WF10M + WF10NS + 
+                     mVarPB2 + mVarPB1 + mVarPA + mVarHA + mVarNP + mVarNA + mVarM + mVarNS,
+                   Test_Prop = Test_RNA / TotalRNA,
+                   Flu_Prop = Flu_RNA / TotalRNA)
+  
+  x$Cell = Cells[i]
+  x$MOI = MOIs[i]
+  x %>% dplyr::select(Cell,MOI,
+               WF10PB2, WF10PB1, WF10PA, WF10HA, WF10NP, WF10NA, WF10M, WF10NS, 
+               mVarPB2, mVarPB1, mVarPA, mVarHA, mVarNP, mVarNA, mVarM, mVarNS, 
+               mHelperPB2, mHelperPB1, mHelperPA, mHelperHA, mHelperNP, mHelperNA, mHelperM, mHelperNS,
+               Flu_RNA,TotalRNA,Flu_Prop,Test_Prop)
+}
+GBM_Aggr = do.call("rbind", lapply(1:length(Genomes),GBM))
+
+write.csv(GBM_Aggr,
+          file = file.path(Proj.Home,"Data","10X_Expt2_Raw.csv"),
+          row.names = FALSE)
+
+df1 = read.csv(file = file.path(Proj.Home,"Data","10X_Expt2_Raw.csv"),
+               header = TRUE) %>% 
+  mutate(WT = WF10PB2 + WF10PB1 + WF10PA + WF10HA + WF10NP + WF10NA + WF10M + WF10NS,
+         VAR = mVarPB2 + mVarPB1 + mVarPA + mVarHA + mVarNP + mVarNA + mVarM + mVarNS,
+         HELPER = mHelperPB2 + mHelperPB1 + mHelperPA + mHelperHA + mHelperNP + mHelperNA + mHelperM + mHelperNS,
+         HELPER_Segments = sign(mHelperPB2) + sign(mHelperPB1) + sign(mHelperPA) + sign(mHelperHA) + sign(mHelperNP) + sign(mHelperNA) + sign(mHelperM) + sign(mHelperNS),
+         WT_Test_Prop = WT / (WT + VAR),
+         VAR_Test_Prop = VAR / (VAR + WT),
+         WT_Prop = WT / Flu_RNA,
+         VAR_Prop = VAR / Flu_RNA,
+         Test_Prop_Flu = (WT + VAR) / Flu_RNA,
+         Test_Prop_Cell = (WT + VAR) / TotalRNA,
+         Test_Sum = WT + VAR,
+         HELPER_Prop = HELPER / Flu_RNA,
+         Purity = pmax(WT,VAR) / Test_Sum,
+         Test_Log = Test_Sum %>% log10,
+         Minor_Frac = pmin(WT,VAR) / Test_Sum * (Test_Sum %>% log10),
+         Mean_Log = 0,
+         Mean_Gain = 0,
+         Mean_Sum = 0) %>% 
+  filter(HELPER_Segments == 8, Test_Sum > 0) %>%
+  arrange(Cell,MOI,Test_Prop_Flu) %>%
+  mutate(Cell.ID = 1:length(Test_Sum),
+         Test_Gain = (Test_Sum - lag(Test_Sum)) / lag(Test_Sum))
+
+Threshold.df = df1 %>% 
+  dplyr::select(Cell,MOI) %>% 
+  unique
+
+df2 = df1 %>% arrange(Cell,MOI,Test_Prop_Cell) %>%
+  group_by(Cell,MOI) %>%
+  mutate(Test_Log = Test_Log %>% round(2),
+         Marginal_Test = (Test_Sum - lag(Test_Sum)) / lag(Test_Sum),
+         Marginal_Prop = (Test_Prop_Cell - lag(Test_Prop_Cell)) / lag(Test_Prop_Cell),
+         Marginal_Flu = (Test_Prop_Flu - lag(Test_Prop_Flu)) / lag(Test_Prop_Flu)) %>%
+  na.omit() %>%
+  filter(Marginal_Prop > 0)
+
+# Now, find point of maximum curvature (greatest second derivative)
+
+for(i in 1:nrow(Threshold.df)) {
+  sub.df = df2 %>% filter(Cell == Threshold.df[i,"Cell"],
+                          MOI == Threshold.df[i,"MOI"]) %>%
+    mutate(Test_Prop_Cell_Log = log10(Test_Prop_Cell)) 
+  
+  model = loess(Marginal_Prop ~ Test_Prop_Cell_Log, 
+                data = sub.df,
+                span = 0.2)
+  
+  xrange = range(sub.df$Test_Prop_Cell_Log)
+  xseq = seq(from = xrange[1], to = xrange[2], by = (xrange[2] - xrange[1]) / 100)
+  pred = predict(model, newdata = data.frame(Test_Prop_Cell_Log = xseq), se = TRUE)
+  y = pred$fit
+  ymin = y - 1.96 * pred$se.fit
+  ymax = y + 1.96 * pred$se.fit
+  loess.df = data.frame(x = xseq, y, ymin, ymax, se = pred$se.fit) %>% na.omit
+  valley.df = loess.df %>%
+    mutate(x = 10^x,
+           Decreased = y < lag(y),
+           Increasing = y < lead(y),
+           Local.Minimum = Decreased * Increasing) %>%
+    filter(Local.Minimum == 1)
+  Threshold.df[i,"Threshold"] = valley.df[1,"x"]
+  
+}
+
+Base.Plot +
+  geom_point(data = df2 %>% mutate(Cell = Cell %>% recode("DF1" = "DF-1")),
+             aes(x = Test_Prop_Cell,
+                 y = Marginal_Prop)) +
+  facet_wrap(Cell ~ MOI, scales = "free") +
+  geom_smooth(data = df2 %>% mutate(Cell = Cell %>% recode("DF1" = "DF-1")),
+              aes(x = Test_Prop_Cell,
+                  y = Marginal_Prop,
+                  group = interaction(Cell,MOI),
+                  color = Cell),
+              se = FALSE,
+              span = 0.2) +
+  geom_vline(data = Threshold.df %>% mutate(Cell = Cell %>% recode("DF1" = "DF-1")),
+             aes(xintercept = Threshold),
+             lty = 2) +
+  scale_color_manual(values = c("MDCK" = "skyblue",
+                                "DF-1" = "deeppink3")) +
+  labs(x = "Proportion IAV mRNA in transcriptome",
+       y = "Marginal increase in % IAV mRNA in transcriptome") +
+  scale_x_log10(breaks = c(1e-4, 1e-3, 1e-2, 1e-1, 1)) +
+  theme(legend.position = "NA")
+
+ggsave(file = "Plots/Supp5B_Expt2_Threshold.pdf",
+       height = 9,
+       width = 9,
+       units = "in")
+
+df3 = right_join(df1,Threshold.df) %>%
+  filter(Test_Prop_Cell > Threshold)
+
+write.csv(df3,
+          file = file.path(Proj.Home,"Data","10X_Expt2_Trimmed.csv"),
+          row.names = FALSE)
+
+# Bar Plots for Cell #s ----
+
+Sum.df1 = rbind(read.csv(file = file.path(Proj.Home, "Data", "10X_Expt1_Raw.csv")) %>%
+  mutate(Status = sign(Flu_RNA)) %>%
+  filter(Status == 0) %>%
+  dplyr::select(Cell, MOI, Status),
+  read.csv(file = file.path(Proj.Home, "Data", "10X_Expt1_Trimmed.csv")) %>%
+  mutate(Test = sign(WT),
+         Status = Test + P3_NP) %>%
+  dplyr::select(Cell, MOI, Status) %>%
+  filter(Status > 0)) %>%
+  group_by(Cell,MOI,Status) %>%
+  dplyr::summarise(Cell_Num = length(Cell))
+
+df.Total = read.csv(file = file.path(Proj.Home, "Data", "10X_Expt1_Raw.csv")) %>%
+  group_by(Cell,MOI) %>%
+  dplyr::summarise(Total = length(Cell))
+
+df.Test = read.csv(file = file.path(Proj.Home, "Data", "10X_Expt1_Trimmed.csv")) %>%
+  mutate(Test = sign(WT)) %>%
+  group_by(Cell,MOI) %>%
+  dplyr::summarise(Test = sum(Test),
+                   P3_NP = sum(P3_NP))
+
+Sum.df1 = right_join(df.Total,df.Test) %>%
+  mutate(Total = Total - Test,
+         Test = Test - P3_NP,
+         Cell = Cell %>% recode("DF1" = "DF-1")) %>%
+  melt(id = c("Cell","MOI"))
+
+
+
+Base.Plot +
+  geom_bar(data = Sum.df1,
+           stat = "identity",
+           position = "stack",
+           color = "black",
+           aes(x = MOI %>% factor,
+               y = value,
+               alpha = variable,
+               fill = variable)) +
+  labs(x = "MOI (NP units/cell)",
+       y = "# cells") +
+  scale_fill_manual(values = c("Total" = "gray40",
+                               "Test" = "gold2",
+                               "P3_NP" = "gold2")) +
+  scale_alpha_manual(values = c("Total" = 1,
+                               "Test" = 0.4,
+                               "P3_NP" = 1)) +
+  facet_wrap(~ Cell)
+
+ggsave(file = "Plots/Supp6A_Expt1_Numbers.pdf",
+       height = 5,
+       width = 5,
+       units = "in")
+
+Legend.6A = Legend.Plot +
+  geom_bar(data = Sum.df1 %>% mutate(variable = variable %>% recode("Total" = "Total cells","Test" = "Polymerase absent",
+                                                                    "P3_NP" = "Polymerase present")),
+           stat = "identity",
+           position = "stack",
+           color = "black",
+           aes(x = MOI %>% factor,
+               y = value,
+               alpha = variable,
+               fill = variable)) +
+  labs(x = "MOI (NP units/cell)",
+       y = "# cells",
+       fill = NULL,
+       alpha = NULL) +
+  scale_fill_manual(values = c("Total cells" = "gray40",
+                               "Polymerase absent" = "gold2",
+                               "Polymerase present" = "gold2")) +
+  scale_alpha_manual(values = c("Total cells" = 1,
+                                "Polymerase absent" = 0.4,
+                                "Polymerase present" = 1)) +
+  facet_wrap(~ Cell)
+
+ggsave(g_legend(Legend.6A),
+       file = "Plots/Legend_Supp6A.pdf",
+       height = 3,
+       width = 2,
+       units = "in")
+  
+df.Test = read.csv(file = file.path(Proj.Home, "Data", "10X_Expt2_Trimmed.csv")) %>%
+  mutate(Helper = sign(mHelperPB2) * sign(mHelperPB1) * sign(mHelperPA) * sign(mHelperHA) * sign(mHelperNP) * sign(mHelperNA) * sign(mHelperM) * sign(mHelperNS),
+         Test = Helper * sign(Test_Sum),
+         Status = Helper + Test) %>%
+  #filter(Status > 1) %>%
+  filter(Test == 1) %>%
+  group_by(Cell,MOI) %>%
+  dplyr::summarise(Test = length(Cell))
+
+df.Total = read.csv(file = file.path(Proj.Home, "Data", "10X_Expt2_Raw.csv")) %>%
+  mutate(Helper = sign(mHelperPB2) * sign(mHelperPB1) * sign(mHelperPA) * sign(mHelperHA) * sign(mHelperNP) * sign(mHelperNA) * sign(mHelperM) * sign(mHelperNS)) %>%
+  group_by(Cell,MOI) %>%
+  dplyr::summarise(Total = length(Cell),
+                   Helper = sum(Helper))
+
+Sum.df1 = right_join(df.Total,df.Test) %>%
+  mutate(Total = Total - Helper,
+         Helper = Helper - Test,
+         Cell = Cell %>% recode("DF1" = "DF-1")) %>%
+  melt(id = c("Cell","MOI"))
+
+Base.Plot +
+  geom_bar(data = Sum.df1,
+           stat = "identity",
+           position = "stack",
+           color = "black",
+           aes(x = MOI %>% factor,
+               y = value,
+               alpha = variable,
+               fill = variable)) +
+  labs(x = "MOI (NP units/cell)",
+       y = "# cells") +
+  scale_fill_manual(values = c("Total" = "gray40",
+                               "Helper" = "darkorange2",
+                               "Test" = "darkorange2")) +
+  scale_alpha_manual(values = c("Total" = 1,
+                                "Helper" = 0.4,
+                                "Test" = 1)) +
+  facet_wrap(~ Cell)
+
+ggsave(file = "Plots/Supp6C_Expt2_Numbers.pdf",
+       height = 5,
+       width = 5,
+       units = "in")
+
+Legend.6C = Legend.Plot +
+  geom_bar(data = Sum.df1 %>% mutate(variable = variable %>% recode("Total" = "Total cells",
+                                                                    "Helper" = "Helper+",
+                                                                    "Test" = "WT+ or mVar+")),
+           stat = "identity",
+           position = "stack",
+           color = "black",
+           aes(x = MOI %>% factor,
+               y = value,
+               alpha = variable,
+               fill = variable)) +
+  labs(x = "MOI (NP units/cell)",
+       y = "# cells",
+       alpha = NULL,
+       fill = NULL) +
+  scale_fill_manual(values = c("Total cells" = "gray40",
+                               "Helper+" = "darkorange2",
+                               "WT+ or mVar+" = "darkorange2")) +
+  scale_alpha_manual(values = c("Total cells" = 1,
+                                "Helper+" = 0.4,
+                                "WT+ or mVar+" = 1)) +
+  facet_wrap(~ Cell)
+
+Legend.6C
+ggsave(g_legend(Legend.6C),
+       file = "Plots/Legend_Supp6C.pdf",
+       height = 3,
+       width = 2,
+       units = "in")
+
+# Violin Plots from Cleaned Data ----
+
+df1 = read.csv(file = file.path(Proj.Home, "Data", "10X_Expt1_Trimmed.csv")) %>%
+  mutate(WT.Segments = sign(WF10PB2) + sign(WF10PB1) + sign(WF10PA) + sign(WF10HA) + sign(WF10NP) + sign(WF10NA) + sign(WF10M) + sign(WF10NS),
+         Cell = Cell %>% recode("DF1" = "DF-1"))
+
+Median.df1 = df1 %>% group_by(Cell,MOI) %>%
+  dplyr::summarise(Median_UMI = median(TotalRNA))
+Norm.df1 = right_join(df1,Median.df1) %>%
+  mutate(Norm_Factor = Median_UMI / TotalRNA,
+         WT = (WT * Norm_Factor) %>% log10)
+
+df2 = read.csv(file = file.path(Proj.Home, "Data", "10X_Expt2_Trimmed.csv")) %>% 
+  mutate(WT.Segments = sign(WF10PB2) + sign(WF10PB1) + sign(WF10PA) + sign(WF10HA) + sign(WF10NP) + sign(WF10NA) + sign(WF10M) + sign(WF10NS),
+         VAR.Segments = sign(mVarPB2) + sign(mVarPB1) + sign(mVarPA) + sign(mVarHA) + sign(mVarNP) + sign(mVarNA) + sign(mVarM) + sign(mVarNS),
+         Cell = Cell %>% recode("DF1" = "DF-1"))
+
+Median.df2 = df2 %>% group_by(Cell,MOI) %>%
+  dplyr::summarise(Median_UMI = median(TotalRNA))
+Norm.df2 = right_join(df2,Median.df2) %>%
+    mutate(Norm_Factor = Median_UMI / TotalRNA,
+           WT = (WT * Norm_Factor) %>% log10,
+           VAR = (VAR * Norm_Factor) %>% log10)
+
+Sum.df = rbind(Norm.df1 %>% dplyr::select(Cell,MOI,WT,WT.Segments) %>% dplyr::rename(Test = WT,Segments = WT.Segments) %>% mutate(Help = "Virus alone"),
+               rbind(Norm.df2 %>% filter(WT.Segments > 0) %>% dplyr::select(Cell,MOI,WT,WT.Segments) %>% dplyr::rename(Test = WT,Segments = WT.Segments),
+                     Norm.df2 %>% filter(VAR.Segments > 0) %>% dplyr::select(Cell,MOI,VAR,VAR.Segments) %>% dplyr::rename(Test = VAR,Segments = VAR.Segments)) %>%
+                 mutate(Help = "w/ mVAR2"))
+
+Base.Plot +
+  geom_violin(data = Norm.df1,
+              aes(x = MOI %>% factor,
+                  y = WT,
+                  fill = Cell,
+                  alpha = P3_NP %>% factor),
+              scale = "area",
+              draw_quantiles = 0.5,
+              lwd = 0.8) +
+  facet_wrap(~ Cell) +
+  coord_flip() +
+  scale_alpha_manual(values = c("0" = 0.25,
+                                "1" = 1)) +
+  labs(x = "MOI (NP units/cell)",
+       y = TeX("\\textbf{$\\log_1_0$ normalized UMI counts/cell}")) +
+  scale_fill_manual(values = c("DF-1" = "deeppink3", "MDCK" = "skyblue"))
+
+ggsave(file = "Plots/Supp6B_WT_Polymerase.pdf",
+       height = 5,
+       width = 5,
+       units = "in")
+
+Legend.6B = Legend.Plot +
+  geom_violin(data = Norm.df1 %>% mutate(P3_NP = P3_NP %>% recode("0" = "Absent",
+                                                                  "1" = "Present")),
+              aes(x = MOI %>% factor,
+                  y = WT,
+                  fill = Cell,
+                  alpha = P3_NP),
+              scale = "area",
+              draw_quantiles = 0.5,
+              lwd = 0.8) +
+  facet_wrap(~ Cell) +
+  coord_flip() +
+  scale_alpha_manual(values = c("Absent" = 0.25,
+                                "Present" = 1)) +
+  labs(x = "MOI (NP units/cell)",
+       y = TeX("\\textbf{$\\log_1_0$ normalized UMI counts/cell}"),
+       alpha = "Polymerase") +
+  scale_fill_manual(values = c("DF-1" = "deeppink3", "MDCK" = "skyblue"))
+
+ggsave(g_legend(Legend.6B),
+       file = "Plots/Legend_Supp6B.pdf",
+       height = 3,
+       width = 2,
+       units = "in")
+
+Base.Plot + 
+  geom_violin(data = Sum.df,
+              aes(x = MOI %>% factor,
+                  y = Test,
+                  fill = Cell),
+              scale = "area",
+              draw_quantiles = 0.5,
+              lwd = 0.8) +
+  facet_wrap(~ Help) +
+    coord_flip() +
+    labs(x = "MOI (NP units/cell)",
+         y = TeX("\\textbf{$\\log_1_0$ normalized UMI counts/cell}")) +
+    scale_fill_manual(values = c("DF-1" = "deeppink3", "MDCK" = "skyblue"))
+
+ggsave(file = "Plots/6A_WT_vs_Helper.pdf",
+       height = 5,
+       width = 5,
+       units = "in")
+
+Legend.6A = Legend.Plot + 
+  geom_violin(data = Sum.df,
+              aes(x = MOI %>% factor,
+                  y = Test,
+                  fill = Cell),
+              scale = "area",
+              draw_quantiles = 0.5,
+              lwd = 0.8) +
+  facet_wrap(~ Help) +
+  coord_flip() +
+  labs(x = "MOI (NP units/cell)",
+       y = TeX("\\textbf{$\\log_1_0$ normalized UMI counts/cell}")) +
+  scale_fill_manual(values = c("DF-1" = "deeppink3", "MDCK" = "skyblue"))
+
+ggsave(g_legend(Legend.6A),
+       file = "Plots/Legend_6A.pdf",
+       height = 3,
+       width = 2,
+       units = "in")
+
+Base.Plot + 
+  geom_violin(data = Sum.df,
+              aes(x = MOI %>% factor,
+                  y = Segments,
+                  fill = Cell),
+              scale = "width",
+              draw_quantiles = 0.5,
+              lwd = 0.8) +
+  facet_wrap(~ Help) +
+  coord_flip() +
+  labs(x = "MOI (NP units/cell)",
+       y = "Segments/cell") +
+  scale_fill_manual(values = c("DF-1" = "deeppink3", "MDCK" = "skyblue"))
+
+ggsave(file = "Plots/6B_Segments.pdf",
+       height = 5,
+       width = 5,
+       units = "in")
+
+# Stats ----
+
+Sum.df %>% group_by(Cell,MOI,Help) %>%
+  dplyr::summarise(Cell_Num = length(Cell)) %>%
+  arrange(Help,Cell_Num)
+
+x = Sum.df %>% group_by(Cell,MOI,Help) %>%
+  dplyr::summarise(Cell_Num = length(Cell)) %>%
+  arrange(Help,Cell_Num) %>% filter(Help == "Virus alone")
+x$Cell_Num %>% sum
+
+df1 = Sum.df %>% filter(Help == "Virus alone")
+
+df1 = read.csv(file = file.path(Proj.Home, "Data", "10X_Expt1_Trimmed.csv"))
+
+Median.df1 = df1 %>% group_by(Cell,MOI) %>%
+  dplyr::summarise(Median_UMI = median(TotalRNA))
+Norm.df1 = right_join(df1,Median.df1) %>%
+  mutate(Norm_Factor = Median_UMI / TotalRNA,
+         WT = (WT * Norm_Factor) %>% log10)
+
+lmer(formula = WT ~ P3_NP + (1|MOI),
+     data = Norm.df1 %>% filter(Cell == "DF1")) %>% summary
+10^(.61) # 4.1-fold increase in DF-1
+lmer(formula = WT ~ P3_NP + (1|MOI),
+     data = Norm.df1 %>% filter(Cell == "MDCK")) %>% summary
+10^(0.39) # 2.5-fold increase in MDCK
+
+lmer(formula = WT ~ P3_NP * Cell + (1|MOI),
+     data = Norm.df1) %>% summary
+10^(0.58) #3.8-fold increase in abundance from P3_NP
+1 - 10^(-.25) # 41% reduciton in MDCK cells
+
+lmer(formula = WT ~ Cell + (1|MOI),
+     data = Norm.df1) %>% summary
+1 - 10^(-.25) # 41% reduciton in MDCK cells
+10^(.25) - 1 # 41% reduciton in MDCK cells
+
+df2 = read.csv(file = file.path(Proj.Home, "Data", "10X_Expt2_Trimmed.csv"))
+Median.df2 = df2 %>% group_by(Cell,MOI) %>%
+  dplyr::summarise(Median_UMI = median(TotalRNA))
+Norm.df2 = right_join(df2,Median.df2) %>%
+  mutate(Norm_Factor = Median_UMI / TotalRNA,
+         WT = (WT * Norm_Factor) %>% log10,
+         VAR = (VAR * Norm_Factor) %>% log10)
+Melt.df2 = Norm.df2 %>% dplyr::select(Cell,MOI,WT,VAR) %>% melt(id = c("Cell","MOI")) %>% filter(value > 0)
+
+Base.Plot + 
+  geom_violin(data = Melt.df2 %>% mutate(Cell = Cell %>% recode("DF1" = "DF-1")),
+              aes(x = MOI %>% factor,
+                  y = value,
+                  group = interaction(variable,Cell,MOI),
+                  fill = Cell),
+              scale = "area",
+              draw_quantiles = 0.5,
+              lwd = 0.8) +
+  coord_flip() +
+  labs(x = "MOI (NP units/cell)",
+       y = TeX("\\textbf{$\\log_1_0$ normalized UMI counts/cell}")) +
+  scale_fill_manual(values = c("DF-1" = "deeppink3", "MDCK" = "skyblue"))
+
+ggsave(file = "Plots/Supp6D_Expt2_WT_VAR_Separated.pdf",
+       height = 5,
+       width = 5,
+       units = "in")
+
+lmer(formula = value ~ variable + (1|MOI),
+     data = Melt.df2) %>% summary
+
+lmer(formula = Test ~ Cell * Help + (1|MOI),
+     data = Sum.df) %>% summary
+1 - 10^(-.25) #44% reduction in MDCK cells in the absence of Help,
+1 - 10^(-.25 + .15) #20% reduction in MDCK cells in the presence of Help
+10^(.39627) - 1 # (Effect of VAR in DF-1 cells)
+
+10^(.39627 + .15808) - 1
+
+10^(.45) # 2.8-fold increase from Helper in DF-1 cells
+10^(.45 + .11) # 3.6-fold increase from Helper in MDCK cells
+
+lmer(formula = Test ~ Cell * Help + (1|MOI),
+     data = Sum.df %>% filter(MOI < 0.6)) %>% summary
+
+df1 = read.csv(file = file.path(Proj.Home,"Data","10X_Expt1_Raw.csv"),
+         header = TRUE) %>%
+  mutate(UMI = TotalRNA %>% log10,
+         Help = "Virus alone")
+df2 = read.csv(file = file.path(Proj.Home,"Data","10X_Expt2_Raw.csv"),
+               header = TRUE) %>%
+  mutate(UMI = TotalRNA %>% log10,
+         Help = "w/ mVAR2")
+df3 = rbind(df1 %>% dplyr::select(Cell,MOI,UMI,Help),
+            df2 %>% dplyr::select(Cell,MOI,UMI,Help)) %>%
+  mutate(Cell = Cell %>% recode("DF1" = "DF-1"))
+Base.Plot +
+  geom_violin(data = df3,
+              aes(x = MOI %>% factor,
+                  y = UMI,
+                  fill = Cell,
+                  group = interaction(MOI,Cell)),
+              draw_quantiles = 0.5,
+              lwd = 0.8) +
+  facet_wrap(~Help) +
+  coord_flip() +
+  scale_y_continuous(limits = c(0,max(df3$UMI))) +
+  labs(x = "MOI (NP units/cell)",
+       y = TeX("\\textbf{$\\log_1_0$ total UMIs/cell}")) +
+  scale_fill_manual(values = c("DF-1" = "deeppink3", "MDCK" = "skyblue"))
+
+ggsave(file = "Plots/Supp6E_Total_UMIs_per_Cell.pdf",
+       height = 5,
+       width = 5,
+       units = "in")
+
+```
+
+```{r Figure 7}
+Flu.Segments = c("PB2","PB1","PA","HA","NP","NA","M","NS")
+
+Exp_Dual_HA = read.csv(file = file.path(Proj.Home,"Data","Poisson_DualHA_Exp.csv"), header = TRUE)
+
+SCA = read.csv(file.path(Proj.Home,"Data","7A_Data.csv")) %>%
+  na.omit %>%
+  mutate(Helper = PB2.Helper * PB1.Helper,
+         WT.Segments = PB2 + PB1 + PA + HA + NP + NA. + M + NS,
+         WT = sign(WT.Segments))
+
+SCA %>%
+  group_by(Rep) %>%
+  dplyr::summarise(WT.Cells = sum(WT),
+                   Helper.Cells = sum(Helper)) %>% 
+  filter(Rep <= 4) %>%
+  colSums
+
+Exp.Pp = read.csv(file.path(Proj.Home,"Data","7A_Data.csv")) %>%
+  na.omit %>%
+  mutate(Helper = PB2.Helper * PB1.Helper,
+         WT.Segments = PB2 + PB1 + PA + HA + NP + NA. + M + NS,
+         WT = sign(WT.Segments)) %>%
+  group_by(Rep) %>%
+  dplyr::summarise(PB2 = sum(PB2),
+            PB1 = sum(PB1),
+            PA = sum(PA),
+            HA = sum(HA),
+            NP = sum(NP),
+            NA. = sum(NA.),
+            M = sum(M),
+            NS = sum(NS),
+            Helper = sum(Helper),
+            WT = sum(WT)) %>%
+  mutate(PB2 = (log(1 - PB2 / Helper) / log(1 - WT / Helper)) %>% round(2),
+         PB1 = (log(1 - PB1 / Helper) / log(1 - WT / Helper)) %>% round(2),
+         PA = (log(1 - PA / Helper) / log(1 - WT / Helper)) %>% round(2),
+         HA = (log(1 - HA / Helper) / log(1 - WT / Helper)) %>% round(2),
+         NP = (log(1 - NP / Helper) / log(1 - WT / Helper)) %>% round(2),
+         NA. = (log(1 - NA. / Helper) / log(1 - WT / Helper)) %>% round(2),
+         M = (log(1 - M / Helper) / log(1 - WT / Helper)) %>% round(2),
+         NS = (log(1 - NS / Helper) / log(1 - WT / Helper)) %>% round(2)) %>%
+  dplyr::select(Rep,PB2:NS)
+
+Exp.Pp.1 = Exp.Pp %>%
+  melt(id.vars = "Rep",
+       variable.name = "Segment",
+       value.name = "Pp") %>%
+  mutate(Segment = Segment %>% str_replace("NA.", "NA") %>% factor(levels = Flu.Segments))
+
+Exp.Pp.2 = Exp.Pp %>%
+  mutate(Pp = (PB2 * PB1 * PA * HA * NP * NA. * M * NS) ^ (1 / 8) %>% round(2),
+         Avg.Pp = (PB2 + PB1 + PA + HA + NP + NA. + M + NS) / 8 %>% round(2))
+
+Exp.Pp.Summary.2 = Exp.Pp.1 %>%
+  group_by(Rep) %>%
+  dplyr::summarise(Pp.Mean = mean(Pp),
+                   Pp.sd = sd(Pp))
+
+Base.Plot +
+  geom_crossbar(data = Exp.Pp.Summary.2,
+                aes(x = Rep,
+                    y = Pp.Mean,
+                    ymin = Pp.Mean - Pp.sd,
+                    ymax = Pp.Mean + Pp.sd),
+                fill = "darkgray",
+                alpha = 0.5) +
+  geom_jitter(data = Exp.Pp.1,
+              aes(x = Rep,
+                  y = Pp,
+                  color = Segment)) +
+  scale_y_continuous(limits=c(0,1.05),breaks=0:5/5) +
+  labs(y=expression(bold(paste("Probability of detection (P"[bold("P")],")"))),
+       x="Replicate") +
+  scale_color_tableau() +
+  theme(legend.position = "right")
+
+ggsave(file = "Plots/Misc7_Pp_v_Rep.pdf",
+       width = 6,
+       height = 5,
+       unit = "in")
+
+lm(formula = Pp ~ Rep,
+   data = Exp.Pp.1 %>%  mutate(Rep = Rep %>% factor(levels = c(1,2,3,4,5)))) %>% summary
+
+Exp.Pp.1 = Exp.Pp.1 %>% filter(Rep <= 4)
+Exp.Pp.2 = Exp.Pp.2 %>% filter(Rep <= 4)
+
+Exp.Pp.1 = Exp.Pp.1 %>% arrange(Rep,Segment)
+Exp.Pp.2 = Exp.Pp.2 %>% arrange(Rep)
+
+lm(formula = Pp ~ Rep,
+   data = Exp.Pp.1 %>%  mutate(Rep = Rep %>% factor(levels = c(1,2,3,4)))) %>% summary
+
+write.csv(Exp.Pp.2 %>% dplyr::select(Rep:NS),
+          file = file.path(Proj.Home,"Data","7B_Pp_Data.csv"),
+          row.names = FALSE)
+
+Exp.Pp.Summary = Exp.Pp.1 %>% 
+  group_by(Segment) %>%
+  dplyr::summarise(Pp.Mean = mean(Pp),
+            Pp.se = sd(Pp) / sqrt(length(Pp)),
+            Pp.sd = sd(Pp),
+            Pp.Min = Pp.Mean - Pp.sd,
+            Pp.Max = Pp.Mean + Pp.sd)
+
+Exp.Pp.Summary[Exp.Pp.Summary[,"Pp.Mean"] == 0.625,"Pp.Mean"] = 0.63 # R rounds 0.625 down to 0.62, so this rounding step had to be adjusted
+
+
+Base.Plot = ggplot() +
+  scale_color_manual(values = c("DF-1" = "deeppink3", "MDCK" = "skyblue")) +
+  scale_fill_manual(values = c("DF-1" = "deeppink3", "MDCK" = "skyblue")) +
+  theme(text=element_text(size=14,face="bold"),
+        strip.text.x=element_text(size=rel(1.5),margin=margin(0,0,3,0)),
+        strip.text.y=element_text(size=rel(1.5),margin=margin(0,0,0,0),angle=0),
+        strip.background = element_blank(),
+        plot.title = element_text(size=rel(1.5)),
+        axis.text.x=element_text(angle=0,vjust=0,size=rel(1.5),color = "black"),
+        axis.text.y=element_text(size=rel(1.5),color = "black"),
+        axis.line.x = element_line(size=0.5),
+        axis.line.y = element_line(size=0.5),
+        axis.ticks.x = element_line(size=0.5, color = "black"),
+        axis.ticks.y = element_line(size = 0.5, color = "black"),
+        axis.title.y = element_text(size=rel(1.2),color = "black"),
+        axis.title.x = element_text(size=rel(1.2)),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank())
+
+Legend.Plot = 
+  ggplot() +
+  theme(text=element_text(size=14,face="bold"),
+        strip.text.x=element_text(size=rel(1.5),margin=margin(0,0,3,0)),
+        strip.text.y=element_text(size=rel(1.5),margin=margin(0,0,0,0),angle=0),
+        strip.background = element_blank(),
+        plot.title = element_text(size=rel(1.5)),
+        axis.text.x=element_text(angle=0,vjust=0,size=rel(1.5),color = "black"),
+        axis.text.y=element_text(size=rel(1.5),color = "black"),
+        axis.line.x = element_line(size=0.5),
+        axis.line.y = element_line(size=0.5),
+        axis.ticks.x = element_line(size=0.5),
+        axis.ticks.y = element_line(size = 0.5),
+        axis.title.y = element_text(size=rel(1.2),color = "black"),
+        axis.title.x = element_text(size=rel(1.2)),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank())
+
+Exp.Pp.1 %>% group_by(Rep) %>%
+  dplyr::summarise(Avg = prod(Pp) ^ (1 / 8)) %>%
+  ungroup %>%
+  dplyr::summarise(Pp.Mean = mean(Avg),
+            Pp.sd = sd(Avg),
+            Pp.Max = Pp.Mean + Pp.sd,
+            Pp.Min = Pp.Mean - Pp.sd)
+
+Base.Plot +
+  geom_crossbar(data = Exp.Pp.Summary,
+                aes(x = Segment,
+                    y = Pp.Mean,
+                    ymin = Pp.Min,
+                    ymax = Pp.Max),
+                fill = "darkgray",
+                alpha = 0.5) +
+  geom_jitter(data = Exp.Pp.1,
+             aes(x = Segment,
+                 y = Pp,
+                 color = factor(Rep)),
+             width = 0.3,
+             size = 2) +
+  geom_text(data = Exp.Pp.Summary,
+            aes(x = Segment,
+                label = Pp.Mean %>% round(2)),
+            size = 5,
+            fontface = "bold",
+            y = .05) +
+  scale_y_continuous(limits=c(0,1.05),breaks=0:5/5) +
+  annotate("text",x = 3, y = 1, size = 5,label = TeX("\\textbf{$P_P$ = 0.65 (0.60 - 0.70)}")) +
+  labs(y=expression(bold(paste("Probability of detection (P"[bold("P")],")"))),
+       x="Segment",
+       color="Replicate") +
+  scale_color_manual(values = c("1" = "#4E7A97",
+                                "2" = "#F28E2B",
+                                "4" = "#59A14F",
+                                "3" = "#964B00")) +
+  guides(color = FALSE)
+
+ggsave(file = "Plots/7A_Pp_v_Segment.pdf",
+       width = 5,
+       height = 5,
+       unit = "in")
+
+Legend.7A = Legend.Plot +
+  geom_crossbar(data = Exp.Pp.Summary,
+                aes(x = Segment,
+                    y = Pp.Mean,
+                    ymin = Pp.Min,
+                    ymax = Pp.Max),
+                fill = "darkgray",
+                alpha = 0.5) +
+  geom_jitter(data = Exp.Pp.1,
+              aes(x = Segment,
+                  y = Pp,
+                  color = factor(Rep)),
+              width = 0.3,
+              size = 2) +
+  scale_y_continuous(limits=c(0,1.05),breaks=0:5/5) +
+  annotate("text",x = 3, y = 1, size = 5,label = TeX("\\textbf{$P_P$ = 0.65 (0.60 - 0.70)}")) +
+  labs(y=expression(bold(paste("Probability of detection (P"[bold("P")],")"))),
+       x="Segment",
+       color="Replicate") +
+  scale_color_manual(values = c("1" = "#4E7A97",
+                                "2" = "#F28E2B",
+                                "4" = "#59A14F",
+                                "3" = "#964B00"))
+
+ggsave(g_legend(Legend.7A),
+       file = "Plots/Legend_7A.pdf",
+       height = 3,
+       width = 2,
+       units = "in")
+
+
+# Simulation ----
+
+CellInfection=function(Cell.Num,MOI,Cell.Type,Pp) {
+
+  set.seed(666) #
+
+  Cell.Names = c(
+    "MOI","Cell.Type",
+    "Cell","Infected","Co.Infected","Productive","Productive.Co.Infected","Poly","Surface.HA","Inf.A","Inf.B",
+    "pParent.A","pParent.B","pReassort","pHN.Reassort",
+    "PB2","PB1","PA","HA","NP","NA","M","NS",
+    "A.PB2","A.PB1","A.PA","A.HA","A.NP","A.NA","A.M","A.NS",
+    "B.PB2","B.PB1","B.PA","B.HA","B.NP","B.NA","B.M","B.NS",
+    "Copy.A.PB2","Copy.A.PB1","Copy.A.PA","Copy.A.HA","Copy.A.NP","Copy.A.NA","Copy.A.M","Copy.A.NS",
+    "Copy.B.PB2","Copy.B.PB1","Copy.B.PA","Copy.B.HA","Copy.B.NP","Copy.B.NA","Copy.B.M","Copy.B.NS",
+    "Copy.PB2","Copy.PB1","Copy.PA","Copy.HA","Copy.NP","Copy.NA","Copy.M","Copy.NS",
+    "Six","HA.Neg","NS.Neg"
+  )
+  Cells = matrix(nrow = Cell.Num,
+                 ncol = length(Cell.Names),
+                 data = 0)
+
+  colnames(Cells) = Cell.Names
+
+  Cells[, "Cell"] = seq(1, Cell.Num)
+  Cells[, "MOI"] = MOI
+
+  withA = sort(ceiling(runif(n = MOI * Cell.Num) * Cell.Num))
+  withB = sort(ceiling(runif(n = MOI * Cell.Num) * Cell.Num))
+
+  x = table(withA)
+  x_index = as.numeric(names(x))
+  x_values = as.numeric(x)
+  Cells[x_index, "Inf.A"] = x_values
+
+  x = table(withB)
+  x_index = as.numeric(names(x))
+  x_values = as.numeric(x)
+  Cells[x_index, "Inf.B"] = x_values
+
+  Cells[, "Co.Infected"] = (Cells[, "Inf.A"] * Cells[, "Inf.B"] > 0)
+  Cells[, "Infected"] = (Cells[, "Inf.A"] + Cells[, "Inf.B"] > 0)
+  Cells[, "pParent.A"] = 1
+  Cells[, "pParent.B"] = 1
+  Cells[, "pHN.Reassort"] = 1
+
+  A.PB2.Index = which((colnames(Cells)) == "A.PB2")
+  PB2.Index = which((colnames(Cells)) == "PB2")
+
+  for (segment in 1:8) {
+    x = table(sort(sample(
+      withA,
+      size = length(withA) * Pp[segment],
+      replace = FALSE
+    )))
+    x_index = as.numeric(names(x))
+    x_values = as.numeric(x)
+
+    Cells[x_index, A.PB2.Index + segment - 1] = x_values > 0     #Boolean Presence/Absence of Segment, A strain
+    Cells[x_index, A.PB2.Index + segment - 1 + 16] = x_values     #Copy Number of each segment, A strain
+
+    x = table(sort(sample(
+      withB,
+      size = length(withB) * Pp[segment],
+      replace = FALSE
+    )))
+    x_index = as.numeric(names(x))
+    x_values = as.numeric(x)
+
+    Cells[x_index, A.PB2.Index + segment - 1 + 8] = x_values > 0     #Boolean Presence/Absence of Segment, B strain
+    Cells[x_index, A.PB2.Index + segment - 1 + 16 + 8] = x_values     #Copy Number of each segment, B strain
+
+    Cells[, A.PB2.Index + segment - 1 + 16 + 8 + 8] = Cells[, A.PB2.Index + segment - 1 + 16] + Cells[, A.PB2.Index + segment - 1 + 16 + 8] #Copy number of each segment, irrespective of source
+    Cells[, PB2.Index + segment - 1] = (Cells[, A.PB2.Index + segment - 1] +
+                                          Cells[, A.PB2.Index + segment - 1 + 8]) > 0  #Presence/Absence of Gene, irrespective of source
+
+    Cells[, "pParent.A"] = Cells[, "pParent.A"] * (Cells[, A.PB2.Index + segment -
+                                                           1 + 16] / Cells[, A.PB2.Index + segment - 1 + 16 + 8 + 8])
+    Cells[, "pParent.B"] = Cells[, "pParent.B"] * (Cells[, A.PB2.Index + segment -
+                                                           1 + 16 + 8] / Cells[, A.PB2.Index + segment - 1 + 16 + 8 + 8])
+  }
+
+  Cells[, "Poly"] = Cells[, "PB2"] * Cells[, "PB1"] * Cells[, "PA"] * Cells[, "NP"]
+  Cells[, "Surface.HA"] = Cells[, "Poly"] * Cells[, "HA"]
+  Cells[, "Productive"] = Cells[, "Surface.HA"] * Cells[, "M"] * Cells[, "NS"] *
+    Cells[, "NA"]
+  Cells[, "Productive.Co.Infected"] = Cells[, "Productive"] * Cells[, "Co.Infected"]
+  Cells[, "pReassort"] = 1 -
+    Cells[, "pParent.A"] -
+    Cells[, "pParent.B"]
+  Cells[, "pHN.Reassort"] = 1 -
+    (Cells[, "Copy.A.HA"] / Cells[, "Copy.HA"]) * (Cells[, "Copy.A.NA"] / Cells[, "Copy.NA"]) -
+    (Cells[, "Copy.B.HA"] / Cells[, "Copy.HA"]) * (Cells[, "Copy.B.NA"] / Cells[, "Copy.NA"])
+
+  Cells
+}
+
+
+Pp = Exp.Pp.2 %>% dplyr::select(PB2:NS) %>% as.matrix
+Rep.Num = nrow(Exp.Pp.2)
+rownames(Pp) = as.character(1:Rep.Num)
+
+MOI = matrix(data = rep(c(.001,.01,.05,.1,.2,.3,.4,.5,.6,.7,.8,.9,1,1.5,2,5,10), Rep.Num), #Range of MOIs
+           byrow = TRUE, nrow = Rep.Num)
+
+rownames(MOI) = Exp.Pp.2$Rep
+MOI.Num = ncol(MOI)
+
+Cell.Num = 100000 # Usually inoculate 1,000,000 cells, but similar results obtained by simulating 100,000 cells
+Burst.Size = 967
+### Initialize Summary Data Frame ----
+
+Cell.Summary.Names = c(
+  # Model Parameters
+  "Rep","MOI",
+
+  # Outcomes
+  "Productive", "Productive.Co.Infected","Expressing.HA",
+  "Virion.Number","Parent.A.Percent","Parent.B.Percent","Reassortant.Percent","Reassortant.HN.Percent",
+  "Parent.A.Number","Parent.B.Number","Reassortant.Number","Reassortant.HN.Number"
+)
+
+Cell.Summary = matrix(nrow = (MOI.Num * Rep.Num),
+                    ncol = length(Cell.Summary.Names),
+                    data = 0)
+
+colnames(Cell.Summary) = Cell.Summary.Names
+Cell.Summary = as.data.frame(Cell.Summary)
+Cell.Summary$Rep = rownames(Pp)
+
+Complete.Summary = Cell.Summary[1:MOI.Num,]
+
+Summary.Index = 1
+
+Pp
+
+# Execute Simulation ----
+Sim.Start = Sys.time()
+
+for (moi in 1:MOI.Num) {
+  for (cell in 1:Rep.Num) {
+
+    Infected.Cells = CellInfection(MOI = MOI[cell, moi],
+                                   Cell.Num = Cell.Num,
+                                   Pp = Pp[cell,])
+
+    Cell.Summary[Summary.Index,"Productive"] =  mean(Infected.Cells[,"Productive"]) * 100
+    Cell.Summary[Summary.Index,"Productive.Co.Infected"] = mean(Infected.Cells[,"Productive.Co.Infected"]) * 100
+    Cell.Summary[Summary.Index,"Expressing.HA"] = mean(Infected.Cells[,"Surface.HA"]) * 100
+    Cell.Summary[Summary.Index,"Rep"] = rownames(Pp)[cell]
+    Cell.Summary[Summary.Index,"MOI"] = MOI[cell,moi]
+    Cell.Summary[Summary.Index,"Virion.Number"] = Burst.Size * Cell.Summary[Summary.Index,"Productive"]
+
+    Infected.Cells=Infected.Cells[Infected.Cells[,"Productive"]==1,,drop=FALSE]
+    Cell.Summary[Summary.Index,"Parent.A.Percent"] = mean(Infected.Cells[,"pParent.A"]) * 100
+    Cell.Summary[Summary.Index,"Parent.B.Percent"] = mean(Infected.Cells[,"pParent.B"]) * 100
+    Cell.Summary[Summary.Index,"Reassortant.Percent"] = mean(Infected.Cells[,"pReassort"]) * 100
+    Cell.Summary[Summary.Index,"Reassortant.HN.Percent"] = mean(Infected.Cells[,"pHN.Reassort"]) * 100
+
+    Cell.Summary[Summary.Index,"Parent.A.Number"] = Cell.Summary[Summary.Index,"Parent.A.Percent"] * Cell.Summary[Summary.Index,"Virion.Number"]
+    Cell.Summary[Summary.Index,"Parent.B.Number"] = Cell.Summary[Summary.Index,"Parent.B.Percent"] * Cell.Summary[Summary.Index,"Virion.Number"]
+    Cell.Summary[Summary.Index,"Reassortant.Number"] = Cell.Summary[Summary.Index,"Reassortant.Percent"] * Cell.Summary[Summary.Index,"Virion.Number"]
+    Cell.Summary[Summary.Index,"Reassortant.HN.Number"] = Cell.Summary[Summary.Index,"Reassortant.HN.Percent"] * Cell.Summary[Summary.Index,"Virion.Number"]
+
+    Summary.Index=Summary.Index+1
+  }
+
+  Infected.Cells = CellInfection(MOI = MOI[1,moi],
+                                 Cell.Num = Cell.Num,
+                                 Pp = rep(1,8))
+
+  Complete.Summary[moi,"Productive"] =  mean(Infected.Cells[,"Productive"]) * 100
+  Complete.Summary[moi,"Productive.Co.Infected"] = mean(Infected.Cells[,"Productive.Co.Infected"]) * 100
+  Complete.Summary[moi,"Expressing.HA"] = mean(Infected.Cells[,"Surface.HA"]) * 100
+  Complete.Summary[moi,"Rep"] = 1
+  Complete.Summary[moi,"MOI"] = MOI[cell,moi]
+  Complete.Summary[moi,"Virion.Number"] = Burst.Size * Cell.Summary[Summary.Index,"Productive"]
+
+  Infected.Cells=Infected.Cells[Infected.Cells[,"Productive"]==1,,drop=FALSE]
+  Complete.Summary[moi,"Parent.A.Percent"] = mean(Infected.Cells[,"pParent.A"]) * 100
+  Complete.Summary[moi,"Parent.B.Percent"] = mean(Infected.Cells[,"pParent.B"]) * 100
+  Complete.Summary[moi,"Reassortant.Percent"] = mean(Infected.Cells[,"pReassort"]) * 100
+  Complete.Summary[moi,"Reassortant.HN.Percent"] = mean(Infected.Cells[,"pHN.Reassort"]) * 100
+
+  Complete.Summary[moi,"Parent.A.Number"] = Cell.Summary[Summary.Index,"Parent.A.Percent"] * Cell.Summary[Summary.Index,"Virion.Number"]
+  Complete.Summary[moi,"Parent.B.Number"] = Cell.Summary[Summary.Index,"Parent.B.Percent"] * Cell.Summary[Summary.Index,"Virion.Number"]
+  Complete.Summary[moi,"Reassortant.Number"] = Cell.Summary[Summary.Index,"Reassortant.Percent"] * Cell.Summary[Summary.Index,"Virion.Number"]
+  Complete.Summary[moi,"Reassortant.HN.Number"] = Cell.Summary[Summary.Index,"Reassortant.HN.Percent"] * Cell.Summary[Summary.Index,"Virion.Number"]
+}
+
+Sim.End = Sys.time()
+Sim.Time = Sim.End - Sim.Start
+
+Sim.Time
+
+write.csv(Cell.Summary %>% dplyr::select(Rep, MOI, Expressing.HA, Reassortant.Percent), file = file.path(Proj.Home,"Data","7B_Sim_Data.csv"), row.names = FALSE)
+write.csv(Complete.Summary %>% dplyr::select(Rep, MOI, Expressing.HA, Reassortant.Percent), file = file.path(Proj.Home,"Data","PP1_Reassortment.csv"), row.names = FALSE)
+
+# Plot Simulation Results ----
+
+Cell.Summary = read.csv(file = file.path(Proj.Home,"Data","7B_Sim_Data.csv"), header = TRUE) %>% 
+  na.omit
+PP1_Reassortment = read.csv(file = file.path(Proj.Home,"Data","PP1_Reassortment.csv"), header = TRUE)
+
+KP4 = read.csv(file = file.path(Proj.Home,"Data","1C_Data.csv"), header = TRUE) %>%
+  dplyr::mutate(Cell = Cell %>% str_replace("DF1","DF-1"),
+                Virus_Cell = str_c(Virus," in ", Cell),
+                Virus_Cell = Virus_Cell %>% factor(levels = c("GFHK99 in MDCK",
+                                                              "GFHK99 in DF-1",
+                                                              "NL09 in MDCK",
+                                                              "MaMN99 in MDCK"))) %>%
+  na.omit
+
+Base.Plot +
+  geom_line(data = PP1_Reassortment, 
+            aes(x = Expressing.HA, 
+                y = Reassortant.Percent), 
+            lty = 2, 
+            lwd = 1) +
+  geom_line(data = Cell.Summary,
+            aes(y = Reassortant.Percent,
+                x = Expressing.HA,
+                group = as.factor(Rep),
+                color = as.factor(Rep)),
+            lwd = 1.2) +
+  geom_point(data = KP4 %>% filter(Virus_Cell == "GFHK99 in DF-1"),
+             aes(x = Expressing_HA,
+                 y = Reassortment),
+             color = "deeppink3",
+             size = 2.5) +
+  geom_point(data = KP4 %>% filter(Virus_Cell == "GFHK99 in MDCK"),
+             aes(x = Expressing_HA,
+                 y = Reassortment),
+             color = "skyblue",
+             size = 2.5) +
+
+  scale_color_manual(values = c("1" = "#4E7A97",
+                                "2" = "#F28E2B",
+                                "4" = "#59A14F",
+                                "3" = "#964B00")) +
+
+  annotate("text",x = 75, y = 15,size = 6,label = TeX("\\textbf{$\\P_P$ = 1}")) +
+  labs(x=expression(bold("% cells HA"^"+")),
+       y="% reassortment",
+       color="Rep") +
+  guides(color = FALSE) +
+  scale_x_continuous(limits=c(0,100)) +
+  scale_y_continuous(limits=c(0,100)) 
+
+ggsave(file = "Plots/7B_Predicted_GFHK99_Reassortment.pdf",
+       dpi = 300,
+       width = 5,
+       height = 5,
+       unit = "in")
+
+```
