@@ -843,7 +843,7 @@ ggsave('Plots/2H_Burst_by_MOI_High_Bar.pdf',
 
 ```
 
-```{r Figure 3}
+```{r Figure 4}
 
 Pois_Exp = function(HA) {
   
@@ -900,9 +900,9 @@ Base.Plot = ggplot() +
         legend.position = "NA")
 
 
-# 3A: % Dual-HA+ vs. % HA+ in 4:4 chimeras ----
+# 4A: % Dual-HA+ vs. % HA+ in 4:4 chimeras ----
 
-KP6 = read.csv(file = file.path(Proj.Home,"Data","3A_3B_Data.csv"), header = TRUE) %>%
+KP6 = read.csv(file = file.path(Proj.Home,"Data","4A_4B_Data.csv"), header = TRUE) %>%
   na.omit %>% 
   mutate(Strain = recode(Strain,
                          "GFHK99" = "All GFHK99",
@@ -920,8 +920,6 @@ KP6 = read.csv(file = file.path(Proj.Home,"Data","3A_3B_Data.csv"), header = TRU
                              "None, all MaMN99")))
 
 Exp_Dual_HA = read.csv(file = file.path(Proj.Home,"Data","Poisson_DualHA_Exp.csv"), header = TRUE)
-
-# 3B: HA co-expression by 4:4 chimeras
 
 Base.Plot +
   geom_abline(slope = 1,
@@ -962,12 +960,12 @@ Base.Plot +
   scale_y_continuous(breaks = c(0,25,50,75,100)) +
   coord_cartesian(xlim = c(0,100), ylim = c(0,100))
 
-ggsave('Plots/3A_4_4_HA_Co_Expression.pdf',
+ggsave('Plots/4A_4_4_HA_Co_Expression.pdf',
        width = 4,
        height = 4,
        unit = "in")
 
-# 3B: HA co-expression by 1:7 chimeras ----
+# 4B: HA co-expression by 1:7 chimeras ----
 
 Base.Plot +
   geom_abline(slope = 1,
@@ -1006,12 +1004,12 @@ Base.Plot +
   scale_y_continuous(breaks = c(0,25,50,75,100)) +
   coord_cartesian(xlim = c(0,100), ylim = c(0,100))
 
-ggsave('Plots/3B_1_7_HA_Co_Expression.pdf',
+ggsave('Plots/4B_1_7_HA_Co_Expression.pdf',
        width = 4,
        height = 4,
        unit = "in")
 
-Legend.3A = ggplot() +
+Legend.4A = ggplot() +
   geom_smooth(data = KP6,
               aes(x = Expressing_HA,
                   y = Dual_HA,
@@ -1066,8 +1064,8 @@ Legend.3A = ggplot() +
         panel.grid.minor = element_blank(),
         panel.background = element_blank())
 
-ggsave(g_legend(Legend.3A),
-       file = "Plots/Legend_3A.pdf",
+ggsave(g_legend(Legend.4A),
+       file = "Plots/Legend_4A.pdf",
        height = 4,
        width = 2,
        units = "in")
@@ -1091,7 +1089,7 @@ colnames(df2) = c("Strain","Pois","Linear")
 # Reassortment data ----
 
 PP1_Reassortment = read.csv(file = file.path(Proj.Home,"Data/PP1_Reassortment.csv"))
-KP3 = read.csv(file = file.path(Proj.Home,"Data","3C_3D_Data.csv"), header = TRUE) %>%
+KP3 = read.csv(file = file.path(Proj.Home,"Data","4C_4D_Data.csv"), header = TRUE) %>%
   na.omit %>% 
   mutate(Strain = recode(Strain,
                          "GFHK99" = "All GFHK99",
@@ -1108,7 +1106,7 @@ KP3 = read.csv(file = file.path(Proj.Home,"Data","3C_3D_Data.csv"), header = TRU
                              "HA",
                              "None, all MaMN99")))
 
-# 3C: Reassortment of 4:4 chimeras ----
+# 4C: Reassortment of 4:4 chimeras ----
 Base.Plot + 
   geom_point(data = KP3 %>% filter(Strain %in% c("All GFHK99",
                                                  "PB2 + PB1 + PA + NP",
@@ -1141,7 +1139,7 @@ Base.Plot +
   scale_y_continuous(breaks = c(0,25,50,75,100)) +
   coord_cartesian(xlim = c(0,100), ylim = c(0,100))
 
-ggsave('Plots/3C_4_4_Reassortment.pdf',
+ggsave('Plots/4C_4_4_Reassortment.pdf',
        width = 4,
        height = 4,
        unit = "in")
@@ -1178,7 +1176,7 @@ Base.Plot +
   scale_y_continuous(breaks = c(0,25,50,75,100)) +
   coord_cartesian(xlim = c(0,100), ylim = c(0,100))
 
-ggsave('Plots/3D_1_7_Reassortment.pdf',
+ggsave('Plots/4D_1_7_Reassortment.pdf',
        width = 4,
        height = 4,
        unit = "in")
@@ -1307,311 +1305,11 @@ ggplot(ggd1, horiz = TRUE) + theme_dendro() +
             lwd = 1.2,
             lty = 8)
 
-ggsave(file = "Plots/3E_Cluster.pdf",
+ggsave(file = "Plots/4E_Cluster.pdf",
        height = 4,
        width = 4,
        units = "in")
 
-
-```
-
-```{r Figure 4}
-
-df1 = read.csv(file = file.path(Proj.Home,"Data","4_Data.csv"), header = TRUE) %>%
-  mutate(Virus_Cell = str_c(Virus," in ", Cell))
-
-Baseline.df = df1 %>% 
-  filter(MOI == 0) %>%
-  group_by(Virus_Cell) %>%
-  dplyr::summarise(Base = mean(Copy))
-
-df2 = right_join(df1,Baseline.df) %>%
-  mutate(Fold = Copy / Base)
-
-df3 = df2 %>% 
-  group_by(Virus_Cell,MOI) %>%
-  dplyr::summarise(Fold = mean(Fold)) %>%
-  filter(Fold == max(Fold))
-
-df4 = df2 %>%
-  mutate(MOI = factor(MOI)) %>%
-  group_by(Virus, Cell, Virus_Cell, MOI) %>%
-  dplyr::summarise(Fold.Avg = mean(Fold),
-                   Fold.se = sd(Fold) / sqrt(length(Fold)))
-
-Base.Plot = 
-  ggplot() +
-  scale_color_manual(values = c("GFHK99 in MDCK" = "skyblue",
-                                "GFHK99 in DF-1" = "deeppink3",
-                                "GFHK99 in HTBE" = "steelblue",
-                                "NL09 in MDCK" = "goldenrod",
-                                "NL09 in HTBE" = "purple",
-                                "MaMN99 in MDCK" = "green3",
-                                "MaMN99 in DE" = "firebrick3")) +
-  scale_fill_manual(values = c("GFHK99 in MDCK" = "skyblue",
-                               "GFHK99 in DF-1" = "deeppink3",
-                               "GFHK99 in HTBE" = "steelblue",
-                               "NL09 in MDCK" = "goldenrod",
-                               "NL09 in HTBE" = "purple",
-                               "MaMN99 in MDCK" = "green3",
-                               "MaMN99 in DE" = "firebrick3")) +
-  theme(text=element_text(size=14,face="bold"),
-        strip.text.x=element_text(size=rel(1.5),margin=margin(0,0,3,0)),
-        strip.text.y=element_text(size=rel(1.5),margin=margin(0,0,0,0),angle=0),
-        strip.background = element_blank(),
-        plot.title = element_text(size=rel(1.5)),
-        axis.text.x=element_text(angle=0,vjust=0,size=rel(1.5),color = "black"),
-        axis.text.y=element_text(size=rel(1.5),color = "black"),
-        axis.line.x = element_line(size=0.5),
-        axis.line.y = element_line(size=0.5),
-        axis.ticks.x = element_line(size=0.5),
-        axis.ticks.y = element_line(size = 0.5),
-        axis.title.y = element_text(size=rel(1.2),color = "black"),
-        axis.title.x = element_text(size=rel(1.2)),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.background = element_blank(),
-        legend.position = "NA")
-
-Base.Plot +
-  geom_hline(lty = 2, yintercept = 1) +
-  geom_col(data = df4 %>% filter(MOI != "0", Virus == "GFHK99", Cell != "HTBE"),
-           position = position_dodge(),
-           color = "black",
-           aes(x = MOI,
-               y = Fold.Avg,
-               fill = Virus_Cell)) +
-  geom_errorbar(data = df4 %>% filter(MOI != "0", Virus == "GFHK99", Cell != "HTBE"),
-                aes(x = MOI,
-                    ymin = Fold.Avg - Fold.se,
-                    ymax = Fold.Avg + Fold.se),
-                position = position_dodge2(padding = 0.5),
-                width = 0.9,
-                lwd = 0.8) +
-  geom_jitter(data = df2 %>% filter(MOI != "0", Virus == "GFHK99", Cell != "HTBE"),
-           aes(x = MOI %>% factor,
-               y = Fold,
-               fill = Virus_Cell),
-           color = "black",
-           position = position_dodge2(0.9),
-           stroke = 1,
-           pch = 21) +
-  scale_y_log10(breaks = c(.1, 1, 10, 100)) +
-  labs(x = "Helper virus MOI (PFU/cell)",
-       y = "Fold change relative to WT only") +
-  coord_cartesian(ylim = c(.1,100))
-
-ggsave(file = "Plots/4A_Help_GFHK99_Bar.pdf",
-       height = 5,
-       width = 5,
-       units = "in")
-
-options(scipen = 999)
-
-Base.Plot +
-  geom_hline(lty = 2, yintercept = 1) +
-  geom_col(data = df4 %>% filter(MOI != "0", Virus == "NL09", Cell != "HTBE"),
-           position = position_dodge(),
-           color = "black",
-           aes(x = MOI,
-               y = Fold.Avg,
-               fill = Virus_Cell)) +
-  geom_errorbar(data = df4 %>% filter(MOI != "0", Virus == "NL09", Cell != "HTBE"),
-                aes(x = MOI,
-                    ymin = Fold.Avg - Fold.se,
-                    ymax = Fold.Avg + Fold.se),
-                #position = position_dodge2(padding = 0.1),
-                width = 0.4,
-                lwd = 0.8) +
-  geom_jitter(data = df2 %>% filter(MOI != "0", Virus == "NL09", Cell != "HTBE"),
-              aes(x = MOI %>% factor,
-                  y = Fold,
-                  fill = Virus_Cell),
-              color = "black",
-              #position_dodge(width = 0.1),
-              position = position_dodge2(0.9),
-              stroke = 1,
-              pch = 21) +
-  scale_y_log10(breaks = c(.001, 0.01, .1, 1, 10, 100)) +
-  labs(x = "Helper virus MOI (PFU/cell)",
-       y = "Fold change relative to WT only") +
-  coord_cartesian(ylim = c(.001,1))
-
-ggsave(file = "Plots/4C_Help_NL09_Bar.pdf",
-       height = 5,
-       width = 5,
-       units = "in")
-
-options(scipen = 999)
-Base.Plot +
-  geom_hline(lty = 2, yintercept = 1) +
-  geom_jitter(data = df2 %>% filter(MOI > 0,
-                                    Fold > 0,
-                                    Virus == "MaMN99"),
-              aes(x = MOI,
-                  y = Fold,
-                  color = Virus_Cell),
-              width = 0.05) +
-  geom_smooth(data = df2 %>% filter(MOI > 0, 
-                                    Cell == "DE",
-                                    Virus == "MaMN99"),
-              aes(x = MOI,
-                  y = Fold,
-                  color = Virus_Cell,
-                  fill = Virus_Cell)) +
-  scale_x_log10() +
-  scale_y_log10(breaks = c(100,1,.01)) +
-  labs(x = "Helper virus MOI (PFU/cell)",
-       y = "Fold change relative to WT only") +
-  coord_cartesian(xlim = c(.01,5),
-                  ylim = c(1e-4,3))
-
-Base.Plot +
-  geom_hline(lty = 2, yintercept = 1) +
-  geom_col(data = df4 %>%
-             mutate(Fold.Avg = Fold.Avg %>% na_if(0)) %>%
-             #mutate(Fold.Avg = Fold.Avg + 1 * (Fold.Avg == 0)) %>%
-             filter(MOI != "0", Virus == "MaMN99", Cell != "HTBE"),
-           position = position_dodge(),
-           color = "black",
-           aes(x = MOI,
-               y = Fold.Avg,
-               fill = Virus_Cell)) +
-  geom_errorbar(data = df4 %>%
-                  #mutate(Fold.Avg = Fold.Avg + 1 * (Fold.Avg == 0)) %>%
-                  mutate(Fold.Avg = Fold.Avg %>% na_if(0)) %>%
-                  filter(MOI != "0", Virus == "MaMN99", Cell != "HTBE"),
-                aes(x = MOI,
-                    ymin = Fold.Avg - Fold.se,
-                    ymax = Fold.Avg + Fold.se),
-                position = position_dodge2(padding = 0.5),
-                width = 0.9,
-                lwd = 0.8) +
-  geom_jitter(data = df2 %>% 
-                #mutate(Fold = Fold %>% na_if(0)) %>%
-                filter(MOI != "0", Virus == "MaMN99", Cell != "HTBE"),
-              aes(x = MOI %>% factor,
-                  y = Fold,
-                  fill = Virus_Cell),
-              color = "black",
-              #position_dodge(width = 0.1),
-              position = position_dodge2(width = 0.9, padding = 0.2),
-              stroke = 1,
-              pch = 21) +
-  scale_y_log10(breaks = c(.0001, .001, 0.01, .1, 1, 10, 100)) +
-  labs(x = "Helper virus MOI (PFU/cell)",
-       y = "Fold change relative to WT only") +
-  coord_cartesian(ylim = c(5e-5,1))
-
-ggsave(file = "Plots/4B_Help_MaMN99_Bar.pdf",
-       height = 5,
-       width = 5,
-       units = "in")
-
-Base.Plot +
-  geom_hline(lty = 2, yintercept = 1) +
-  geom_col(data = df4 %>%
-             mutate(Fold.Avg = Fold.Avg %>% na_if(0)) %>%
-             #mutate(Fold.Avg = Fold.Avg + 1 * (Fold.Avg == 0)) %>%
-             filter(MOI != "0", Virus == "GFHK99", Cell == "HTBE"),
-           position = position_dodge(),
-           color = "black",
-           aes(x = MOI,
-               y = Fold.Avg,
-               fill = Virus_Cell)) +
-  geom_errorbar(data = df4 %>%
-                  #mutate(Fold.Avg = Fold.Avg + 1 * (Fold.Avg == 0)) %>%
-                  mutate(Fold.Avg = Fold.Avg %>% na_if(0)) %>%
-                  filter(MOI != "0", Virus == "GFHK99", Cell == "HTBE"),
-                aes(x = MOI,
-                    ymin = Fold.Avg - Fold.se,
-                    ymax = Fold.Avg + Fold.se),
-                position = position_dodge2(padding = 0.5),
-                width = 0.4,
-                lwd = 0.8) +
-  geom_jitter(data = df2 %>% 
-                #mutate(Fold = Fold %>% na_if(0)) %>%
-                filter(MOI != "0", Virus == "GFHK99", Cell == "HTBE"),
-              aes(x = MOI %>% factor,
-                  y = Fold,
-                  fill = Virus_Cell),
-              color = "black",
-              #position_dodge(width = 0.1),
-              position = position_dodge2(width = 0.9, padding = 0.2),
-              stroke = 1,
-              pch = 21) +
-  scale_y_log10(breaks = c(.0001, .001, 0.01, .1, 1, 10, 100)) +
-  labs(x = "Helper virus MOI (PFU/cell)",
-       y = "Fold change relative to WT only") +
-  coord_cartesian(ylim = c(1,100))
-
-ggsave(file = "Plots/4D_Help_GFHK99_HTBE_Bar.pdf",
-       height = 5,
-       width = 5,
-       units = "in")
-
-Base.Plot +
-  geom_hline(lty = 2, yintercept = 1) +
-  geom_col(data = df4 %>%
-             mutate(Fold.Avg = Fold.Avg %>% na_if(0)) %>%
-             #mutate(Fold.Avg = Fold.Avg + 1 * (Fold.Avg == 0)) %>%
-             filter(MOI != "0", Virus == "NL09", Cell == "HTBE"),
-           position = position_dodge(),
-           color = "black",
-           aes(x = MOI,
-               y = Fold.Avg,
-               fill = Virus_Cell)) +
-  geom_errorbar(data = df4 %>%
-                  #mutate(Fold.Avg = Fold.Avg + 1 * (Fold.Avg == 0)) %>%
-                  mutate(Fold.Avg = Fold.Avg %>% na_if(0)) %>%
-                  filter(MOI != "0", Virus == "NL09", Cell == "HTBE"),
-                aes(x = MOI,
-                    ymin = Fold.Avg - Fold.se,
-                    ymax = Fold.Avg + Fold.se),
-                position = position_dodge2(padding = 0.5),
-                width = 0.4,
-                lwd = 0.8) +
-  geom_jitter(data = df2 %>% 
-                #mutate(Fold = Fold %>% na_if(0)) %>%
-                filter(MOI != "0", Virus == "NL09", Cell == "HTBE"),
-              aes(x = MOI %>% factor,
-                  y = Fold,
-                  fill = Virus_Cell),
-              color = "black",
-              #position_dodge(width = 0.1),
-              position = position_dodge2(width = 0.9, padding = 0.2),
-              stroke = 1,
-              pch = 21) +
-  scale_y_log10(breaks = c(.0001, .001, 0.01, .1, 1, 10, 100)) +
-  labs(x = "Helper virus MOI (PFU/cell)",
-       y = "Fold change relative to WT only") +
-  coord_cartesian(ylim = c(.1,10))
-
-ggsave(file = "Plots/4E_Help_NL09_HTBE_Bar.pdf",
-       height = 5,
-       width = 5,
-       units = "in")
-
-# Legend ----
-Legend.Plot = Base.Plot +
-  geom_point(data = df2,
-             aes(x = MOI,
-                 y = Fold,
-                 color = Virus_Cell)) +
-  geom_smooth(data = df2,
-             aes(x = MOI,
-                 y = Fold,
-                 color = Virus_Cell,
-                 fill = Virus_Cell)) +
-  labs(color = NULL,
-       fill = NULL) +
-  theme(legend.position = "right")
-
-ggsave(g_legend(Legend.Plot),
-       file = "Plots/Legend_4A.pdf",
-       height = 4,
-       width = 2,
-       units = "in")
 
 ```
 

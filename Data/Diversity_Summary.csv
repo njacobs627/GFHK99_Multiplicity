@@ -1,0 +1,72 @@
+"Short.ID","Day","Organ","Dose","Species","Virus","RT","Expt","Simpson"
+"Q19.KG1",1,"Trachea","100","Quail","GFHK99","URT","KG1",2.88235294117647
+"Q19.KG1",3,"Trachea","100","Quail","GFHK99","URT","KG1",2.5974025974026
+"Q19.KG1",5,"Trachea","100","Quail","GFHK99","URT","KG1",1.21487603305785
+"Q20.KG1",1,"Trachea","100","Quail","GFHK99","URT","KG1",1.72972972972973
+"Q20.KG1",3,"Trachea","100","Quail","GFHK99","URT","KG1",1.93959731543624
+"Q20.KG1",5,"Trachea","100","Quail","GFHK99","URT","KG1",6.2112676056338
+"Q21.KG1",1,"Trachea","100","Quail","GFHK99","URT","KG1",3.88172043010753
+"Q21.KG1",3,"Trachea","100","Quail","GFHK99","URT","KG1",3.44827586206897
+"Q21.KG1",5,"Trachea","100","Quail","GFHK99","URT","KG1",5.55384615384615
+"Q22.KG1",1,"Trachea","100","Quail","GFHK99","URT","KG1",1
+"Q22.KG1",3,"Trachea","100","Quail","GFHK99","URT","KG1",1
+"Q23.KG1",1,"Trachea","100","Quail","GFHK99","URT","KG1",1
+"Q23.KG1",3,"Trachea","100","Quail","GFHK99","URT","KG1",2.80582524271845
+"Q23.KG1",5,"Trachea","100","Quail","GFHK99","URT","KG1",13.7619047619048
+"Q24.KG1",1,"Trachea","100","Quail","GFHK99","URT","KG1",1
+"Q24.KG1",3,"Trachea","100","Quail","GFHK99","URT","KG1",2.11004784688995
+"Q24.KG1",5,"Trachea","100","Quail","GFHK99","URT","KG1",1.79601990049751
+"GP1.KG2",1,"Nasal Wash","100","Guinea Pig","NL09","URT","KG2",1.34862385321101
+"GP1.KG2",2,"Nasal Wash","100","Guinea Pig","NL09","URT","KG2",3.25225225225225
+"GP1.KG2",4,"Nasal Wash","100","Guinea Pig","NL09","URT","KG2",1.96078431372549
+"GP2.KG2",1,"Nasal Wash","100","Guinea Pig","NL09","URT","KG2",9.09090909090909
+"GP2.KG2",2,"Nasal Wash","100","Guinea Pig","NL09","URT","KG2",15.695652173913
+"GP2.KG2",4,"Nasal Wash","100","Guinea Pig","NL09","URT","KG2",9.25641025641026
+"GP3.KG2",1,"Nasal Wash","100","Guinea Pig","NL09","URT","KG2",2.88235294117647
+"GP3.KG2",2,"Nasal Wash","100","Guinea Pig","NL09","URT","KG2",4.2
+"GP3.KG2",4,"Nasal Wash","100","Guinea Pig","NL09","URT","KG2",17.64
+"GP4.KG2",1,"Nasal Wash","100","Guinea Pig","NL09","URT","KG2",2.45454545454545
+"GP4.KG2",2,"Nasal Wash","100","Guinea Pig","NL09","URT","KG2",2.8169014084507
+"GP4.KG2",4,"Nasal Wash","100","Guinea Pig","NL09","URT","KG2",4.26315789473684
+"GP5.KG2",1,"Nasal Wash","100","Guinea Pig","NL09","URT","KG2",1.68965517241379
+"GP5.KG2",2,"Nasal Wash","100","Guinea Pig","NL09","URT","KG2",1.53846153846154
+"GP5.KG2",4,"Nasal Wash","100","Guinea Pig","NL09","URT","KG2",2.06285714285714
+"GP6.KG2",1,"Nasal Wash","100","Guinea Pig","NL09","URT","KG2",2.26153846153846
+"GP6.KG2",2,"Nasal Wash","100","Guinea Pig","NL09","URT","KG2",2.27272727272727
+"GP6.KG2",4,"Nasal Wash","100","Guinea Pig","NL09","URT","KG2",1.67680608365019
+"GP1.KG3",1,"Nasal Wash","100","Guinea Pig","GFHK99","URT","KG3",8.64705882352941
+"GP1.KG3",2,"Nasal Wash","100","Guinea Pig","GFHK99","URT","KG3",11.9189189189189
+"GP1.KG3",3,"Nasal Wash","100","Guinea Pig","GFHK99","URT","KG3",16.3333333333333
+"GP2.KG3",1,"Nasal Wash","100","Guinea Pig","GFHK99","URT","KG3",9.38297872340426
+"GP2.KG3",2,"Nasal Wash","100","Guinea Pig","GFHK99","URT","KG3",8.01818181818182
+"GP2.KG3",3,"Nasal Wash","100","Guinea Pig","GFHK99","URT","KG3",10.7560975609756
+"GP3.KG3",1,"Nasal Wash","100","Guinea Pig","GFHK99","URT","KG3",3.03030303030303
+"GP3.KG3",2,"Nasal Wash","100","Guinea Pig","GFHK99","URT","KG3",10
+"GP3.KG3",3,"Nasal Wash","100","Guinea Pig","GFHK99","URT","KG3",16.3333333333333
+"GP4.KG3",1,"Nasal Wash","100","Guinea Pig","GFHK99","URT","KG3",5.55555555555556
+"GP4.KG3",2,"Nasal Wash","100","Guinea Pig","GFHK99","URT","KG3",6.48
+"GP4.KG3",3,"Nasal Wash","100","Guinea Pig","GFHK99","URT","KG3",15.3846153846154
+"GP5.KG3",1,"Nasal Wash","100","Guinea Pig","GFHK99","URT","KG3",14.2857142857143
+"GP5.KG3",2,"Nasal Wash","100","Guinea Pig","GFHK99","URT","KG3",5.88
+"GP5.KG3",3,"Nasal Wash","100","Guinea Pig","GFHK99","URT","KG3",15.2068965517241
+"GP6.KG3",1,"Nasal Wash","100","Guinea Pig","GFHK99","URT","KG3",4.74193548387097
+"GP6.KG3",2,"Nasal Wash","100","Guinea Pig","GFHK99","URT","KG3",17.64
+"GP6.KG3",3,"Nasal Wash","100","Guinea Pig","GFHK99","URT","KG3",9
+"GP1.KG5",1,"Nasal Wash","100","Guinea Pig","MaMN99","URT","KG5",5.18823529411765
+"GP1.KG5",2,"Nasal Wash","100","Guinea Pig","MaMN99","URT","KG5",3.26666666666667
+"GP1.KG5",3,"Nasal Wash","100","Guinea Pig","MaMN99","URT","KG5",2.15121951219512
+"GP2.KG5",1,"Nasal Wash","100","Guinea Pig","MaMN99","URT","KG5",2.46368715083799
+"GP2.KG5",2,"Nasal Wash","100","Guinea Pig","MaMN99","URT","KG5",2.88235294117647
+"GP2.KG5",3,"Nasal Wash","100","Guinea Pig","MaMN99","URT","KG5",2.52447552447552
+"GP3.KG5",1,"Nasal Wash","100","Guinea Pig","MaMN99","URT","KG5",2.23857868020305
+"GP3.KG5",2,"Nasal Wash","100","Guinea Pig","MaMN99","URT","KG5",10
+"GP3.KG5",3,"Nasal Wash","100","Guinea Pig","MaMN99","URT","KG5",3.31192660550459
+"GP4.KG5",1,"Nasal Wash","100","Guinea Pig","MaMN99","URT","KG5",1
+"GP4.KG5",2,"Nasal Wash","100","Guinea Pig","MaMN99","URT","KG5",2.40983606557377
+"GP4.KG5",3,"Nasal Wash","100","Guinea Pig","MaMN99","URT","KG5",4.2
+"GP5.KG5",1,"Nasal Wash","100","Guinea Pig","MaMN99","URT","KG5",2.32558139534884
+"GP5.KG5",2,"Nasal Wash","100","Guinea Pig","MaMN99","URT","KG5",14.2258064516129
+"GP5.KG5",3,"Nasal Wash","100","Guinea Pig","MaMN99","URT","KG5",2.15121951219512
+"GP6.KG5",1,"Nasal Wash","100","Guinea Pig","MaMN99","URT","KG5",4.45454545454546
+"GP6.KG5",2,"Nasal Wash","100","Guinea Pig","MaMN99","URT","KG5",2.15121951219512
+"GP6.KG5",3,"Nasal Wash","100","Guinea Pig","MaMN99","URT","KG5",2.88235294117647
