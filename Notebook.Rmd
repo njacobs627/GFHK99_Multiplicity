@@ -641,7 +641,7 @@ Base.Plot = ggplot() +
         panel.background = element_blank(),
         legend.position = "NA")
 
-# 2G: Fold change amplification vs. MOI ----
+# 2A: Fold change amplification vs. MOI ----
 
 KP7.Titer = read.csv(file = file.path(Proj.Home,"Data","2_Titer_Data.csv"), header = TRUE) %>%
   na.omit %>% 
@@ -733,12 +733,12 @@ Base.Plot +
                                "NL09 in MDCK" = "goldenrod"),
                     guide = FALSE)
 
-ggsave('Plots/2G_Amplification_by_MOI_Bar.pdf',
+ggsave('Plots/2A_Amplification_by_MOI_Bar.pdf',
        width = 4,
        height = 4,
        unit = "in")
 
-Legend.2D = Base.Plot + geom_bar(data = Norm.df %>% mutate(MOI = (10^MOI) %>% round(2) %>% factor,
+Legend.2A = Base.Plot + geom_bar(data = Norm.df %>% mutate(MOI = (10^MOI) %>% round(2) %>% factor,
                                                Virus_Cell = Virus_Cell %>% factor(levels = c("WF10 in DF-1","WF10 in MDCK","MN99 in MDCK","NL09 in MDCK"))) %>%
                        group_by(MOI,Virus_Cell) %>%
                        dplyr::summarise(Amp_Norm_Mean = mean(Amp_Norm)),
@@ -762,13 +762,13 @@ Legend.2D = Base.Plot + geom_bar(data = Norm.df %>% mutate(MOI = (10^MOI) %>% ro
                                "NL09 in MDCK" = "goldenrod")) +
   theme(legend.position = "right")
 
-ggsave(g_legend(Legend.2D),
-       file = "Plots/Legend_2G.pdf",
+ggsave(g_legend(Legend.2A),
+       file = "Plots/Legend_2A.pdf",
        height = 3,
        width = 2,
        units = "in")
 
-# 2H: Burst vs. MOI ----
+# 2B: Burst vs. MOI ----
 
 DF1.Max = KP7.Burst.Sum %>%
   filter(Expt == 1,
@@ -836,7 +836,7 @@ Base.Plot +
   scale_color_manual(values = c("DF-1" = "deeppink3", "MDCK" = "skyblue"), guide = FALSE) +
   scale_fill_manual(values = c("DF-1" = "deeppink3", "MDCK" = "skyblue"), guide = FALSE)
 
-ggsave('Plots/2H_Burst_by_MOI_High_Bar.pdf',
+ggsave('Plots/2B_Burst_by_MOI_High_Bar.pdf',
        width = 4,
        height = 4,
        unit = "in")
@@ -1313,7 +1313,7 @@ ggsave(file = "Plots/4E_Cluster.pdf",
 
 ```
 
-```{r Figure 6, eval = FALSE}
+```{r Figure 5}
 
 Base.Plot = ggplot() +
   theme(text=element_text(size=14,face="bold"),
@@ -1854,7 +1854,7 @@ Base.Plot +
          y = TeX("\\textbf{$\\log_1_0$ normalized UMI counts/cell}")) +
     scale_fill_manual(values = c("DF-1" = "deeppink3", "MDCK" = "skyblue"))
 
-ggsave(file = "Plots/6A_WT_vs_Helper.pdf",
+ggsave(file = "Plots/5A_WT_vs_Helper.pdf",
        height = 5,
        width = 5,
        units = "in")
@@ -1893,7 +1893,7 @@ Base.Plot +
        y = "Segments/cell") +
   scale_fill_manual(values = c("DF-1" = "deeppink3", "MDCK" = "skyblue"))
 
-ggsave(file = "Plots/6B_Segments.pdf",
+ggsave(file = "Plots/5B_Segments.pdf",
        height = 5,
        width = 5,
        units = "in")
@@ -2014,12 +2014,12 @@ ggsave(file = "Plots/Supp6E_Total_UMIs_per_Cell.pdf",
 
 ```
 
-```{r Figure 7}
+```{r Figure 6}
 Flu.Segments = c("PB2","PB1","PA","HA","NP","NA","M","NS")
 
 Exp_Dual_HA = read.csv(file = file.path(Proj.Home,"Data","Poisson_DualHA_Exp.csv"), header = TRUE)
 
-SCA = read.csv(file.path(Proj.Home,"Data","7A_Data.csv")) %>%
+SCA = read.csv(file.path(Proj.Home,"Data","6A_Data.csv")) %>%
   na.omit %>%
   mutate(Helper = PB2.Helper * PB1.Helper,
          WT.Segments = PB2 + PB1 + PA + HA + NP + NA. + M + NS,
@@ -2032,7 +2032,7 @@ SCA %>%
   filter(Rep <= 4) %>%
   colSums
 
-Exp.Pp = read.csv(file.path(Proj.Home,"Data","7A_Data.csv")) %>%
+Exp.Pp = read.csv(file.path(Proj.Home,"Data","6A_Data.csv")) %>%
   na.omit %>%
   mutate(Helper = PB2.Helper * PB1.Helper,
          WT.Segments = PB2 + PB1 + PA + HA + NP + NA. + M + NS,
@@ -2091,7 +2091,7 @@ Base.Plot +
   scale_color_tableau() +
   theme(legend.position = "right")
 
-ggsave(file = "Plots/Misc7_Pp_v_Rep.pdf",
+ggsave(file = "Plots/Misc6_Pp_v_Rep.pdf",
        width = 6,
        height = 5,
        unit = "in")
@@ -2109,7 +2109,7 @@ lm(formula = Pp ~ Rep,
    data = Exp.Pp.1 %>%  mutate(Rep = Rep %>% factor(levels = c(1,2,3,4)))) %>% summary
 
 write.csv(Exp.Pp.2 %>% dplyr::select(Rep:NS),
-          file = file.path(Proj.Home,"Data","7B_Pp_Data.csv"),
+          file = file.path(Proj.Home,"Data","6B_Pp_Data.csv"),
           row.names = FALSE)
 
 Exp.Pp.Summary = Exp.Pp.1 %>% 
@@ -2201,12 +2201,12 @@ Base.Plot +
                                 "3" = "#964B00")) +
   guides(color = FALSE)
 
-ggsave(file = "Plots/7A_Pp_v_Segment.pdf",
+ggsave(file = "Plots/6A_Pp_v_Segment.pdf",
        width = 5,
        height = 5,
        unit = "in")
 
-Legend.7A = Legend.Plot +
+Legend.6A = Legend.Plot +
   geom_crossbar(data = Exp.Pp.Summary,
                 aes(x = Segment,
                     y = Pp.Mean,
@@ -2230,8 +2230,8 @@ Legend.7A = Legend.Plot +
                                 "4" = "#59A14F",
                                 "3" = "#964B00"))
 
-ggsave(g_legend(Legend.7A),
-       file = "Plots/Legend_7A.pdf",
+ggsave(g_legend(Legend.6A),
+       file = "Plots/Legend_6A.pdf",
        height = 3,
        width = 2,
        units = "in")
@@ -2432,12 +2432,12 @@ Sim.Time = Sim.End - Sim.Start
 
 Sim.Time
 
-write.csv(Cell.Summary %>% dplyr::select(Rep, MOI, Expressing.HA, Reassortant.Percent), file = file.path(Proj.Home,"Data","7B_Sim_Data.csv"), row.names = FALSE)
+write.csv(Cell.Summary %>% dplyr::select(Rep, MOI, Expressing.HA, Reassortant.Percent), file = file.path(Proj.Home,"Data","6B_Sim_Data.csv"), row.names = FALSE)
 write.csv(Complete.Summary %>% dplyr::select(Rep, MOI, Expressing.HA, Reassortant.Percent), file = file.path(Proj.Home,"Data","PP1_Reassortment.csv"), row.names = FALSE)
 
 # Plot Simulation Results ----
 
-Cell.Summary = read.csv(file = file.path(Proj.Home,"Data","7B_Sim_Data.csv"), header = TRUE) %>% 
+Cell.Summary = read.csv(file = file.path(Proj.Home,"Data","6B_Sim_Data.csv"), header = TRUE) %>% 
   na.omit
 PP1_Reassortment = read.csv(file = file.path(Proj.Home,"Data","PP1_Reassortment.csv"), header = TRUE)
 
@@ -2486,7 +2486,7 @@ Base.Plot +
   scale_x_continuous(limits=c(0,100)) +
   scale_y_continuous(limits=c(0,100)) 
 
-ggsave(file = "Plots/7B_Predicted_GFHK99_Reassortment.pdf",
+ggsave(file = "Plots/6B_Predicted_GFHK99_Reassortment.pdf",
        dpi = 300,
        width = 5,
        height = 5,
